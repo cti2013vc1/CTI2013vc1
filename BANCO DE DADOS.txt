@@ -1,9 +1,0 @@
-BANCO DE DADOS
-USER: ctitarde
-PASS: Ctivesp15
-DATABASE: pacelli_tarde (estrutura ainda não criada)
-
-GERENCIADOR PHPMYADMIN:
-phpmyadmin.paginas.setrem.com.br
-
-HOST: paginasaaa.setrem.com.br
