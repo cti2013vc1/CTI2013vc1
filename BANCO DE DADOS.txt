@@ -6,4 +6,4 @@ DATABASE: pacelli_tarde (estrutura ainda não criada)
 GERENCIADOR PHPMYADMIN:
 phpmyadmin.paginas.setrem.com.br
 
-HOST: paginas.setrem.com.br
+HOST: paginasaaa.setrem.com.br
