@@ -1,0 +1,73 @@
+unit classTurnos;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassCidades = class
+  private
+    FTUR_CODIGO: integer;
+    FTUR_NOME: string;
+    procedure SetTUR_CODIGO(const Value: integer);
+    procedure SetTUR_NOME(const Value: string);
+
+
+
+  public
+    property TUR_NOME : string read FTUR_NOME write SetTUR_NOME;
+    property TUR_CODIGO : integer read FTUR_CODIGO write SetTUR_CODIGO;
+
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarTurnos(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+
+     end;
+implementation
+
+{ TclassCidades }
+
+function TclassCidades.Alterar: boolean;
+begin
+
+end;
+
+procedure TclassCidades.Carregar;
+begin
+
+end;
+
+function TclassCidades.ConsultarTurnos: TFDQuery;
+begin
+
+end;
+
+function TclassCidades.Excluir: boolean;
+begin
+
+end;
+
+function TclassCidades.Inserir: boolean;
+begin
+
+end;
+
+procedure TclassCidades.SetTUR_CODIGO(const Value: integer);
+begin
+  FTUR_CODIGO := Value;
+end;
+
+procedure TclassCidades.SetTUR_NOME(const Value: string);
+begin
+  FTUR_NOME := Value;
+end;
+
+end.

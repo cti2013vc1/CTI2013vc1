@@ -1,0 +1,113 @@
+unit untConceitos;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassConceitos = class
+  private
+    FCON_CODIGO: integer;
+    FCON_NOME: string;
+    FCON_LETRA: string;
+    procedure SetCON_LETRA(const Value: string);
+    procedure SetPEL_CODIGO(const Value: integer);
+    procedure SetPEL_NOME(const Value: string);
+
+  public
+    property CON_NOME : string read FCON_NOME write SetPEL_NOME;
+    property CON_CODIGO : integer read FCON_CODIGO write SetPEL_CODIGO;
+    property CON_LETRA : string read FCON_LETRA write SetCON_LETRA;
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarConceitos(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+
+     end;
+implementation
+
+uses untConexao;
+
+{ TclassConceitos }
+
+function TclassConceitos.Alterar: boolean;
+var
+fdquery : TFDQuery;
+begin
+fdquery := TFDQuery.Create(nil);
+fdquery.Connection := DMConexao.FDConnection1;
+fdquery.SQL.Add('UPDATE ');
+fdquery.SQL.Add('CONCEITOS ');//TABELA QUE VAI ALTERAR
+fdquery.SQL.Add('SET ');
+fdquery.SQL.Add('CON_NOME = :CON_NOME, ');  //CAMPO DE ALTERAÇÃO
+fdquery.SQL.Add('CON_LETRA = :CON_LETRA ');  //CAMPO DE ALTERAÇÃO
+//APOS O ULTIMO CAMPO NÃO VAI VIRGULA
+fdquery.SQL.Add('WHERE ');
+fdquery.SQL.Add('CON_CODIGO = :CON_CODIGO ');
+
+fdquery.ParamByName('CON_CODIGO').Value := CON_CODIGO;
+fdquery.ParamByName('CON_NOME').Value := CON_NOME;
+fdquery.ParamByName('CON_LETRA').Value := CON_LETRA;
+//executa no banco de dados
+fdquery.ExecSQL;
+//verifica se realmente fez a alteração no banco
+if fdquery.RowsAffected > 0 then
+  result := True else result := false
+
+end;
+
+procedure TclassConceitos.Carregar;
+var
+fdquery : TFDQuery;
+begin
+fdquery := TFDQuery.Create(nil);
+fdquery.Connection := DMConexao.FDConnection1;
+fdquery.SQL.Add('SELECT * FROM CONCEITOS ');
+fdquery.SQL.Add('WHERE CON_CODIGO = :CON_CODIGO ');
+
+fdquery.ParamByName('CON_CODIGO').Value := CON_CODIGO;
+
+fdquery.Open();
+FCON_NOME := fdquery.FieldByName('CON_NOME').Value;
+FCON_LETRA := fdquery.FieldByName('CON_LETRA').Value;
+
+end;
+
+function TclassConceitos.ConsultarConceitos: TFDQuery;
+begin
+
+end;
+
+function TclassConceitos.Excluir: boolean;
+begin
+
+end;
+
+function TclassConceitos.Inserir: boolean;
+begin
+
+end;
+
+procedure TclassConceitos.SetCON_LETRA(const Value: string);
+begin
+  FCON_LETRA := Value;
+end;
+
+procedure TclassConceitos.SetPEL_CODIGO(const Value: integer);
+begin
+
+end;
+
+procedure TclassConceitos.SetPEL_NOME(const Value: string);
+begin
+
+end;
+
+end.

@@ -1,0 +1,35 @@
+unit untConceitos;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassConceitos = class
+  private
+    FCON_CODIGO: integer;
+    FCON_NOME: string;
+    FCON_LETRA: string;
+
+  public
+    property PEL_NOME : string;
+    property PEL_CODIGO : integer;
+    property CON_LETRA : string;
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarPeriodoLetivo(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+
+     end;
+implementation
+
+uses untConexao;
+
+end.

@@ -1,0 +1,69 @@
+unit classSeries;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassCidades = class
+  private
+    FSER_CODIGO: integer;
+    FSER_NOME: string;
+    procedure SetSER_CODIGO(const Value: integer);
+    procedure SetSER_NOME(const Value: string);
+
+  public
+    property SER_NOME : string read FSER_NOME write SetSER_NOME;
+    property SER_CODIGO : integer read FSER_CODIGO write SetSER_CODIGO;
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarSeries(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+     end;
+implementation
+
+{ TclassCidades }
+
+function TclassCidades.Alterar: boolean;
+begin
+
+end;
+
+procedure TclassCidades.Carregar;
+begin
+
+end;
+
+function TclassCidades.ConsultarSeries: TFDQuery;
+begin
+
+end;
+
+function TclassCidades.Excluir: boolean;
+begin
+
+end;
+
+function TclassCidades.Inserir: boolean;
+begin
+
+end;
+
+procedure TclassCidades.SetSER_CODIGO(const Value: integer);
+begin
+  FSER_CODIGO := Value;
+end;
+
+procedure TclassCidades.SetSER_NOME(const Value: string);
+begin
+  FSER_NOME := Value;
+end;
+
+end.

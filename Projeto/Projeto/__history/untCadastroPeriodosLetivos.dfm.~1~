@@ -1,0 +1,12 @@
+inherited Form3: TForm3
+  Caption = 'Cadastro de Per'#237'odos Letivos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 342
+      Caption = 'Cadastro de Per'#237'odos Letivos'
+      ExplicitWidth = 342
+    end
+  end
+end

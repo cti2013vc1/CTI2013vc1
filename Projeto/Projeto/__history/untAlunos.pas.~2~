@@ -1,0 +1,89 @@
+unit untAlunos;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassAlunos = class
+  private
+    FALU_CODIGO: integer;
+    FALU_NOME: string;
+    FALU_DATANASCIMENTO: tdate;
+    FALU_INEP: string;
+    FPALU_CODIGO: integer;
+    FPALU_INEP: string;
+    procedure SetALU_DATANASCIMENTO(const Value: tdate);
+    procedure SetALU_NOME(const Value: string);
+    procedure SetPALU_CODIGO(const Value: integer);
+    procedure SetPALU_INEP(const Value: string);
+
+  public
+    property ALU_NOME : string read FALU_NOME write SetALU_NOME;
+    property PALU_CODIGO : integer read FPALU_CODIGO write SetPALU_CODIGO;
+    property ALU_DATANASCIMENTO : tdate read FALU_DATANASCIMENTO write SetALU_DATANASCIMENTO;
+    property PALU_INEP : string read FPALU_INEP write SetPALU_INEP;
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarAlunos(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+
+     end;
+implementation
+
+uses untConexao;
+{ TclassAlunos }
+
+function TclassAlunos.Alterar: boolean;
+begin
+
+end;
+
+procedure TclassAlunos.Carregar;
+begin
+
+end;
+
+function TclassAlunos.ConsultarAlunos: TFDQuery;
+begin
+
+end;
+
+function TclassAlunos.Excluir: boolean;
+begin
+
+end;
+
+function TclassAlunos.Inserir: boolean;
+begin
+
+end;
+
+procedure TclassAlunos.SetALU_DATANASCIMENTO(const Value: tdate);
+begin
+  FALU_DATANASCIMENTO := Value;
+end;
+
+procedure TclassAlunos.SetALU_NOME(const Value: string);
+begin
+  FALU_NOME := Value;
+end;
+
+procedure TclassAlunos.SetPALU_CODIGO(const Value: integer);
+begin
+  FPALU_CODIGO := Value;
+end;
+
+procedure TclassAlunos.SetPALU_INEP(const Value: string);
+begin
+  FPALU_INEP := Value;
+end;
+
+end.

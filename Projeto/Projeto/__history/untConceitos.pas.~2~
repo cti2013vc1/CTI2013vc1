@@ -1,0 +1,39 @@
+unit untConceitos;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassConceitos = class
+  private
+    FPEL_CODIGO: integer;
+    FPEL_NOME: string;
+    FQTDE_NOTAS: integer;
+    procedure SetPEL_CODIGO(const Value: integer);
+    procedure SetPEL_NOME(const Value: string);
+    procedure SetQTDE_NOTAS(const Value: integer);
+
+
+  public
+    property PEL_NOME : string read FPEL_NOME write SetPEL_NOME;
+    property PEL_CODIGO : integer read FPEL_CODIGO write SetPEL_CODIGO;
+    property QTDE_NOTAS : integer read FQTDE_NOTAS write SetQTDE_NOTAS;
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarPeriodoLetivo(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+
+     end;
+implementation
+
+uses untConexao;
+
+end.

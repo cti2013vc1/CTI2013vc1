@@ -1,0 +1,80 @@
+unit classPeriodoLetivo;
+
+interface
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassCidades = class
+  private
+    FPEL_CODIGO: integer;
+    FPEL_NOME: string;
+    FQTDE_NOTAS: integer;
+    procedure SetPEL_CODIGO(const Value: integer);
+    procedure SetPEL_NOME(const Value: string);
+    procedure SetQTDE_NOTAS(const Value: integer);
+
+
+  public
+    property PEL_NOME : string read FPEL_NOME write SetPEL_NOME;
+    property PEL_CODIGO : integer read FPEL_CODIGO write SetPEL_CODIGO;
+    property QTDE_NOTAS : integer read FQTDE_NOTAS write SetQTDE_NOTAS;
+
+
+ //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarCidades(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+
+
+     end;
+
+implementation
+
+{ TclassCidades }
+
+function TclassCidades.Alterar: boolean;
+begin
+
+end;
+
+procedure TclassCidades.Carregar;
+begin
+
+end;
+
+function TclassCidades.ConsultarCidades: TFDQuery;
+begin
+
+end;
+
+function TclassCidades.Excluir: boolean;
+begin
+
+end;
+
+function TclassCidades.Inserir: boolean;
+begin
+
+end;
+
+procedure TclassCidades.SetPEL_CODIGO(const Value: integer);
+begin
+  FPEL_CODIGO := Value;
+end;
+
+procedure TclassCidades.SetPEL_NOME(const Value: string);
+begin
+  FPEL_NOME := Value;
+end;
+
+procedure TclassCidades.SetQTDE_NOTAS(const Value: integer);
+begin
+  FQTDE_NOTAS := Value;
+end;
+
+end.

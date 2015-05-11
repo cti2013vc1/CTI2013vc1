@@ -1,0 +1,26 @@
+program Project1;
+
+uses
+  Vcl.Forms,
+  untPrincilpal in 'untPrincilpal.pas' {Form1},
+  untConexao in 'untConexao.pas' {DMConexao: TDataModule},
+  classPeriodoLetivo in 'classPeriodoLetivo.pas',
+  classTurnos in 'classTurnos.pas',
+  classMaterias in 'classMaterias.pas',
+  classSeries in 'classSeries.pas',
+  classColaboradores in 'classColaboradores.pas',
+  classConceitos in 'classConceitos.pas',
+  classAlunos in 'classAlunos.pas',
+  classAreas in 'classAreas.pas',
+  classTurmas in 'classTurmas.pas',
+  classMatriculas in 'classMatriculas.pas';
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm1, Form1);
+  Application.CreateForm(TDMConexao, DMConexao);
+  Application.Run;
+end.

@@ -1,0 +1,21 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Height = 282
+  Width = 534
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Server=localhost'
+      'DriverID=MySQL')
+    Left = 40
+    Top = 32
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 440
+    Top = 56
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 432
+    Top = 176
+  end
+end
