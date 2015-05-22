@@ -5,25 +5,24 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Data.DB;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
 
 type
   TfrmPeriodosLetivosCadastro = class(Tfrm_modelo_cadastro)
-    lbl_pel_codigo: TLabeledEdit;
-    lbl_pel_nome: TLabeledEdit;
-    lbl_pel_qtde_notas: TLabeledEdit;
+    lbledt_codigo: TLabeledEdit;
+    lbledt_nome: TLabeledEdit;
+    lbledt_qtdenotas: TLabeledEdit;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
-    procedure SpeedButton1Click(Sender: TObject);
-    procedure SpeedButton2Click(Sender: TObject);
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
-  status : string;
-  procedure ListarPeriodosLetivos();
-
     { Public declarations }
+    status : string;
+
   end;
 
 var
@@ -33,62 +32,59 @@ implementation
 
 {$R *.dfm}
 
-uses classPeriodoLetivo, untPeriodosLetivosConsulta;
 
-procedure TfrmPeriodosLetivosCadastro.ListarPeriodosLetivos;
-begin
+uses classPeriodoLetivo, untPeriodosLetivosCadastro, untPeriodosLetivosConsulta;
 
-end;
-
-procedure TfrmPeriodosLetivosCadastro.SpeedButton1Click(Sender: TObject);
-var
-periodos : TclassPeriodoLetivo;
+procedure TfrmPeriodosLetivosCadastro.btnCancelarClick(Sender: TObject);
 begin
   inherited;
-periodos := TclassPeriodoLetivo.Create;
+    Close;
+end;
 
-if status = 'I' then
- begin
+procedure TfrmPeriodosLetivosCadastro.btnSalvarClick(Sender: TObject);
+var
+  pel: TClassPeriodoLetivo;
+begin
+  inherited;
+  pel := TClassPeriodoLetivo.Create;
 
-    //alimentar os atributos da classe
-    periodos.PEL_CODIGO := StrToInt (lbl_pel_codigo.Text);
-    periodos.PEL_NOME := lbl_pel_nome.Text;
-    periodos.QTDE_NOTAS := StrToInt (lbl_pel_qtde_notas.Text);
+  if status = 'I' then
+begin
+   //Alimentar os atributos da classe
+   pel.PEL_CODIGO := StrToInt(lbledt_codigo.Text);
+   pel.PEL_NOME := lbledt_nome.Text;
+   pel.QTDE_NOTAS := lbledt_qtdenotas.Text;
 
-
-    if periodos.Inserir() then
-  begin
-      ShowMessage('Registro Inserido com Sucesso');
-      //atualiza a grid no form de consulta
-      frmPeriodosLetivosConsulta.FormShow(nil);
+    if pel.Inserir() then
+    begin
+      ShowMessage('Resgistro inserido com sucesso!');
+      //atualizar a grid no form de consulta
+      frmPeriodosLetivosConsulta.FormShow(nil); //alt + F11
       //fecha o form de cadastro
-      close;
-  end;
-end else //se o status foi editar
+      Close;
+    end;
+end else  //se o status for editar
 if status = 'E' then
 begin
-    //aqui vai os comandos para editar um registro
-    //alimentar is atributos da classe
-    periodos.PEL_CODIGO := StrToInt (lbl_pel_codigo.Text);
-    periodos.PEL_NOME := lbl_pel_nome.Text;
-    periodos.QTDE_NOTAS := StrToInt (lbl_pel_qtde_notas.Text);
+  //aqui vai os comandos para editar um registro
+  //alimentar os atributos da classe
+  pel.PEL_CODIGO := StrToInt(lbledt_codigo.Text);
+  pel.PEL_NOME := lbledt_nome.Text;
+  pel.QTDE_NOTAS := lbledt_qtdenotas.Text;
 
-    if periodos.Alterar() then
-    begin
-      ShowMessage('Registro alterado com sucesso!');
-      //atualiza o grid
-      frmPeriodosLetivosConsulta.FormShow(nil);
-      //fecha o formulário
-      close;
+
+  if pel.Alterar() then
+  begin
+    ShowMessage('Registro alterado com sucesso!');
+    //atualiza o grid
+    frmPeriodosLetivosConsulta.FormShow(nil);
+    //fecha o formulario
+    Close;
+  end;
+
+
 
 end;
-end;
-end;
-
-procedure TfrmPeriodosLetivosCadastro.SpeedButton2Click(Sender: TObject);
-begin
-  inherited;
-  Close;
 end;
 
 end.

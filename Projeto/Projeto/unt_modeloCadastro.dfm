@@ -31,7 +31,7 @@ object frm_modelo_cadastro: Tfrm_modelo_cadastro
     DesignSize = (
       462
       416)
-    object SpeedButton1: TSpeedButton
+    object btnSalvar: TSpeedButton
       Left = 70
       Top = 342
       Width = 113
@@ -68,7 +68,7 @@ object frm_modelo_cadastro: Tfrm_modelo_cadastro
       ExplicitLeft = 68
       ExplicitTop = 344
     end
-    object SpeedButton2: TSpeedButton
+    object btnCancelar: TSpeedButton
       Left = 240
       Top = 342
       Width = 129

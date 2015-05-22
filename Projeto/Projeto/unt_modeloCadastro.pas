@@ -10,8 +10,8 @@ uses
 type
   Tfrm_modelo_cadastro = class(TForm)
     Panel2: TPanel;
-    SpeedButton1: TSpeedButton;
-    SpeedButton2: TSpeedButton;
+    btnSalvar: TSpeedButton;
+    btnCancelar: TSpeedButton;
     Panel1: TPanel;
     Image1: TImage;
     Label1: TLabel;

@@ -310,7 +310,7 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
     DesignSize = (
       677
       370)
-    object SpeedButton3: TSpeedButton
+    object btnExcluir: TSpeedButton
       Left = 17
       Top = 174
       Width = 121
@@ -344,7 +344,7 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
         7777FFFFFFFFFF000000FFFFFFFFFFFFFFFFFFFFFFFFFF000000}
       ParentFont = False
     end
-    object SpeedButton2: TSpeedButton
+    object btnEditar: TSpeedButton
       Left = 17
       Top = 103
       Width = 121
@@ -378,7 +378,7 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
         FFFFFFFFFFF7007FFFFFFFFFFFFFFFFFFFFFFFFFFFFF88FFFFFF}
       ParentFont = False
     end
-    object SpeedButton1: TSpeedButton
+    object btnInserir: TSpeedButton
       Left = 17
       Top = 32
       Width = 121

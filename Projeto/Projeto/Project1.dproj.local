@@ -5,8 +5,8 @@
     <Transaction>2015/04/23 14:28:57.000.790,C:\Users\em0106692\Desktop\Projeto\Projeto\untPrincilpal.pas=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2015/04/23 14:28:57.000.790,C:\Users\em0106692\Desktop\Projeto\Projeto\untPrincilpal.dfm=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2015/04/23 14:29:22.000.328,=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2015/04/23 14:29:36.000.434,C:\Users\em0106692\Desktop\Projeto\Projeto\untConexao.dfm=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2015/04/23 14:29:36.000.434,C:\Users\em0106692\Desktop\Projeto\Projeto\untConexao.pas=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2015/04/23 14:29:36.000.434,C:\Users\em0106692\Desktop\Projeto\Projeto\untConexao.dfm=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2015/04/23 14:32:48.000.062,=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2015/04/23 14:33:17.000.147,C:\Users\em0106692\Desktop\Projeto\Projeto\classPeriodoLetivo.pas=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
     <Transaction>2015/04/23 14:54:50.000.282,=C:\Users\em0106692\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
@@ -37,17 +37,30 @@
     <Transaction>2015/05/07 14:28:30.000.906,=C:\Users\em0106692\Desktop\Projeto\Projeto\unt_modeloCadastro.pas</Transaction>
     <Transaction>2015/05/07 14:29:03.000.621,=C:\Users\em0106692\Desktop\Projeto\Projeto\unt_modeloConsulta.pas</Transaction>
     <Transaction>2015/05/07 14:36:00.000.147,=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit3.pas</Transaction>
-    <Transaction>2015/05/07 14:37:11.000.065,C:\Users\em0106692\Desktop\Projeto\Projeto\untCadastroPeriodosLetivos.dfm=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit3.dfm</Transaction>
     <Transaction>2015/05/07 14:37:11.000.065,C:\Users\em0106692\Desktop\Projeto\Projeto\untCadastroPeriodosLetivos.pas=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit3.pas</Transaction>
+    <Transaction>2015/05/07 14:37:11.000.065,C:\Users\em0106692\Desktop\Projeto\Projeto\untCadastroPeriodosLetivos.dfm=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit3.dfm</Transaction>
     <Transaction>2015/05/07 15:43:06.000.118,=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit4.pas</Transaction>
-    <Transaction>2015/05/07 15:44:55.000.333,C:\Users\em0106692\Desktop\Projeto\Projeto\untConsultaPeriodosLetivos.pas=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit4.pas</Transaction>
     <Transaction>2015/05/07 15:44:55.000.333,C:\Users\em0106692\Desktop\Projeto\Projeto\untConsultaPeriodosLetivos.dfm=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit4.dfm</Transaction>
+    <Transaction>2015/05/07 15:44:55.000.333,C:\Users\em0106692\Desktop\Projeto\Projeto\untConsultaPeriodosLetivos.pas=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit4.pas</Transaction>
     <Transaction>2015/05/07 15:52:43.000.599,C:\Users\em0106692\Desktop\Projeto\Projeto\untConsultaPeriodosLetivos.pas=</Transaction>
     <Transaction>2015/05/07 15:55:08.000.953,C:\Users\em0106692\Desktop\Projeto\Projeto\untCadastroPeriodosLetivos.dfm=C:\Users\em0106692\Desktop\Projeto\Projeto\untPeriodosLetivosCadastro.dfm</Transaction>
     <Transaction>2015/05/07 15:55:08.000.953,C:\Users\em0106692\Desktop\Projeto\Projeto\untCadastroPeriodosLetivos.pas=C:\Users\em0106692\Desktop\Projeto\Projeto\untPeriodosLetivosCadastro.pas</Transaction>
     <Transaction>2015/05/07 15:58:02.000.424,=C:\Users\em0106692\Desktop\Projeto\Projeto\Unit1.pas</Transaction>
-    <Transaction>2015/05/07 15:58:18.000.402,C:\Users\em0106692\Desktop\Projeto\Projeto\Unit1.pas=C:\Users\em0106692\Desktop\Projeto\Projeto\untPeriodosLetivosConsulta.pas</Transaction>
     <Transaction>2015/05/07 15:58:18.000.402,C:\Users\em0106692\Desktop\Projeto\Projeto\Unit1.dfm=C:\Users\em0106692\Desktop\Projeto\Projeto\untPeriodosLetivosConsulta.dfm</Transaction>
+    <Transaction>2015/05/07 15:58:18.000.402,C:\Users\em0106692\Desktop\Projeto\Projeto\Unit1.pas=C:\Users\em0106692\Desktop\Projeto\Projeto\untPeriodosLetivosConsulta.pas</Transaction>
+    <Transaction>2015/05/19 15:54:33.000.769,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosCadastro.pas=</Transaction>
+    <Transaction>2015/05/19 15:54:44.000.390,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosConsulta.pas=</Transaction>
+    <Transaction>2015/05/19 15:55:11.000.381,=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.pas</Transaction>
+    <Transaction>2015/05/19 15:56:04.000.973,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosCadastro.pas=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.pas</Transaction>
+    <Transaction>2015/05/19 15:56:04.000.973,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosCadastro.dfm=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.dfm</Transaction>
+    <Transaction>2015/05/20 13:52:16.000.915,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPrincilpal.dfm=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPrincipal.dfm</Transaction>
+    <Transaction>2015/05/20 13:52:16.000.915,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPrincilpal.pas=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPrincipal.pas</Transaction>
+    <Transaction>2015/05/20 13:58:15.000.932,=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.pas</Transaction>
+    <Transaction>2015/05/20 13:58:44.000.875,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.pas=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosCadastro.pas</Transaction>
+    <Transaction>2015/05/20 13:58:44.000.876,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.dfm=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosCadastro.dfm</Transaction>
+    <Transaction>2015/05/20 14:57:27.000.013,=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.pas</Transaction>
+    <Transaction>2015/05/20 14:57:45.000.332,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.pas=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosConsulta.pas</Transaction>
+    <Transaction>2015/05/20 14:57:45.000.332,C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\Unit1.dfm=C:\Users\Kassia\Documents\CTI2013vc1.git\Projeto\Projeto\untPeriodosLetivosConsulta.dfm</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="classAreas.pas"/>
@@ -61,8 +74,8 @@
     <File Path="classTurnos.pas"/>
     <File Path="untConexao.pas"/>
     <File Path="untConexao.dfm"/>
-    <File Path="untPrincilpal.pas"/>
-    <File Path="untPrincilpal.dfm"/>
+    <File Path="untPrincipal.pas"/>
+    <File Path="untPrincipal.dfm"/>
     <File Path="classMatriculas.pas"/>
     <File Path="unt_modeloCadastro.pas"/>
     <File Path="unt_modeloCadastro.dfm"/>

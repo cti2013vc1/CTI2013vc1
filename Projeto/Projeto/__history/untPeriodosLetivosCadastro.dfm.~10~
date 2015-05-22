@@ -1,0 +1,44 @@
+inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
+  Caption = 'Cadastro de Per'#237'odos Letivos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    object lbledt_codigo: TLabeledEdit
+      Left = 32
+      Top = 56
+      Width = 121
+      Height = 21
+      EditLabel.Width = 77
+      EditLabel.Height = 13
+      EditLabel.Caption = 'C'#243'digo do aluno'
+      TabOrder = 0
+    end
+    object lbledt_nome: TLabeledEdit
+      Left = 32
+      Top = 128
+      Width = 121
+      Height = 21
+      EditLabel.Width = 27
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Nome'
+      TabOrder = 1
+    end
+    object lbledt_qtdenotas: TLabeledEdit
+      Left = 32
+      Top = 198
+      Width = 121
+      Height = 21
+      EditLabel.Width = 101
+      EditLabel.Height = 13
+      EditLabel.Caption = 'Quantidade de notas'
+      TabOrder = 2
+    end
+  end
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 342
+      Caption = 'Cadastro de Per'#237'odos Letivos'
+      ExplicitWidth = 342
+    end
+  end
+end

@@ -1,0 +1,66 @@
+unit untPeriodosLetivosCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmPeriodosLetivosCadastro = class(Tfrm_modelo_cadastro)
+    lbledt_codigo: TLabeledEdit;
+    lbledt_nome: TLabeledEdit;
+    lbledt_qtdenotas: TLabeledEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro;
+  status : string;
+
+implementation
+
+{$R *.dfm}
+
+
+uses classPeriodoLetivo, untPeriodosLetivosCadastro;
+
+procedure TfrmPeriodosLetivosCadastro.btnCancelarClick(Sender: TObject);
+var
+   pel : TClassPeriodoLetivo;
+begin
+  inherited;
+
+end;
+
+procedure TfrmPeriodosLetivosCadastro.btnSalvarClick(Sender: TObject);
+var
+  pel: TClassPeriodoLetivo;
+begin
+  inherited;
+  //alimentar todos os países na tela de cadastro
+  frmPeriodosLetivosCadastro.ListarPeriodosLetivos();
+
+  pel:= TClassPeriodoLetivo.Create();
+  pel.PEL_CODIGO := dsdados.DataSet.FieldByName('PEL_CODIGO').Value;
+  pel.Carregar;
+  frmPeriodosLetivosCadastro.lbledt_codigo.Text := pel.PEL_CODIGO.ToString;
+  frmPeriodosLetivosCadastro.lbledt_nome.Text := pel.PEL_NOME;
+  frmPeriodosLetivosCadastro.lbledt_qtdenotas.Text := pel.QTDE_NOTAS;
+  // frm_cidades_cadastro.lbledt_pais.Text := cid.PAISES_PAI_CODIGO.ToString;
+
+  frmPeriodosLetivosCadastro.Show;
+  //criar a variavel status dentro do public do frmcadastrocidades
+  frmPeriodosLetivosCadastro.status := 'E';
+end;
+
+end.

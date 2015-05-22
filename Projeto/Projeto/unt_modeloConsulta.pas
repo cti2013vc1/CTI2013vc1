@@ -12,9 +12,9 @@ type
     Edit1: TEdit;
     Panel2: TPanel;
     DBGrid1: TDBGrid;
-    SpeedButton3: TSpeedButton;
-    SpeedButton2: TSpeedButton;
-    SpeedButton1: TSpeedButton;
+    btnExcluir: TSpeedButton;
+    btnEditar: TSpeedButton;
+    btnInserir: TSpeedButton;
     Panel1: TPanel;
     Image1: TImage;
     Image2: TImage;

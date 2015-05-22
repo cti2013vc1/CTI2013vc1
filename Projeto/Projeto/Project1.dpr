@@ -2,7 +2,7 @@ program Project1;
 
 uses
   Vcl.Forms,
-  untPrincilpal in 'untPrincilpal.pas' {frmPrincipal},
+  untPrincipal in 'untPrincipal.pas' {frmPrincipal},
   untConexao in 'untConexao.pas' {DMConexao: TDataModule},
   classPeriodoLetivo in 'classPeriodoLetivo.pas',
   classTurnos in 'classTurnos.pas',
@@ -16,10 +16,10 @@ uses
   classMatriculas in 'classMatriculas.pas',
   unt_modeloCadastro in 'unt_modeloCadastro.pas' {frm_modelo_cadastro},
   unt_modeloConsulta in 'unt_modeloConsulta.pas' {frm_modelo_consulta},
-  untPeriodosLetivosCadastro in 'untPeriodosLetivosCadastro.pas' {frmPeriodosLetivosCadastro},
-  untPeriodosLetivosConsulta in 'untPeriodosLetivosConsulta.pas' {frmPeriodosLetivosConsulta},
   Vcl.Themes,
-  Vcl.Styles;
+  Vcl.Styles,
+  untPeriodosLetivosCadastro in 'untPeriodosLetivosCadastro.pas' {frmPeriodosLetivosCadastro},
+  untPeriodosLetivosConsulta in 'untPeriodosLetivosConsulta.pas' {frmPeriodosLetivosConsulta};
 
 {$R *.res}
 

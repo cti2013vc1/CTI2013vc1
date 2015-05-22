@@ -1,5 +1,0 @@
-inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
-  Caption = 'Consulta de per'#237'odos letivos'
-  PixelsPerInch = 96
-  TextHeight = 13
-end
