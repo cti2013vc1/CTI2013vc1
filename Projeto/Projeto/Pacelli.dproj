@@ -122,6 +122,22 @@
             <Form>frmPeriodosLetivosConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untSeriesCadastro.pas">
+            <Form>frmSeriesCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untSeriesConsulta.pas">
+            <Form>frmSeriesConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untColaboradoresCadastro.pas">
+            <Form>frmColaboradoresCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untColaboradoresConsulta.pas">
+            <Form>frmColaboradoresConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

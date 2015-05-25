@@ -19,7 +19,11 @@ uses
   Vcl.Themes,
   Vcl.Styles,
   untPeriodosLetivosCadastro in 'untPeriodosLetivosCadastro.pas' {frmPeriodosLetivosCadastro},
-  untPeriodosLetivosConsulta in 'untPeriodosLetivosConsulta.pas' {frmPeriodosLetivosConsulta};
+  untPeriodosLetivosConsulta in 'untPeriodosLetivosConsulta.pas' {frmPeriodosLetivosConsulta},
+  untSeriesCadastro in 'untSeriesCadastro.pas' {frmSeriesCadastro},
+  untSeriesConsulta in 'untSeriesConsulta.pas' {frmSeriesConsulta},
+  untColaboradoresCadastro in 'untColaboradoresCadastro.pas' {frmColaboradoresCadastro},
+  untColaboradoresConsulta in 'untColaboradoresConsulta.pas' {frmColaboradoresConsulta};
 
 {$R *.res}
 
@@ -33,5 +37,9 @@ begin
   Application.CreateForm(Tfrm_modelo_consulta, frm_modelo_consulta);
   Application.CreateForm(TfrmPeriodosLetivosCadastro, frmPeriodosLetivosCadastro);
   Application.CreateForm(TfrmPeriodosLetivosConsulta, frmPeriodosLetivosConsulta);
+  Application.CreateForm(TfrmSeriesCadastro, frmSeriesCadastro);
+  Application.CreateForm(TfrmSeriesConsulta, frmSeriesConsulta);
+  Application.CreateForm(TfrmColaboradoresCadastro, frmColaboradoresCadastro);
+  Application.CreateForm(TfrmColaboradoresConsulta, frmColaboradoresConsulta);
   Application.Run;
 end.

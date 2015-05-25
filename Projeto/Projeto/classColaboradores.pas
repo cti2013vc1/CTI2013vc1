@@ -103,8 +103,8 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'COLABORADORES.COL_CODIGO,   '+
                      'COLABORADORES.COL_NOME,     '+
-                     'COLABORADORES.COL_SENHA    '+
-                     'COLABORADORES.COL_NIVEL_ACESSO '+
+                     'COLABORADORES.COL_SENHA,    '+
+                     'COLABORADORES.COL_NIVEL_ACESSO, '+
                      'COLABORADORES.COL_USUARIO              '+
                      'FROM COLABORADORES          ');
 
