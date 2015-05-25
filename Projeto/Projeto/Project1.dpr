@@ -18,8 +18,7 @@ uses
   unt_modeloConsulta in 'unt_modeloConsulta.pas' {frm_modelo_consulta},
   Vcl.Themes,
   Vcl.Styles,
-  untPeriodosLetivosCadastro in 'untPeriodosLetivosCadastro.pas' {frmPeriodosLetivosCadastro},
-  untPeriodosLetivosConsulta in 'untPeriodosLetivosConsulta.pas' {frmPeriodosLetivosConsulta};
+  untPeriodosLetivosCadastro in 'untPeriodosLetivosCadastro.pas' {frmPeriodosLetivosCadastro};
 
 {$R *.res}
 
@@ -32,6 +31,5 @@ begin
   Application.CreateForm(Tfrm_modelo_cadastro, frm_modelo_cadastro);
   Application.CreateForm(Tfrm_modelo_consulta, frm_modelo_consulta);
   Application.CreateForm(TfrmPeriodosLetivosCadastro, frmPeriodosLetivosCadastro);
-  Application.CreateForm(TfrmPeriodosLetivosConsulta, frmPeriodosLetivosConsulta);
   Application.Run;
 end.

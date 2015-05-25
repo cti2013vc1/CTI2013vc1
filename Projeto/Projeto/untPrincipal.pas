@@ -10,6 +10,7 @@ type
   TfrmPrincipal = class(TForm)
     MainMenu1: TMainMenu;
     Cadastrodeperodosletivos1: TMenuItem;
+    procedure Cadastrodeperodosletivos1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,6 +24,13 @@ implementation
 
 {$R *.dfm}
 
+uses untPeriodosLetivosConsulta;
 
+
+
+procedure TfrmPrincipal.Cadastrodeperodosletivos1Click(Sender: TObject);
+begin
+frmPeriodosLetivosConsulta.Show;
+end;
 
 end.

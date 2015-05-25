@@ -33,7 +33,7 @@ implementation
 {$R *.dfm}
 
 
-uses classPeriodoLetivo, untPeriodosLetivosCadastro, untPeriodosLetivosConsulta;
+uses classPeriodoLetivo, untPeriodosLetivosConsulta;
 
 procedure TfrmPeriodosLetivosCadastro.btnCancelarClick(Sender: TObject);
 begin
@@ -53,7 +53,7 @@ begin
    //Alimentar os atributos da classe
    pel.PEL_CODIGO := StrToInt(lbledt_codigo.Text);
    pel.PEL_NOME := lbledt_nome.Text;
-   pel.QTDE_NOTAS := lbledt_qtdenotas.Text;
+   pel.QTDE_NOTAS := StrToInt(lbledt_qtdenotas.Text);
 
     if pel.Inserir() then
     begin
@@ -70,7 +70,7 @@ begin
   //alimentar os atributos da classe
   pel.PEL_CODIGO := StrToInt(lbledt_codigo.Text);
   pel.PEL_NOME := lbledt_nome.Text;
-  pel.QTDE_NOTAS := lbledt_qtdenotas.Text;
+  pel.QTDE_NOTAS := StrToInt(lbledt_qtdenotas.Text);
 
 
   if pel.Alterar() then

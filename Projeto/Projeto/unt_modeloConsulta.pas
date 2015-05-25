@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Buttons, Vcl.Grids, Vcl.DBGrids,
-  Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Imaging.pngimage;
+  Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Imaging.pngimage, Data.DB;
 
 type
   Tfrm_modelo_consulta = class(TForm)
@@ -18,6 +18,7 @@ type
     Panel1: TPanel;
     Image1: TImage;
     Image2: TImage;
+    dsdados: TDataSource;
   private
     { Private declarations }
   public

@@ -12,9 +12,9 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
     object Label2: TLabel
       Left = 32
       Top = 224
-      Width = 186
+      Width = 200
       Height = 13
-      Caption = 'Obs.: A quantidade de notas se refere'
+      Caption = 'Obs.: A quantidade de per'#237'odos se refere'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clGray
       Font.Height = -11
@@ -38,9 +38,11 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
     object Label4: TLabel
       Left = 32
       Top = 262
-      Width = 301
+      Width = 343
       Height = 13
-      Caption = 'Ex.: Bimestre: 4 notas; Trimestre: 3 notas; Semestre: 6 notas;'
+      Caption = 
+        'Ex.: Bimestre: 4 per'#237'odos; Trimestre: 3 per'#237'odos; Semestre: 6 pe' +
+        'r'#237'odos;'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clGray
       Font.Height = -11
@@ -52,10 +54,10 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Left = 32
       Top = 56
       Width = 113
-      Height = 27
-      EditLabel.Width = 115
+      Height = 26
+      EditLabel.Width = 52
       EditLabel.Height = 18
-      EditLabel.Caption = 'C'#243'digo do aluno'
+      EditLabel.Caption = 'C'#243'digo'
       EditLabel.Font.Charset = ANSI_CHARSET
       EditLabel.Font.Color = clBlack
       EditLabel.Font.Height = -16
@@ -65,7 +67,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -16
-      Font.Name = 'Times New Roman'
+      Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
       TabOrder = 0
@@ -74,10 +76,10 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Left = 32
       Top = 128
       Width = 204
-      Height = 27
-      EditLabel.Width = 42
+      Height = 26
+      EditLabel.Width = 55
       EditLabel.Height = 18
-      EditLabel.Caption = 'Nome'
+      EditLabel.Caption = 'Per'#237'odo'
       EditLabel.Font.Charset = ANSI_CHARSET
       EditLabel.Font.Color = clBlack
       EditLabel.Font.Height = -16
@@ -87,7 +89,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -16
-      Font.Name = 'Times New Roman'
+      Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
       TabOrder = 1
@@ -96,10 +98,10 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Left = 32
       Top = 198
       Width = 49
-      Height = 27
-      EditLabel.Width = 145
+      Height = 26
+      EditLabel.Width = 168
       EditLabel.Height = 18
-      EditLabel.Caption = 'Quantidade de notas'
+      EditLabel.Caption = 'Quantidade de per'#237'odos'
       EditLabel.Font.Charset = ANSI_CHARSET
       EditLabel.Font.Color = clBlack
       EditLabel.Font.Height = -16
@@ -109,7 +111,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -16
-      Font.Name = 'Times New Roman'
+      Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
       TabOrder = 2

@@ -418,6 +418,7 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
       Width = 481
       Height = 297
       Anchors = [akLeft, akTop, akRight, akBottom]
+      DataSource = dsdados
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
@@ -431,5 +432,9 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
       TitleFont.Name = 'Tahoma'
       TitleFont.Style = []
     end
+  end
+  object dsdados: TDataSource
+    Left = 472
+    Top = 32
   end
 end

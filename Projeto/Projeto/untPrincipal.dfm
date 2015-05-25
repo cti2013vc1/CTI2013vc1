@@ -19,6 +19,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 24
     object Cadastrodeperodosletivos1: TMenuItem
       Caption = 'Cadastro de per'#237'odos letivos'
+      OnClick = Cadastrodeperodosletivos1Click
     end
   end
 end
