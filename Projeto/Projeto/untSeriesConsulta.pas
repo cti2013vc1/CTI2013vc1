@@ -30,10 +30,10 @@ uses classSeries, untSeriesCadastro;
 
 procedure TfrmSeriesConsulta.btnEditarClick(Sender: TObject);
 var
-   series: TclassSeries;
+   series: TClassSeries;
 begin
   inherited;
-  series:= TclassSeries.Create();
+  series:= TClassSeries.Create();
   series.SER_CODIGO := dsdados.DataSet.FieldByName ('SER_CODIGO').Value;
   series.Carregar;
   frmSeriesCadastro.lbledt_ser_codigo.Text := series.SER_CODIGO.ToString;

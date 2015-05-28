@@ -26,6 +26,7 @@ type
     procedure Cadastrodeperodosletivos1Click(Sender: TObject);
     procedure Cadastrodesries1Click(Sender: TObject);
     procedure Colaboradores1Click(Sender: TObject);
+    procedure Conceitos1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -40,7 +41,7 @@ implementation
 {$R *.dfm}
 
 uses untPeriodosLetivosConsulta, untSeriesCadastro, untSeriesConsulta,
-  untColaboradoresConsulta;
+  untColaboradoresConsulta, untConceitosConsulta;
 
 
 
@@ -56,7 +57,12 @@ end;
 
 procedure TfrmPrincipal.Colaboradores1Click(Sender: TObject);
 begin
-frmcolaboradoresConsulta.Show;
+frmColaboradoresConsulta.Show;
+end;
+
+procedure TfrmPrincipal.Conceitos1Click(Sender: TObject);
+begin
+frmConceitosConsulta.Show;
 end;
 
 end.

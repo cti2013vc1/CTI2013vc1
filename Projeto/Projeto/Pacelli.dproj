@@ -138,6 +138,22 @@
             <Form>frmColaboradoresConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untConceitosCadastro.pas">
+            <Form>frmConceitosCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untConceitosConsulta.pas">
+            <Form>frmConceitosConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untAlunosCadastro.pas">
+            <Form>frmAlunosCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untAlunosConsulta.pas">
+            <Form>frmAlunosConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

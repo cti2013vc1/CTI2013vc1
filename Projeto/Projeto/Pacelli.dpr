@@ -23,7 +23,11 @@ uses
   untSeriesCadastro in 'untSeriesCadastro.pas' {frmSeriesCadastro},
   untSeriesConsulta in 'untSeriesConsulta.pas' {frmSeriesConsulta},
   untColaboradoresCadastro in 'untColaboradoresCadastro.pas' {frmColaboradoresCadastro},
-  untColaboradoresConsulta in 'untColaboradoresConsulta.pas' {frmColaboradoresConsulta};
+  untColaboradoresConsulta in 'untColaboradoresConsulta.pas' {frmColaboradoresConsulta},
+  untConceitosCadastro in 'untConceitosCadastro.pas' {frmConceitosCadastro},
+  untConceitosConsulta in 'untConceitosConsulta.pas' {frmConceitosConsulta},
+  untAlunosCadastro in 'untAlunosCadastro.pas' {frmAlunosCadastro},
+  untAlunosConsulta in 'untAlunosConsulta.pas' {frmAlunosConsulta};
 
 {$R *.res}
 
@@ -41,5 +45,9 @@ begin
   Application.CreateForm(TfrmSeriesConsulta, frmSeriesConsulta);
   Application.CreateForm(TfrmColaboradoresCadastro, frmColaboradoresCadastro);
   Application.CreateForm(TfrmColaboradoresConsulta, frmColaboradoresConsulta);
+  Application.CreateForm(TfrmConceitosCadastro, frmConceitosCadastro);
+  Application.CreateForm(TfrmConceitosConsulta, frmConceitosConsulta);
+  Application.CreateForm(TfrmAlunosCadastro, frmAlunosCadastro);
+  Application.CreateForm(TfrmAlunosConsulta, frmAlunosConsulta);
   Application.Run;
 end.

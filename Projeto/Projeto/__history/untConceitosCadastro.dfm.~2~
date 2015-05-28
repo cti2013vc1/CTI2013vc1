@@ -1,0 +1,12 @@
+inherited frmConceitosCadastro: TfrmConceitosCadastro
+  Caption = 'Cadastro de conceitos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 264
+      Caption = 'Cadastro de Conceitos'
+      ExplicitWidth = 264
+    end
+  end
+end

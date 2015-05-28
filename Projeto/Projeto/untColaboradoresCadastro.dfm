@@ -2,7 +2,6 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
   Caption = 'Cadastro de colaboradores'
   ClientHeight = 505
   ClientWidth = 431
-  ExplicitTop = -83
   ExplicitWidth = 447
   ExplicitHeight = 544
   PixelsPerInch = 96
@@ -10,17 +9,20 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
   inherited Panel2: TPanel
     Width = 431
     Height = 440
-    ExplicitTop = 64
     ExplicitWidth = 431
     ExplicitHeight = 440
     inherited btnSalvar: TSpeedButton
       Left = 62
       Top = 366
       OnClick = btnSalvarClick
+      ExplicitLeft = 62
+      ExplicitTop = 366
     end
     inherited btnCancelar: TSpeedButton
       Left = 220
       Top = 366
+      ExplicitLeft = 220
+      ExplicitTop = 366
     end
     object lbledt_col_codigo: TLabeledEdit
       Left = 32
@@ -135,6 +137,7 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
   end
   inherited Panel1: TPanel
     Width = 431
+    ExplicitWidth = 431
     inherited Label1: TLabel
       Width = 317
       Caption = 'Cadastro de colaboradores'
