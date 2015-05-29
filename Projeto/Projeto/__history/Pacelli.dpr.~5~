@@ -27,8 +27,7 @@ uses
   untConceitosCadastro in 'untConceitosCadastro.pas' {frmConceitosCadastro},
   untConceitosConsulta in 'untConceitosConsulta.pas' {frmConceitosConsulta},
   untAlunosCadastro in 'untAlunosCadastro.pas' {frmAlunosCadastro},
-  untAlunosConsulta in 'untAlunosConsulta.pas' {frmAlunosConsulta},
-  frmTurnosConsulta in 'frmTurnosConsulta.pas' {frm_modelo_consulta1};
+  untAlunosConsulta in 'untAlunosConsulta.pas' {frmAlunosConsulta};
 
 {$R *.res}
 
@@ -50,6 +49,5 @@ begin
   Application.CreateForm(TfrmConceitosConsulta, frmConceitosConsulta);
   Application.CreateForm(TfrmAlunosCadastro, frmAlunosCadastro);
   Application.CreateForm(TfrmAlunosConsulta, frmAlunosConsulta);
-  Application.CreateForm(Tfrm_modelo_consulta1, frm_modelo_consulta1);
   Application.Run;
 end.

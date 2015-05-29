@@ -1,4 +1,4 @@
-unit untSeriesConsulta;
+unit frmTurnosConsulta;
 
 interface
 
@@ -8,8 +8,7 @@ uses
   Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
-  TfrmSeriesConsulta = class(Tfrm_modelo_consulta)
-    procedure btnInserirClick(Sender: TObject);
+  Tfrm_modelo_consulta1 = class(Tfrm_modelo_consulta)
   private
     { Private declarations }
   public
@@ -17,19 +16,10 @@ type
   end;
 
 var
-  frmSeriesConsulta: TfrmSeriesConsulta;
+  frm_modelo_consulta1: Tfrm_modelo_consulta1;
 
 implementation
 
 {$R *.dfm}
-
-uses untSeriesCadastro;
-
-procedure TfrmSeriesConsulta.btnInserirClick(Sender: TObject);
-begin
-  inherited;
-frm
-frmSeriesCadastro.status := 'I';
-end;
 
 end.
