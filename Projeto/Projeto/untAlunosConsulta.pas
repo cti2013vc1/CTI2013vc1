@@ -38,7 +38,7 @@ begin
   alunos.Carregar;
   frmAlunosCadastro.lbledt_alu_codigo.Text := alunos.ALU_CODIGO.ToString;
   frmAlunosCadastro.lbledt_alu_nome.Text := alunos.ALU_NOME;
-  frmAlunosCadastro.lbledt_alu_datanascimento.Text := alunos.ALU_DATANASCIMENTO;
+  frmAlunosCadastro.lbledt_alu_datanascimento.Text := DateToStr(alunos.ALU_DATANASCIMENTO);
   frmAlunosCadastro.lbledt_alu_inep.Text := alunos.ALU_INEP;
   frmAlunosCadastro.Show;
   //criar a variavel status dentro do public do

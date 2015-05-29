@@ -43,6 +43,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Alunos1: TMenuItem
         Caption = 'Alunos'
+        OnClick = Alunos1Click
       end
       object Matrias1: TMenuItem
         Caption = 'Mat'#233'rias'

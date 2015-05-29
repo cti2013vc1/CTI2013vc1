@@ -49,7 +49,7 @@ begin
    //Alimentar os atributos da classe
    alunos.ALU_CODIGO := StrToInt(lbledt_alu_codigo.Text);
    alunos.ALU_NOME := lbledt_alu_nome.Text;
-   alunos.ALU_DATANASCIMENTO := lbledt_alu_datanascimento.Text;
+   alunos.ALU_DATANASCIMENTO := StrToDateTime (lbledt_alu_datanascimento.Text);
    alunos.ALU_INEP := lbledt_alu_nome.Text;
 
     if alunos.Inserir() then
@@ -67,7 +67,7 @@ begin
   //alimentar os atributos da classe
   alunos.ALU_CODIGO := StrToInt(lbledt_alu_codigo.Text);
   alunos.ALU_NOME := lbledt_alu_nome.Text;
-  alunos.ALU_DATANASCIMENTO := lbledt_alu_datanascimento.Text;
+  alunos.ALU_DATANASCIMENTO := StrToDateTime (lbledt_alu_datanascimento.Text);
   alunos.ALU_INEP := lbledt_alu_nome.Text;
 
 

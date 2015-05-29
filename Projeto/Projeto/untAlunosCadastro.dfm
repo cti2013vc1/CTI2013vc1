@@ -9,15 +9,21 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
   inherited Panel2: TPanel
     Width = 351
     Height = 391
+    ExplicitWidth = 351
+    ExplicitHeight = 391
     inherited btnSalvar: TSpeedButton
       Left = 40
       Top = 317
       OnClick = btnSalvarClick
+      ExplicitLeft = 40
+      ExplicitTop = 317
     end
     inherited btnCancelar: TSpeedButton
       Left = 167
       Top = 317
       OnClick = btnCancelarClick
+      ExplicitLeft = 167
+      ExplicitTop = 317
     end
     object lbledt_alu_codigo: TLabeledEdit
       Left = 32
@@ -110,6 +116,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
   end
   inherited Panel1: TPanel
     Width = 351
+    ExplicitWidth = 351
     inherited Label1: TLabel
       Width = 227
       Caption = 'Cadastro de alunos'
