@@ -1,0 +1,48 @@
+unit untTurnosConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloConsulta, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TfrmTurnosConsulta = class(Tfrm_modelo_consulta)
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmTurnosConsulta: TfrmTurnosConsulta;
+
+implementation
+
+{$R *.dfm}
+
+{ TfrmTurnosConsulta }
+
+{ TfrmTurnosConsulta }
+
+{ TfrmTurnosConsulta }
+
+procedure TfrmTurnosConsulta.btnEditarClick(Sender: TObject);
+var
+  tur: TClassTurnos;
+begin
+tur:= TClassTurnos.Create();
+tur.PEL_CODIGO := dsdados.DataSet.FieldByName ('PEL_CODIGO').Value;
+tur.Carregar;
+frmTurnosConsulta.lbledt_codigo.Text := tur.PEL_CODIGO.ToString;
+frmTurnosConsulta.lbledt_nome.Text := tur.PEL_NOME;
+frmTurnosConsulta.lbledt_qtdenotas.Text := tur.QTDE_NOTAS.ToString;
+frmTurnosConsulta.Show;
+//criar a variavel status dentro do public do
+ frmPeriodosLetivosCadastro.status := 'E';
+
+end;
+
+end.
