@@ -1,12 +1,8 @@
 inherited frmTurnosCadastro: TfrmTurnosCadastro
   Caption = 'Cadastro de Turnos'
-  ExplicitWidth = 478
-  ExplicitHeight = 520
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    ExplicitLeft = -8
-    ExplicitTop = 57
     inherited btnSalvar: TSpeedButton
       OnClick = btnSalvarClick
     end
@@ -19,7 +15,7 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
       Width = 113
       Height = 26
       EditLabel.Width = 33
-      EditLabel.Height = 13
+      EditLabel.Height = 18
       EditLabel.Caption = 'C'#243'digo'
       EditLabel.Color = clSkyBlue
       EditLabel.ParentColor = False
@@ -48,13 +44,6 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-    end
-  end
-  inherited Panel1: TPanel
-    inherited Label1: TLabel
-      Width = 233
-      Caption = 'Cadastro de Turnos'
-      ExplicitWidth = 233
     end
   end
 end

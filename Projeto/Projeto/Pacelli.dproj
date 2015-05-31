@@ -154,8 +154,20 @@
             <Form>frmAlunosConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="frmTurnosConsulta.pas">
-            <Form>frm_modelo_consulta1</Form>
+        <DCCReference Include="untTurnosConsulta.pas">
+            <Form>frmTurnosConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untTurnosCadastro.pas">
+            <Form>frmTurnosCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untAreasCadastro.pas">
+            <Form>frmAreasCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untAreasConsulta.pas">
+            <Form>frmAreasConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

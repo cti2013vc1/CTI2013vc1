@@ -1,0 +1,43 @@
+unit untAreasConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloConsulta, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TfrmAreasConsulta = class(TfrmAreasConsulta)
+    procedure btnEditarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAreasConsulta: TfrmAreasConsulta;
+
+implementation
+
+{$R *.dfm}
+
+uses ClassAreas, untAreasCadastro, untConexao;
+
+procedure TfrmAreasConsulta.btnEditarClick(Sender: TObject);
+var
+  are: TClassAreas;
+begin
+are:= TClassAreas.Create();
+are.PEL_CODIGO := dsdados.DataSet.FieldByName ('PEL_CODIGO').Value;
+are.Carregar;
+frmAreasCadastro.lbledt_codigo.Text := are.PEL_CODIGO.ToString;
+frmAreasCadastro.lbledt_nome.Text := are.PEL_NOME;
+frmPeriodosLetivosCadastro.Show;
+//criar a variavel status dentro do public do
+ frmPeriodosLetivosCadastro.status := 'E';
+end;
+
+
+end.

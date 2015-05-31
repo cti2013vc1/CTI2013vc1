@@ -1,0 +1,5 @@
+inherited frmAreasCadastro: TfrmAreasCadastro
+  Caption = 'Cadastro de '#193'reas'
+  PixelsPerInch = 96
+  TextHeight = 13
+end

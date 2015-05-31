@@ -1,0 +1,25 @@
+unit untAreasCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  TfrmAreasCadastro = class(Tfrm_modelo_cadastro)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmAreasCadastro: TfrmAreasCadastro;
+
+implementation
+
+{$R *.dfm}
+
+end.
