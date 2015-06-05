@@ -1,0 +1,13 @@
+inherited frmTurnosConsulta: TfrmTurnosConsulta
+  Caption = 'Consulta de turnos'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+    end
+    inherited btnInserir: TSpeedButton
+      OnClick = btnInserirClick
+    end
+  end
+end

@@ -8,11 +8,11 @@ uses
   Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
 
 type
-  TfrmAreasConsulta = class(TfrmAreasConsulta)
-    procedure FormShow(Sender: TObject);
+  TfrmAreasConsulta = class(Tfrm_modelo_consulta)
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,31 +26,34 @@ implementation
 
 {$R *.dfm}
 
-uses ClassAreas, untAreasCadastro, untConexao;
+uses untAreasCadastro, classAreas;
 
 procedure TfrmAreasConsulta.btnEditarClick(Sender: TObject);
 var
-  are: TClassAreas;
+  areas : TClassAreas;
 begin
-are:= TClassAreas.Create();
-are.ARC_CODIGO := dsdados.DataSet.FieldByName ('ARC_CODIGO').Value;
-are.Carregar;
-frmAreasCadastro.lbledt_codigo.Text := are.ARC_CODIGO.ToString;
-frmAreasCadastro.lbledt_nome.Text := are.ARC_NOME;
-frmAreasCadastro.Show;
-//criar a variavel status dentro do public do
- frmAreasCadastro.status := 'E';
-end;
+  inherited;
+  areas:= TClassAreas.Create();
+  areas.ARC_CODIGO := dsdados.DataSet.FieldByName ('ARC_CODIGO').Value;
+  areas.Carregar;
+  frmAreasCadastro.lbledt_arc_codigo.Text := areas.ARC_CODIGO.ToString;
+  frmAreasCadastro.lbledt_arc_nome.Text := areas.ARC_NOME;
+  frmAreasCadastro.Show;
+  //criar a variavel status dentro do public do
+   frmAreasCadastro.status := 'E';
 
+
+end;
 
 procedure TfrmAreasConsulta.btnExcluirClick(Sender: TObject);
 var
-are : TClassAreas;
-begin
-are := TClassAreas.Create;
-are.ARC_CODIGO :=  dsdados.DataSet.FieldByName('ARC_CODIGO').Value;
+  areas : TclassAreas;
+  begin
+  inherited;
+  areas := TclassAreas.Create;
+  areas.ARC_CODIGO :=  dsdados.DataSet.FieldByName('ARC_CODIGO').Value;
 
-if ARE.Excluir then
+if areas.Excluir then
 begin
   ShowMessage('Registro excluído com sucesso!');
   FormShow(nil);
@@ -67,11 +70,11 @@ end;
 
 procedure TfrmAreasConsulta.FormShow(Sender: TObject);
 var
-  are : TClassAreas ;
+  areas : TClassAreas;
 begin
   inherited;
-  are := TClassAreas.Create();
-  dsdados.DataSet := are.ConsultarAreas();
+  areas := TClassAreas.Create;
+  dsdados.DataSet := areas.ConsultarAreas();
 
 end;
 

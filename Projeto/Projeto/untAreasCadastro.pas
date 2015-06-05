@@ -9,14 +9,17 @@ uses
 
 type
   TfrmAreasCadastro = class(Tfrm_modelo_cadastro)
-    lbledt_codigo: TLabeledEdit;
-    lbledt_nome: TLabeledEdit;
+    lbledt_arc_codigo: TLabeledEdit;
+    lbledt_arc_nome: TLabeledEdit;
+    Label2: TLabel;
+    Label3: TLabel;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    status : string;
   end;
 
 var
@@ -26,28 +29,28 @@ implementation
 
 {$R *.dfm}
 
-uses classAreas, untAreasConsulta;
+uses classAreas, untAlunosConsulta, untAreasConsulta;
 
 procedure TfrmAreasCadastro.btnCancelarClick(Sender: TObject);
 begin
   inherited;
-    Close;
+Close;
 end;
 
 procedure TfrmAreasCadastro.btnSalvarClick(Sender: TObject);
 var
-  are: TClassAreas;
+areas : TClassAreas;
 begin
   inherited;
-  are := TClassAreas.Create;
+  areas := TClassAreas.Create;
 
   if status = 'I' then
 begin
    //Alimentar os atributos da classe
-   are.ARC_CODIGO := StrToInt(lbledt_codigo.Text);
-   are.ARC_NOME := lbledt_nome.Text;
+   areas.ARC_CODIGO := StrToInt(lbledt_arc_codigo.Text);
+   areas.ARC_NOME := lbledt_arc_nome.Text;
 
-    if are.Inserir() then
+    if areas.Inserir() then
     begin
       ShowMessage('Resgistro inserido com sucesso!');
       //atualizar a grid no form de consulta
@@ -60,10 +63,11 @@ if status = 'E' then
 begin
   //aqui vai os comandos para editar um registro
   //alimentar os atributos da classe
-  are.ARC_CODIGO := StrToInt(lbledt_codigo.Text);
-  are.ARC_NOME := lbledt_nome.Text;
+  areas.ARC_CODIGO := StrToInt(lbledt_arc_codigo.Text);
+  areas.ARC_NOME := lbledt_arc_nome.Text;
 
-  if are.Alterar() then
+
+  if areas.Alterar() then
   begin
     ShowMessage('Registro alterado com sucesso!');
     //atualiza o grid
@@ -72,9 +76,6 @@ begin
     Close;
   end;
 
-
-
 end;
 end;
-
 end.

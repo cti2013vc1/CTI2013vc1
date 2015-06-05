@@ -1,0 +1,43 @@
+inherited frmTurnosConsulta: TfrmTurnosConsulta
+  Caption = 'Consulta de turnos'
+  OnShow = FormShow
+  ExplicitWidth = 693
+  ExplicitHeight = 498
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    ExplicitTop = 95
+    inherited btnExcluir: TSpeedButton
+      OnClick = btnExcluirClick
+    end
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+    end
+    inherited DBGrid1: TDBGrid
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'TUR_CODIGO'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          Title.Caption = 'C'#243'digo'
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TUR_NOME'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clWindowText
+          Font.Height = -16
+          Font.Name = 'Arial'
+          Font.Style = []
+          Title.Caption = 'Nome do turno'
+          Width = 89
+          Visible = True
+        end>
+    end
+  end
+end

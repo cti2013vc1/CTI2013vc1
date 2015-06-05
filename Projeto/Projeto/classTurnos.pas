@@ -28,9 +28,8 @@ type
  procedure Carregar();
  function Alterar() : boolean;
  function Excluir() : boolean;
+end;
 
-
-     end;
 implementation
 
 uses untConexao;
@@ -49,7 +48,7 @@ fdquery.SQL.Add('SET ');
 fdquery.SQL.Add('TUR_NOME = :TUR_NOME ');  //CAMPO DE ALTERAÇÃO
 //APOS O ULTIMO CAMPO NÃO VAI VIRGULA
 fdquery.SQL.Add('WHERE ');
-fdquery.SQL.Add('TUR_CODIGO = :PEL_CODIGO ');
+fdquery.SQL.Add('TUR_CODIGO = :TUR_CODIGO ');
 
 fdquery.ParamByName('TUR_CODIGO').Value := TUR_CODIGO;
 fdquery.ParamByName('TUR_NOME').Value := TUR_NOME;

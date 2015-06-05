@@ -1,15 +1,14 @@
-unit untPrincipal;
+unit untAreasCadastro;
 
 interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
 
 type
-  TfrmPrincipal = class(TForm)
-    MainMenu1: TMainMenu;
-    Cadastrodeperodosletivos1: TMenuItem;
+  TfrmAreasCadastro = class(Tfrm_modelo_cadastro)
   private
     { Private declarations }
   public
@@ -17,12 +16,10 @@ type
   end;
 
 var
-  frmPrincipal: TfrmPrincipal;
+  frmAreasCadastro: TfrmAreasCadastro;
 
 implementation
 
 {$R *.dfm}
-
-
 
 end.

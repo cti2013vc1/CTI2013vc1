@@ -9,6 +9,7 @@ uses
 
 type
   TfrmTurnosConsulta = class(Tfrm_modelo_consulta)
+    procedure btnInserirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -21,5 +22,12 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmTurnosConsulta.btnInserirClick(Sender: TObject);
+begin
+  inherited;
+  frmTurnosCadastro.Show;
+  frmTurnosCadastro.status := 'I';
+end;
 
 end.

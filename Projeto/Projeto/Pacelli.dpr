@@ -28,10 +28,11 @@ uses
   untConceitosConsulta in 'untConceitosConsulta.pas' {frmConceitosConsulta},
   untAlunosCadastro in 'untAlunosCadastro.pas' {frmAlunosCadastro},
   untAlunosConsulta in 'untAlunosConsulta.pas' {frmAlunosConsulta},
-  untTurnosConsulta in 'untTurnosConsulta.pas' {frmTurnosConsulta},
   untTurnosCadastro in 'untTurnosCadastro.pas' {frmTurnosCadastro},
   untAreasCadastro in 'untAreasCadastro.pas' {frmAreasCadastro},
-  untAreasConsulta in 'untAreasConsulta.pas' {frmAreasConsulta};
+  untAreasConsulta in 'untAreasConsulta.pas' {frmAreasConsulta},
+  untTurnosConsulta in 'untTurnosConsulta.pas' {frmTurnosConsulta},
+  classFuncoes in 'classFuncoes.pas';
 
 {$R *.res}
 
@@ -53,9 +54,9 @@ begin
   Application.CreateForm(TfrmConceitosConsulta, frmConceitosConsulta);
   Application.CreateForm(TfrmAlunosCadastro, frmAlunosCadastro);
   Application.CreateForm(TfrmAlunosConsulta, frmAlunosConsulta);
-  Application.CreateForm(TfrmTurnosConsulta, frmTurnosConsulta);
   Application.CreateForm(TfrmTurnosCadastro, frmTurnosCadastro);
   Application.CreateForm(TfrmAreasCadastro, frmAreasCadastro);
   Application.CreateForm(TfrmAreasConsulta, frmAreasConsulta);
+  Application.CreateForm(TfrmTurnosConsulta, frmTurnosConsulta);
   Application.Run;
 end.

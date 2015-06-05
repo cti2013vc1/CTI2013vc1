@@ -9,8 +9,8 @@ uses
 
 type
   TfrmTurnosCadastro = class(Tfrm_modelo_cadastro)
-    lbledt_codigo: TLabeledEdit;
-    lbledt_nome: TLabeledEdit;
+    lbledt_tur_codigo: TLabeledEdit;
+    lbledt_tur_nome: TLabeledEdit;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
   private
@@ -45,8 +45,8 @@ begin
   if status = 'I' then
 begin
    //Alimentar os atributos da classe
-   tur.TUR_CODIGO := StrToInt(lbledt_codigo.Text);
-   tur.TUR_NOME := lbledt_nome.Text;
+   tur.TUR_CODIGO := StrToInt(lbledt_tur_codigo.Text);
+   tur.TUR_NOME := lbledt_tur_nome.Text;
 
     if tur.Inserir() then
     begin
@@ -61,8 +61,8 @@ if status = 'E' then
 begin
   //aqui vai os comandos para editar um registro
   //alimentar os atributos da classe
-  tur.TUR_CODIGO := StrToInt(lbledt_codigo.Text);
-  tur.TUR_NOME := lbledt_nome.Text;
+  tur.TUR_CODIGO := StrToInt(lbledt_tur_codigo.Text);
+  tur.TUR_NOME := lbledt_tur_nome.Text;
 
   if tur.Alterar() then
   begin

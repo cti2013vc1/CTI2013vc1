@@ -83,7 +83,7 @@ con := TFDQuery.Create(nil);
 con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'AREAS.ARC_CODIGO,   '+
-                     'AREAS.ARC_NOME,     '+
+                     'AREAS.ARC_NOME     '+
                      'FROM AREAS          ');
 
 con.Open();

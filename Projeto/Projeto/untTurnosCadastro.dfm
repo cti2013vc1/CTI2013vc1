@@ -1,28 +1,40 @@
 inherited frmTurnosCadastro: TfrmTurnosCadastro
   Caption = 'Cadastro de Turnos'
-  ExplicitWidth = 478
-  ExplicitHeight = 520
+  ClientHeight = 337
+  ClientWidth = 371
+  ExplicitWidth = 387
+  ExplicitHeight = 376
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    ExplicitLeft = -8
-    ExplicitTop = 57
+    Width = 371
+    Height = 272
     inherited btnSalvar: TSpeedButton
+      Left = 45
+      Top = 198
       OnClick = btnSalvarClick
     end
     inherited btnCancelar: TSpeedButton
+      Left = 180
+      Top = 198
       OnClick = btnCancelarClick
     end
-    object lbledt_codigo: TLabeledEdit
+    object lbledt_tur_codigo: TLabeledEdit
       Left = 32
-      Top = 56
+      Top = 48
       Width = 113
       Height = 26
-      EditLabel.Width = 33
-      EditLabel.Height = 13
+      EditLabel.Width = 52
+      EditLabel.Height = 18
       EditLabel.Caption = 'C'#243'digo'
       EditLabel.Color = clSkyBlue
+      EditLabel.Font.Charset = DEFAULT_CHARSET
+      EditLabel.Font.Color = clBlack
+      EditLabel.Font.Height = -16
+      EditLabel.Font.Name = 'Arial'
+      EditLabel.Font.Style = []
       EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clHighlightText
       Font.Height = -16
@@ -31,18 +43,24 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
       ParentFont = False
       TabOrder = 0
     end
-    object lbledt_nome: TLabeledEdit
+    object lbledt_tur_nome: TLabeledEdit
       Left = 32
-      Top = 104
-      Width = 113
+      Top = 122
+      Width = 193
       Height = 26
-      EditLabel.Width = 27
-      EditLabel.Height = 13
-      EditLabel.Caption = 'Nome'
+      EditLabel.Width = 102
+      EditLabel.Height = 18
+      EditLabel.Caption = 'Nome do turno'
       EditLabel.Color = clSkyBlue
+      EditLabel.Font.Charset = DEFAULT_CHARSET
+      EditLabel.Font.Color = clBlack
+      EditLabel.Font.Height = -16
+      EditLabel.Font.Name = 'Arial'
+      EditLabel.Font.Style = []
       EditLabel.ParentColor = False
+      EditLabel.ParentFont = False
       Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
+      Font.Color = clHighlightText
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
@@ -51,6 +69,7 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
     end
   end
   inherited Panel1: TPanel
+    Width = 371
     inherited Label1: TLabel
       Width = 233
       Caption = 'Cadastro de Turnos'

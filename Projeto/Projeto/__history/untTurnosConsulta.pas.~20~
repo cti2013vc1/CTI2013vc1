@@ -9,6 +9,7 @@ uses
 
 type
   TfrmTurnosConsulta = class(Tfrm_modelo_consulta)
+    procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
   private
     { Private declarations }
@@ -23,26 +24,29 @@ implementation
 
 {$R *.dfm}
 
-{ TfrmTurnosConsulta }
-
-{ TfrmTurnosConsulta }
-
-{ TfrmTurnosConsulta }
+uses untTurnosCadastro, classTurnos;
 
 procedure TfrmTurnosConsulta.btnEditarClick(Sender: TObject);
 var
-  tur: TClassTurnos;
+   tur: TClassTurnos;
 begin
-tur:= TClassTurnos.Create();
-tur.PEL_CODIGO := dsdados.DataSet.FieldByName ('PEL_CODIGO').Value;
-tur.Carregar;
-frmTurnosConsulta.lbledt_codigo.Text := tur.PEL_CODIGO.ToString;
-frmTurnosConsulta.lbledt_nome.Text := tur.PEL_NOME;
-frmTurnosConsulta.lbledt_qtdenotas.Text := tur.QTDE_NOTAS.ToString;
-frmTurnosConsulta.Show;
-//criar a variavel status dentro do public do
- frmPeriodosLetivosCadastro.status := 'E';
+  inherited;
+  tur:= TClassTurnos.Create();
+  tur.TUR_CODIGO := dsdados.DataSet.FieldByName ('TUR_CODIGO').Value;
+  tur.Carregar;
+  frmTurnosCadastro.lbledt_tur_codigo.Text := tur.TUR_CODIGO.ToString;
+  frmTurnosCadastro.lbledt_tur_nome.Text := tur.TUR_NOME;
+  frmTurnosCadastro.Show;
+  //criar a variavel status dentro do public do
+   frmTurnosCadastro.status := 'E';
 
+end;
+
+procedure TfrmTurnosConsulta.btnInserirClick(Sender: TObject);
+begin
+  inherited;
+  frmTurnosCadastro.Show;
+  frmTurnosCadastro.status := 'I';
 end;
 
 end.

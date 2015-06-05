@@ -424,6 +424,7 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
       Font.Height = -13
       Font.Name = 'Tahoma'
       Font.Style = []
+      Options = [dgTitles, dgIndicator, dgColumnResize, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
       ParentFont = False
       TabOrder = 0
       TitleFont.Charset = DEFAULT_CHARSET

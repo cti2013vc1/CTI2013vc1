@@ -1,5 +1,5 @@
-inherited frm_modelo_consulta1: Tfrm_modelo_consulta1
-  Caption = 'frm_modelo_consulta1'
+inherited frmTurnosConsulta: TfrmTurnosConsulta
+  Caption = 'Consulta de turnos'
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel

@@ -9,10 +9,10 @@ uses
 
 type
   TfrmTurnosConsulta = class(Tfrm_modelo_consulta)
-    procedure FormShow(Sender: TObject);
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -26,37 +26,38 @@ implementation
 
 {$R *.dfm}
 
-uses classTurnos, untTurnosCadastro, untConexao;
-
-{ TfrmTurnosConsulta }
-
-{ TfrmTurnosConsulta }
-
-{ TfrmTurnosConsulta }
+uses untTurnosCadastro, classTurnos, classFuncoes;
 
 procedure TfrmTurnosConsulta.btnEditarClick(Sender: TObject);
 var
-  tur: TClassTurnos;
+   tur: TClassTurnos;
 begin
-tur:= TClassTurnos.Create();
-tur.TUR_CODIGO := dsdados.DataSet.FieldByName ('TUR_CODIGO').Value;
-tur.Carregar;
-frmTurnosCadastro.lbledt_codigo.Text := tur.TUR_CODIGO.ToString;
-frmTurnosCadastro.lbledt_nome.Text := tur.TUR_NOME;
-frmTurnosConsulta.Show;
-//criar a variavel status dentro do public do
- frmTurnosConsulta.status := 'E';
+  inherited;
+
+
+
+  tur:= TClassTurnos.Create();
+  LimparCampos(frmTurnosCadastro);
+  tur.TUR_CODIGO := dsdados.DataSet.FieldByName ('TUR_CODIGO').Value;
+
+  tur.Carregar;
+  frmTurnosCadastro.lbledt_tur_codigo.Text := tur.TUR_CODIGO.ToString;
+  frmTurnosCadastro.lbledt_tur_nome.Text := tur.TUR_NOME;
+  frmTurnosCadastro.Show;
+  //criar a variavel status dentro do public do
+   frmTurnosCadastro.status := 'E';
 
 end;
 
 procedure TfrmTurnosConsulta.btnExcluirClick(Sender: TObject);
 var
-tur : TclassTurnos;
+  tur : TclassTurnos;
 begin
-tur := TclassTurnos.Create;
-tur.TUR_CODIGO :=  dsdados.DataSet.FieldByName('TUR_CODIGO').Value;
+  inherited;
+  tur := TclassTurnos.Create;
+  tur.TUR_CODIGO :=  dsdados.DataSet.FieldByName('TUR_CODIGO').Value;
 
-if TUR.Excluir then
+if tur.Excluir then
 begin
   ShowMessage('Registro excluído com sucesso!');
   FormShow(nil);
@@ -67,17 +68,17 @@ end;
 procedure TfrmTurnosConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
-  frmTurnosConsulta.Show;
-  frmTurnosConsulta.status := 'I';
-
+  LimparCampos(frmTurnosCadastro);
+  frmTurnosCadastro.Show;
+  frmTurnosCadastro.status := 'I';
 end;
 
 procedure TfrmTurnosConsulta.FormShow(Sender: TObject);
 var
-  tur : TclassTurnos ;
+tur : TclassTurnos;
 begin
   inherited;
-  tur := TclassTurnos.Create();
+  tur := TclassTurnos.Create;
   dsdados.DataSet := tur.ConsultarTurnos();
 
 end;

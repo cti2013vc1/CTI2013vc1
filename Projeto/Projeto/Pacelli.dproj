@@ -154,10 +154,6 @@
             <Form>frmAlunosConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="untTurnosConsulta.pas">
-            <Form>frmTurnosConsulta</Form>
-            <FormType>dfm</FormType>
-        </DCCReference>
         <DCCReference Include="untTurnosCadastro.pas">
             <Form>frmTurnosCadastro</Form>
             <FormType>dfm</FormType>
@@ -170,6 +166,11 @@
             <Form>frmAreasConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untTurnosConsulta.pas">
+            <Form>frmTurnosConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="classFuncoes.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
