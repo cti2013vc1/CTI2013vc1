@@ -19,7 +19,7 @@ type
 
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
-  //escrever a uses acima do type
+    //escrever a uses acima do type
  function ConsultarAreas(): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();

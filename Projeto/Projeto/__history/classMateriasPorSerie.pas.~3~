@@ -1,0 +1,14 @@
+unit classMateriasPorSerie;
+ interface
+type
+  TclassAreas = class
+private
+
+  public
+    property MATERIAS_MAT_CODIGO : integer ;
+    property SERIES_SER_CODIGO : integer;
+
+ end;
+implementation
+
+end.

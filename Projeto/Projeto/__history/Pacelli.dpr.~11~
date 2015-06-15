@@ -34,8 +34,7 @@ uses
   untTurnosConsulta in 'untTurnosConsulta.pas' {frmTurnosConsulta},
   classFuncoes in 'classFuncoes.pas',
   untMateriasCadastro in 'untMateriasCadastro.pas' {frmMateriasCadastro},
-  untMateriasConsulta in 'untMateriasConsulta.pas' {frmMateriasConsulta},
-  classMateriasPorSerie in 'classMateriasPorSerie.pas';
+  untMateriasConsulta in 'untMateriasConsulta.pas' {frmMateriasConsulta};
 
 {$R *.res}
 
