@@ -5,14 +5,15 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Mask, Vcl.ComCtrls;
 
 type
   TfrmAlunosCadastro = class(Tfrm_modelo_cadastro)
     lbledt_alu_codigo: TLabeledEdit;
     lbledt_alu_nome: TLabeledEdit;
-    lbledt_alu_datanascimento: TLabeledEdit;
     lbledt_alu_inep: TLabeledEdit;
+    MK_DataNascimento: TMaskEdit;
+    dtpDtaNascimento: TDateTimePicker;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
   private
@@ -45,11 +46,11 @@ begin
    alunos := TClassAlunos.Create;
 
   if status = 'I' then
-begin
+  begin
    //Alimentar os atributos da classe
    alunos.ALU_CODIGO := StrToInt(lbledt_alu_codigo.Text);
    alunos.ALU_NOME := lbledt_alu_nome.Text;
-   alunos.ALU_DATANASCIMENTO := StrToDateTime (lbledt_alu_datanascimento.Text);
+   alunos.ALU_DATANASCIMENTO := dtpDtaNascimento.Date;
    alunos.ALU_INEP := lbledt_alu_nome.Text;
 
     if alunos.Inserir() then
@@ -67,7 +68,7 @@ begin
   //alimentar os atributos da classe
   alunos.ALU_CODIGO := StrToInt(lbledt_alu_codigo.Text);
   alunos.ALU_NOME := lbledt_alu_nome.Text;
-  alunos.ALU_DATANASCIMENTO := StrToDateTime (lbledt_alu_datanascimento.Text);
+  alunos.ALU_DATANASCIMENTO := StrToDateTime (MK_DataNascimento.Text);
   alunos.ALU_INEP := lbledt_alu_nome.Text;
 
 

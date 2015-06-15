@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
-  Vcl.Imaging.pngimage;
+  Vcl.Imaging.pngimage, Data.DB;
 
 type
   Tfrm_modelo_cadastro = class(TForm)
@@ -15,6 +15,7 @@ type
     Panel1: TPanel;
     Image1: TImage;
     Label1: TLabel;
+    dsdados: TDataSource;
   private
     { Private declarations }
   public

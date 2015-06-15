@@ -135,7 +135,7 @@ fdquery.SQL.Add('ALUNOS ');//*
 fdquery.SQL.Add('( ');
 fdquery.SQL.Add('ALU_CODIGO, ');//**
 fdquery.SQL.Add('ALU_NOME, ');//**
-fdquery.SQL.Add('ALU_DATA NASCIMENTO, ');//**
+fdquery.SQL.Add('ALU_DATANASCIMENTO, ');//**
 fdquery.SQL.Add('ALU_INEP ');//**
 fdquery.SQL.Add(') ');
 fdquery.SQL.Add('VALUES ');
@@ -162,7 +162,7 @@ end;
 
 procedure TclassAlunos.SetALU_CODIGO(const Value: integer);
 begin
-
+  FALU_CODIGO := Value;
 end;
 
 procedure TclassAlunos.SetALU_DATANASCIMENTO(const Value: tdate);

@@ -11,6 +11,7 @@ object frm_modelo_consulta: Tfrm_modelo_consulta
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel

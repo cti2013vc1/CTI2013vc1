@@ -26,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-uses untColaboradoresCadastro, classColaboradores;
+uses untColaboradoresCadastro, classColaboradores, classFuncoes;
 
 procedure TfrmColaboradoresConsulta.btnEditarClick(Sender: TObject);
 var
@@ -39,7 +39,14 @@ begin
   frmColaboradoresCadastro.lbledt_col_codigo.Text := col.COL_CODIGO.ToString;
   frmColaboradoresCadastro.lbledt_col_nome.Text := col.COL_NOME;
   frmColaboradoresCadastro.lbledt_col_senha.Text := col.COL_SENHA;
-  frmColaboradoresCadastro.lbledt_col_nivel_acesso.Text := col.COL_NIVEL_ACESSO;
+ if col.COL_NIVEL_ACESSO = 'S' then
+   begin
+   frmColaboradoresCadastro.RBSecretaria.Checked := True;
+   end
+   else if col.COL_NIVEL_ACESSO = 'D' then
+   begin
+   frmColaboradoresCadastro.RBDiretoria.Checked := True;
+   end;
   frmColaboradoresCadastro.lbledt_col_usuario.Text := col.COL_USUARIO;
 
   frmColaboradoresCadastro.Show;
@@ -65,6 +72,7 @@ end;
 procedure TfrmColaboradoresConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
+  LimparCampos(frmColaboradoresCadastro);
   frmColaboradoresCadastro.Show;
   frmColaboradoresCadastro.status := 'I';
 end;

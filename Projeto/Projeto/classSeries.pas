@@ -42,7 +42,7 @@ fdquery.Connection := DMConexao.FDConnection1;
 fdquery.SQL.Add('UPDATE ');
 fdquery.SQL.Add('SERIES ');//TABELA QUE VAI ALTERAR
 fdquery.SQL.Add('SET ');
-fdquery.SQL.Add('SER_NOME = :CID_NOME ');  //CAMPO DE ALTERAÇÃO
+fdquery.SQL.Add('SER_NOME = :SER_NOME ');  //CAMPO DE ALTERAÇÃO
 //APOS O ULTIMO CAMPO NÃO VAI VIRGULA
 fdquery.SQL.Add('WHERE ');
 fdquery.SQL.Add('SER_CODIGO = :SER_CODIGO ');
@@ -69,7 +69,7 @@ fdquery.SQL.Add('WHERE SER_CODIGO = :SER_CODIGO ');
 fdquery.ParamByName('SER_CODIGO').Value := FSER_CODIGO;
 
 fdquery.Open();
-FSER_NOME := fdquery.FieldByName('CID_NOME').Value;
+FSER_NOME := fdquery.FieldByName('SER_NOME').Value;
 
 end;
 

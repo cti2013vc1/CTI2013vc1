@@ -26,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-uses classAlunos, untAlunosCadastro;
+uses classAlunos, untAlunosCadastro, classFuncoes;
 
 procedure TfrmAlunosConsulta.btnEditarClick(Sender: TObject);
 var
@@ -38,7 +38,7 @@ begin
   alunos.Carregar;
   frmAlunosCadastro.lbledt_alu_codigo.Text := alunos.ALU_CODIGO.ToString;
   frmAlunosCadastro.lbledt_alu_nome.Text := alunos.ALU_NOME;
-  frmAlunosCadastro.lbledt_alu_datanascimento.Text := DateToStr(alunos.ALU_DATANASCIMENTO);
+  frmAlunosCadastro.MK_DataNascimento.Text := DateToStr(alunos.ALU_DATANASCIMENTO);
   frmAlunosCadastro.lbledt_alu_inep.Text := alunos.ALU_INEP;
   frmAlunosCadastro.Show;
   //criar a variavel status dentro do public do
@@ -64,6 +64,7 @@ end;
 procedure TfrmAlunosConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
+  LimparCampos(frmAlunosCadastro);
   frmAlunosCadastro.Show;
   frmAlunosCadastro.status := 'I';
 end;

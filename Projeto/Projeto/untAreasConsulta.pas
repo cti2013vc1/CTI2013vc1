@@ -26,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-uses untAreasCadastro, classAreas;
+uses untAreasCadastro, classAreas, classFuncoes;
 
 procedure TfrmAreasConsulta.btnEditarClick(Sender: TObject);
 var
@@ -64,6 +64,7 @@ end;
 procedure TfrmAreasConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
+  LimparCampos(frmAreasCadastro);
   frmAreasCadastro.Show;
   frmAreasCadastro.status := 'I';
 end;

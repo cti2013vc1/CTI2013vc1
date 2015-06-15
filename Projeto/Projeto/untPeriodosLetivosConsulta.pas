@@ -27,7 +27,7 @@ implementation
 
 {$R *.dfm}
 
-uses classPeriodoLetivo, untPeriodosLetivosCadastro, untConexao;
+uses classPeriodoLetivo, untPeriodosLetivosCadastro, untConexao, classFuncoes;
 
 procedure TfrmPeriodosLetivosConsulta.btnEditarClick(Sender: TObject);
 var
@@ -62,6 +62,7 @@ end;
 procedure TfrmPeriodosLetivosConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
+  LimparCampos(frmPeriodosLetivosCadastro);
   frmPeriodosLetivosCadastro.Show;
   frmPeriodosLetivosCadastro.status := 'I';
 end;

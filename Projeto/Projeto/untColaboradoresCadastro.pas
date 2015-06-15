@@ -5,16 +5,19 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Data.DB;
 
 type
   TfrmColaboradoresCadastro = class(Tfrm_modelo_cadastro)
     lbledt_col_codigo: TLabeledEdit;
     lbledt_col_nome: TLabeledEdit;
     lbledt_col_senha: TLabeledEdit;
-    lbledt_col_nivel_acesso: TLabeledEdit;
     lbledt_col_usuario: TLabeledEdit;
+    RBSecretaria: TRadioButton;
+    RBDiretoria: TRadioButton;
+    Label2: TLabel;
     procedure btnSalvarClick(Sender: TObject);
+    procedure btnCancelarClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -31,6 +34,12 @@ implementation
 
 uses classColaboradores, untColaboradoresConsulta;
 
+procedure TfrmColaboradoresCadastro.btnCancelarClick(Sender: TObject);
+begin
+  inherited;
+Close;
+end;
+
 procedure TfrmColaboradoresCadastro.btnSalvarClick(Sender: TObject);
 var
 col : TClassColaboradores;
@@ -41,10 +50,17 @@ begin
   if status = 'I' then
 begin
    //Alimentar os atributos da classe
-   col.COL_CODIGO := StrToInt(lbledt_col_nome.Text);
+   col.COL_CODIGO := StrToInt(lbledt_col_codigo.Text);
    col.COL_NOME := lbledt_col_nome.Text;
    col.COL_SENHA := lbledt_col_senha.Text;
-   col.COL_NIVEL_ACESSO := lbledt_col_nivel_acesso.Text;
+   if RBSecretaria.Checked then
+   begin
+   col.COL_NIVEL_ACESSO := 'S';
+   end
+   else if RBDiretoria.Checked then
+   begin
+     col.COL_NIVEL_ACESSO := 'D';
+   end;
    col.COL_USUARIO := lbledt_col_usuario.Text;
 
     if col.Inserir() then
@@ -63,7 +79,14 @@ begin
   col.COL_CODIGO := StrToInt(lbledt_col_codigo.Text);
   col.COL_NOME := lbledt_col_nome.Text;
   col.COL_SENHA := lbledt_col_senha.Text;
-  col.COL_NIVEL_ACESSO := lbledt_col_nivel_acesso.Text;
+  if RBSecretaria.Checked then
+   begin
+   col.COL_NIVEL_ACESSO := 'S';
+   end
+   else if RBDiretoria.Checked then
+   begin
+     col.COL_NIVEL_ACESSO := 'D';
+   end;
   col.COL_USUARIO := lbledt_col_usuario.Text;
 
   if col.Alterar() then

@@ -9,6 +9,9 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
   inherited Panel2: TPanel
     Width = 370
     Height = 273
+    ExplicitTop = 64
+    ExplicitWidth = 370
+    ExplicitHeight = 273
     inherited btnSalvar: TSpeedButton
       Left = 39
       Top = 191
@@ -70,6 +73,7 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
   end
   inherited Panel1: TPanel
     Width = 370
+    ExplicitWidth = 370
     inherited Label1: TLabel
       Width = 218
       Caption = 'Cadastro de s'#233'ries'

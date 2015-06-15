@@ -32,7 +32,9 @@ uses
   untAreasCadastro in 'untAreasCadastro.pas' {frmAreasCadastro},
   untAreasConsulta in 'untAreasConsulta.pas' {frmAreasConsulta},
   untTurnosConsulta in 'untTurnosConsulta.pas' {frmTurnosConsulta},
-  classFuncoes in 'classFuncoes.pas';
+  classFuncoes in 'classFuncoes.pas',
+  untMateriasCadastro in 'untMateriasCadastro.pas' {frmMateriasCadastro},
+  untMateriasConsulta in 'untMateriasConsulta.pas' {frmMateriasConsulta};
 
 {$R *.res}
 
@@ -58,5 +60,7 @@ begin
   Application.CreateForm(TfrmAreasCadastro, frmAreasCadastro);
   Application.CreateForm(TfrmAreasConsulta, frmAreasConsulta);
   Application.CreateForm(TfrmTurnosConsulta, frmTurnosConsulta);
+  Application.CreateForm(TfrmMateriasCadastro, frmMateriasCadastro);
+  Application.CreateForm(TfrmMateriasConsulta, frmMateriasConsulta);
   Application.Run;
 end.

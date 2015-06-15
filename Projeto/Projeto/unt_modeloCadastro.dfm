@@ -11,6 +11,7 @@ object frm_modelo_cadastro: Tfrm_modelo_cadastro
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object Panel2: TPanel
@@ -209,5 +210,9 @@ object frm_modelo_cadastro: Tfrm_modelo_cadastro
       Font.Style = []
       ParentFont = False
     end
+  end
+  object dsdados: TDataSource
+    Left = 376
+    Top = 329
   end
 end

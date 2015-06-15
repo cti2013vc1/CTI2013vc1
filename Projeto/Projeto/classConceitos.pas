@@ -11,12 +11,12 @@ type
     FCON_NOME: string;
     FCON_LETRA: string;
     procedure SetCON_LETRA(const Value: string);
-    procedure SetPEL_CODIGO(const Value: integer);
-    procedure SetPEL_NOME(const Value: string);
+    procedure SetCON_CODIGO(const Value: integer);
+    procedure SetCON_NOME(const Value: string);
 
   public
-    property CON_NOME : string read FCON_NOME write SetPEL_NOME;
-    property CON_CODIGO : integer read FCON_CODIGO write SetPEL_CODIGO;
+    property CON_NOME : string read FCON_NOME write SetCON_NOME;
+    property CON_CODIGO : integer read FCON_CODIGO write SetCON_CODIGO;
     property CON_LETRA : string read FCON_LETRA write SetCON_LETRA;
 
 
@@ -135,7 +135,7 @@ fdquery.SQL.Add('VALUES ');
 fdquery.SQL.Add('( ');
 fdquery.SQL.Add(':CON_CODIGO, ');//**
 fdquery.SQL.Add(':CON_NOME, ');//**
-fdquery.SQL.Add(':CON_LETRAS ');//**
+fdquery.SQL.Add(':CON_LETRA ');//**
 fdquery.SQL.Add(') ');
 //atribuir os valores para os parametros da SQL
 fdquery.ParamByName('CON_CODIGO').Value := FCON_CODIGO;
@@ -155,14 +155,14 @@ begin
   FCON_LETRA := Value;
 end;
 
-procedure TclassConceitos.SetPEL_CODIGO(const Value: integer);
+procedure TclassConceitos.SetCON_CODIGO(const Value: integer);
 begin
-
+  FCON_CODIGO := Value;
 end;
 
-procedure TclassConceitos.SetPEL_NOME(const Value: string);
+procedure TclassConceitos.SetCON_NOME(const Value: string);
 begin
-
+  FCON_NOME := Value;
 end;
 
 end.

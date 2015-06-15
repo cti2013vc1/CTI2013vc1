@@ -81,10 +81,11 @@ con := TFDQuery.Create(nil);
 con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                 '+
                      'MATERIAS.MAT_CODIGO,   '+
-                     'MATERIAS.MAT_CEP,      '+
-                     'AREAS.ARC_CODIGO       '+
+                     'MATERIAS.MAT_NOME,      '+
+                     'AREAS.ARC_CODIGO,       '+
+                     'ARES.ARC_NOME           '+
                      'FROM MATERIAS          '+
-                     'LEFT OUTER JOIN AREAS ON ( AREAS.AREAS_ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO ) ');
+                     'LEFT OUTER JOIN AREAS ON ( AREAS.ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO ) ');
 con.Open();
 result := con;
 end;

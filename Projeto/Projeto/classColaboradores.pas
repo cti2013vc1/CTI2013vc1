@@ -54,7 +54,7 @@ fdquery.Connection := DMConexao.FDConnection1;
 fdquery.SQL.Add('UPDATE ');
 fdquery.SQL.Add('COLABORADORES ');//TABELA QUE VAI ALTERAR
 fdquery.SQL.Add('SET ');
-fdquery.SQL.Add('COL_NOME = :COL_NOMED_NOME, ');  //CAMPO DE ALTERA플O
+fdquery.SQL.Add('COL_NOME = :COL_NOME, ');  //CAMPO DE ALTERA플O
 fdquery.SQL.Add('COL_SENHA = :COL_SENHA, ');  //CAMPO DE ALTERA플O
 fdquery.SQL.Add('COL_NIVEL_ACESSO = :COL_NIVEL_ACESSO, ');  //CAMPO DE ALTERA플O
 fdquery.SQL.Add('COL_USUARIO = :COL_USUARIO ');  //CAMPO DE ALTERA플O

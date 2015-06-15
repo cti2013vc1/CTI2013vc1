@@ -24,6 +24,12 @@ var
       if Form.Components[i] is TEdit then
       begin
          (Form.Components[i] as TEdit).Clear;
+      end
+      else if Form.Components[i] is TRadioButton then
+      begin
+
+        (Form.Components[i] as TRadioButton).Checked := False;
+
       end;
 
     end;

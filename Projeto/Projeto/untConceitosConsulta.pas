@@ -26,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-uses classConceitos, untConceitosCadastro;
+uses classConceitos, untConceitosCadastro, classFuncoes;
 
 procedure TfrmConceitosConsulta.btnEditarClick(Sender: TObject);
 var
@@ -63,6 +63,7 @@ end;
 procedure TfrmConceitosConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
+  LimparCampos(frmConceitosCadastro);
   frmConceitosCadastro.Show;
   frmConceitosCadastro.status := 'I';
 end;
@@ -73,7 +74,7 @@ conceitos : TClassConceitos;
 begin
   inherited;
    conceitos := TClassConceitos.Create;
-  dsdados.DataSet := conceitos.ConsultarConceitos();
+   dsdados.DataSet := conceitos.ConsultarConceitos();
 end;
 
 end.

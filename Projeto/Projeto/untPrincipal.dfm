@@ -12,6 +12,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu1: TMainMenu
@@ -49,6 +50,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Matrias1: TMenuItem
         Caption = 'Mat'#233'rias'
+        OnClick = Matrias1Click
       end
       object Matrculas1: TMenuItem
         Caption = 'Matr'#237'culas'

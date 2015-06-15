@@ -26,7 +26,7 @@ implementation
 
 {$R *.dfm}
 
-uses classSeries, untSeriesCadastro;
+uses classSeries, untSeriesCadastro, classFuncoes;
 
 procedure TfrmSeriesConsulta.btnEditarClick(Sender: TObject);
 var
@@ -63,6 +63,7 @@ end;
 procedure TfrmSeriesConsulta.btnInserirClick(Sender: TObject);
 begin
   inherited;
+  LimparCampos(frmSeriesCadastro);
   frmSeriesCadastro.Show;
   frmSeriesCadastro.status := 'I';
 end;

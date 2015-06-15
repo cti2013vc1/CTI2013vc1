@@ -1,6 +1,8 @@
 inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
   Caption = 'Consulta de colaboradores'
   OnShow = FormShow
+  ExplicitWidth = 693
+  ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -31,7 +33,7 @@ inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
           Expanded = False
           FieldName = 'COL_SENHA'
           Title.Caption = 'Senha'
-          Visible = True
+          Visible = False
         end
         item
           Expanded = False
