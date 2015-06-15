@@ -1,0 +1,38 @@
+inherited frmMateriasCadastro: TfrmMateriasCadastro
+  Caption = 'Cadastro de mat'#233'rias'
+  ExplicitTop = -61
+  ExplicitWidth = 478
+  ExplicitHeight = 520
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited Panel2: TPanel
+    object LabeledEdit1: TLabeledEdit
+      Left = 32
+      Top = 48
+      Width = 121
+      Height = 21
+      EditLabel.Width = 61
+      EditLabel.Height = 13
+      EditLabel.Caption = 'LabeledEdit1'
+      TabOrder = 0
+    end
+    object DBLookupComboBox1: TDBLookupComboBox
+      Left = 32
+      Top = 104
+      Width = 145
+      Height = 21
+      TabOrder = 1
+    end
+  end
+  inherited Panel1: TPanel
+    inherited Label1: TLabel
+      Width = 252
+      Caption = 'Cadastro de mat'#233'rias'
+      ExplicitWidth = 252
+    end
+  end
+  inherited dsdados: TDataSource
+    Left = 408
+    Top = 409
+  end
+end
