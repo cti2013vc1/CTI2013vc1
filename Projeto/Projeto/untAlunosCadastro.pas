@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Mask, Vcl.ComCtrls;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Vcl.Mask, Vcl.ComCtrls,
+  Data.DB;
 
 type
   TfrmAlunosCadastro = class(Tfrm_modelo_cadastro)
@@ -16,6 +17,7 @@ type
     dtpDtaNascimento: TDateTimePicker;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure dtpDtaNascimentoChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -82,6 +84,12 @@ begin
   end;
 
 end;
+end;
+
+procedure TfrmAlunosCadastro.dtpDtaNascimentoChange(Sender: TObject);
+begin
+  inherited;
+MK_DataNascimento.Text := FormatDateTime('dd/MM/yyyy',dtpDtaNascimento.Date);
 end;
 
 end.

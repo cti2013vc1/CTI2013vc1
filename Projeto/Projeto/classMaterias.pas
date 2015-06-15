@@ -41,7 +41,7 @@ fdquery.Connection := DMConexao.FDConnection1;
 fdquery.SQL.Add('UPDATE ');
 fdquery.SQL.Add('MATERIAS ');//TABELA QUE VAI ALTERAR
 fdquery.SQL.Add('SET ');
-fdquery.SQL.Add('MAT_NOME = :CID_NOME, ');  //CAMPO DE ALTERAÇÃO
+fdquery.SQL.Add('MAT_NOME = :MAT_NOME, ');  //CAMPO DE ALTERAÇÃO
 fdquery.SQL.Add('AREAS_ARC_CODIGO = :AREAS_ARC_CODIGO ');  //CAMPO DE ALTERAÇÃO
 //APOS O ULTIMO CAMPO NÃO VAI VIRGULA
 fdquery.SQL.Add('WHERE ');
@@ -83,7 +83,7 @@ con.sql.Add(         'SELECT                 '+
                      'MATERIAS.MAT_CODIGO,   '+
                      'MATERIAS.MAT_NOME,      '+
                      'AREAS.ARC_CODIGO,       '+
-                     'ARES.ARC_NOME           '+
+                     'AREAS.ARC_NOME           '+
                      'FROM MATERIAS          '+
                      'LEFT OUTER JOIN AREAS ON ( AREAS.ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO ) ');
 con.Open();

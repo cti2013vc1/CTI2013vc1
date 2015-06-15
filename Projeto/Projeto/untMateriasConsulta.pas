@@ -9,6 +9,9 @@ uses
 
 type
   TfrmMateriasConsulta = class(Tfrm_modelo_consulta)
+    procedure btnInserirClick(Sender: TObject);
+    procedure btnEditarClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
     { Private declarations }
@@ -23,17 +26,55 @@ implementation
 
 {$R *.dfm}
 
-uses classMaterias;
+uses classFuncoes, untMateriasCadastro, classMaterias;
+
+procedure TfrmMateriasConsulta.btnEditarClick(Sender: TObject);
+var
+mat : TClassMaterias;
+begin
+  inherited;
+  mat:= TClassMaterias.Create();
+  mat.MAT_CODIGO := dsdados.DataSet.FieldByName ('MAT_CODIGO').Value;
+  mat.Carregar;
+  frmMateriasCadastro.lbledt_mat_codigo.Text := mat.MAT_CODIGO.ToString;
+  frmMateriasCadastro.lbledt_mat_nome.Text := mat.MAT_NOME;
+  frmMateriasCadastro.DBL_materias.KeyValue := mat.AREAS_ARC_CODIGO.ToString;
+  frmMateriasCadastro.Show;
+  //criar a variavel status dentro do public do
+   frmMateriasCadastro.status := 'E';
+
+end;
+
+procedure TfrmMateriasConsulta.btnExcluirClick(Sender: TObject);
+var
+ mat : TClassMaterias;
+begin
+  inherited;
+  mat:= TClassMaterias.Create;
+  mat.MAT_CODIGO :=  dsdados.DataSet.FieldByName('MAT_CODIGO').Value;
+
+if mat.Excluir then
+begin
+  ShowMessage('Registro excluído com sucesso!');
+  FormShow(nil);
+end;
+end;
+
+procedure TfrmMateriasConsulta.btnInserirClick(Sender: TObject);
+begin
+  inherited;
+  LimparCampos(frmMateriasCadastro);
+  frmMateriasCadastro.Show;
+  frmMateriasCadastro.status := 'I';
+end;
 
 procedure TfrmMateriasConsulta.FormShow(Sender: TObject);
 var
-materias : TClassMaterias;
-
+mat : TClassMaterias;
 begin
   inherited;
-  materias := TclassMaterias.Create;
-  dsdados.DataSet := materias.ConsultarMaterias;
-
+  mat := TClassMaterias.Create;
+  dsdados.DataSet := mat.ConsultarMaterias();
 end;
 
 end.

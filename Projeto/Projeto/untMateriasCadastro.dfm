@@ -1,26 +1,36 @@
 inherited frmMateriasCadastro: TfrmMateriasCadastro
   Caption = 'Cadastro de mat'#233'rias'
   ClientHeight = 394
-  ClientWidth = 338
+  ClientWidth = 368
   OnShow = FormShow
-  ExplicitWidth = 354
+  ExplicitWidth = 384
   ExplicitHeight = 433
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    Width = 338
+    Width = 368
     Height = 329
+    ExplicitLeft = -8
+    ExplicitTop = 64
+    ExplicitWidth = 368
+    ExplicitHeight = 329
     inherited btnSalvar: TSpeedButton
-      Left = 36
+      Left = 44
       Top = 255
+      OnClick = btnSalvarClick
+      ExplicitLeft = 36
+      ExplicitTop = 255
     end
     inherited btnCancelar: TSpeedButton
-      Left = 158
+      Left = 178
       Top = 255
+      OnClick = btnCancelarClick
+      ExplicitLeft = 158
+      ExplicitTop = 255
     end
     object Label2: TLabel
       Left = 32
-      Top = 189
+      Top = 176
       Width = 34
       Height = 18
       Caption = #193'rea'
@@ -56,9 +66,9 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
       TabOrder = 0
       Text = 'lbledt_mat_codigo'
     end
-    object DBLookupComboBox1: TDBLookupComboBox
+    object DBL_materias: TDBLookupComboBox
       Left = 32
-      Top = 208
+      Top = 192
       Width = 193
       Height = 26
       Font.Charset = DEFAULT_CHARSET
@@ -99,7 +109,8 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
     end
   end
   inherited Panel1: TPanel
-    Width = 338
+    Width = 368
+    ExplicitWidth = 368
     inherited Label1: TLabel
       Width = 252
       Caption = 'Cadastro de mat'#233'rias'

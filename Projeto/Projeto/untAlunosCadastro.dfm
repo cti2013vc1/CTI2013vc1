@@ -1,25 +1,27 @@
 inherited frmAlunosCadastro: TfrmAlunosCadastro
   Caption = 'Cadastro de alunos'
   ClientHeight = 463
-  ClientWidth = 376
-  ExplicitWidth = 392
+  ClientWidth = 428
+  ExplicitWidth = 444
   ExplicitHeight = 502
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    Width = 376
+    Width = 428
     Height = 398
-    ExplicitWidth = 376
+    ExplicitLeft = -8
+    ExplicitTop = 129
+    ExplicitWidth = 428
     ExplicitHeight = 398
     inherited btnSalvar: TSpeedButton
-      Left = 32
+      Left = 44
       Top = 324
       OnClick = btnSalvarClick
       ExplicitLeft = 32
       ExplicitTop = 324
     end
     inherited btnCancelar: TSpeedButton
-      Left = 183
+      Left = 217
       Top = 324
       OnClick = btnCancelarClick
       ExplicitLeft = 167
@@ -123,22 +125,27 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
       Text = '  /  /    '
     end
     object dtpDtaNascimento: TDateTimePicker
-      Left = 167
+      Left = 159
       Top = 181
-      Width = 186
-      Height = 21
+      Width = 14
+      Height = 26
       Date = 42167.616706678240000000
       Time = 42167.616706678240000000
       TabOrder = 4
+      OnChange = dtpDtaNascimentoChange
     end
   end
   inherited Panel1: TPanel
-    Width = 376
+    Width = 428
     ExplicitWidth = 376
     inherited Label1: TLabel
       Width = 227
       Caption = 'Cadastro de alunos'
       ExplicitWidth = 227
     end
+  end
+  inherited dsdados: TDataSource
+    Left = 280
+    Top = 305
   end
 end
