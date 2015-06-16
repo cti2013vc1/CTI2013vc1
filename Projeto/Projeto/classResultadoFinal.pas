@@ -64,7 +64,7 @@ fdquery.Connection := DMConexao.FDConnection1;
 fdquery.SQL.Add('UPDATE ');
 fdquery.SQL.Add('RESULTADO_FINAL ');//TABELA QUE VAI ALTERAR
 fdquery.SQL.Add('SET ');
-fdquery.SQL.Add('RES_FALTA = :RES_FALTA, ');  //CAMPO DE ALTERA플O
+fdquery.SQL.Add('RES_FALTAS = :RES_FALTAS, ');  //CAMPO DE ALTERA플O
 fdquery.SQL.Add('RES_AULAS_DADAS = :RES_AULAS_DADAS, ');  //CAMPO DE ALTERA플O
 fdquery.SQL.Add('RES_CC = :RES_CC, ');  //CAMPO DE ALTERA플O
 fdquery.SQL.Add('RES_CA = :RES_CA, ');  //CAMPO DE ALTERA플O
@@ -80,7 +80,7 @@ fdquery.ParamByName('ANO').Value := ANO;
 fdquery.ParamByName('ALUNOS_ALU_CODIGO').Value := ALUNOS_ALU_CODIGO;
 fdquery.ParamByName('TURMAS_TUR_CODIGO').Value := TURMAS_TUR_CODIGO;
 fdquery.ParamByName('MATERIAS_MAT_CODIGO').Value := MATERIAS_MAT_CODIGO;
-fdquery.ParamByName('RES_FALTA').Value := RES_FALTA;
+fdquery.ParamByName('RES_FALTAS').Value := RES_FALTAS;
 fdquery.ParamByName('RES_AULAS_DADAS').Value := RES_AULAS_DADAS;
 fdquery.ParamByName('RES_CC').Value := RES_CC;
 fdquery.ParamByName('RES_CA').Value := RES_CA;
@@ -110,7 +110,7 @@ fdquery.ParamByName('TURMAS_TUR_CODIGO').Value := FTURMAS_TUR_CODIGO;
 fdquery.ParamByName('MATERIAS_MAT_CODIGO').Value := FMATERIAS_MAT_CODIGO;
 
 fdquery.Open();
-FRES_FALTA := fdquery.FieldByName('RES_FALTA').Value;
+FRES_FALTAS := fdquery.FieldByName('RES_FALTAS').Value;
 FRES_AULAS_DADAS := fdquery.FieldByName('RES_AULAS_DADAS').Value;
 FRES_CC := fdquery.FieldByName('RES_CC').Value;
 FRES_CA := fdquery.FieldByName('RES_CA').Value;
@@ -129,7 +129,7 @@ con.sql.Add(         'SELECT                 '+
                      'ALUNOS.ALU_CODIGO,     '+
                      'TURMAS.TUR_CODIGO,      '+
                      'MATERIAS.MAT_CODIGO,    '+
-                     'RESULTADO_FINAL.RES_FALTA,    '+
+                     'RESULTADO_FINAL.RES_FALTAS,    '+
                      'RESULTADO_FINAL.RES_AULAS_DADAS,    '+
                      'RESULTADO_FINAL.RES_CC,    '+
                      'RESULTADO_FINAL.RES_CA,    '+
@@ -183,7 +183,7 @@ fdquery.SQL.Add('ANO, ');//**
 fdquery.SQL.Add('ALUNOS_ALU_CODIGO, ');//**
 fdquery.SQL.Add('TURMAS_TUR_CODIGO, ');//**
 fdquery.SQL.Add('MATERIAS_MAT_CODIGO, ');//**
-fdquery.SQL.Add('RES_FALTA, ');//**
+fdquery.SQL.Add('RES_FALTAS, ');//**
 fdquery.SQL.Add('RES_AULAS_DADAS, ');//**
 fdquery.SQL.Add('RES_CC, ');//**
 fdquery.SQL.Add('RES_CA, ');//**
@@ -195,7 +195,7 @@ fdquery.SQL.Add(':ANO, ');//**
 fdquery.SQL.Add(':ALUNOS_ALU_CODIGO, ');//**
 fdquery.SQL.Add(':TURMAS_TUR_CODIGO, ');//**
 fdquery.SQL.Add(':MATERIAS_MAT_CODIGO, ');//**
-fdquery.SQL.Add(':RES_FALTA, ');//**
+fdquery.SQL.Add(':RES_FALTAS, ');//**
 fdquery.SQL.Add(':RES_AULAS_DADAS, ');//**
 fdquery.SQL.Add(':RES_CC, ');//**
 fdquery.SQL.Add(':RES_CA, ');//**
@@ -206,7 +206,7 @@ fdquery.ParamByName('ANO').Value := FANO;
 fdquery.ParamByName('ALUNOS_ALU_CODIGO').Value := FALUNOS_ALU_CODIGO;
 fdquery.ParamByName('TURMAS_TUR_CODIGO').Value := FTURMAS_TUR_CODIGO;
 fdquery.ParamByName('MATERIAS_MAT_CODIGO').Value := FMATERIAS_MAT_CODIGO;
-fdquery.ParamByName('RES_FALTA').Value := FRES_FALTA;
+fdquery.ParamByName('RES_FALTAS').Value := FRES_FALTAS;
 fdquery.ParamByName('RES_AULAS_DADAS').Value := FRES_AULAS_DADAS;
 fdquery.ParamByName('RES_CC').Value := FRES_CC;
 fdquery.ParamByName('RES_CA').Value := FRES_CA;

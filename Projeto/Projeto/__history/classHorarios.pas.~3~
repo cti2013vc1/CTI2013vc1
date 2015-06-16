@@ -1,0 +1,95 @@
+unit classResultadoFinal;
+
+interface
+
+uses
+  FireDAC.Comp.Client, FireDAC.DApt;
+
+type
+  TclassHorarios = class
+
+  Private
+    FANO: integer;
+    FMATERIAS_MAT_CODIGO: integer;
+    FCOLABORADORES_COL_CODIGO: integer;
+    FHOR_CODIGO: integer;
+    FTURMAS_TUR_CODIGO: integer;
+    procedure SetANO(const Value: integer);
+    procedure SetCOLABORADORES_COL_CODIGO(const Value: integer);
+    procedure SetHOR_CODIGO(const Value: integer);
+    procedure SetMATERIAS_MAT_CODIGO(const Value: integer);
+    procedure SetTURMAS_TUR_CODIGO(const Value: integer);
+
+  Public
+  property HOR_CODIGO : integer read FHOR_CODIGO write SetHOR_CODIGO;
+  property COLABORADORES_COL_CODIGO : integer read FCOLABORADORES_COL_CODIGO write SetCOLABORADORES_COL_CODIGO;
+  property TURMAS_TUR_CODIGO : integer read FTURMAS_TUR_CODIGO write SetTURMAS_TUR_CODIGO;
+  property MATERIAS_MAT_CODIGO : integer read FMATERIAS_MAT_CODIGO write SetMATERIAS_MAT_CODIGO;
+  property ANO : integer read FANO write SetANO;
+
+       //Depois de colocar todos os campos clicke Ctrl + Shift + C
+
+    //escrever a uses acima do type
+ function ConsultarAlunos(): TFDQuery;
+ function Inserir(): boolean;
+ procedure Carregar();
+ function Alterar() : boolean;
+ function Excluir() : boolean;
+  end;
+
+implementation
+
+uses untConexao;
+{ TclassHorarios }
+
+function TclassHorarios.Alterar: boolean;
+begin
+
+end;
+
+procedure TclassHorarios.Carregar;
+begin
+
+end;
+
+function TclassHorarios.ConsultarAlunos: TFDQuery;
+begin
+
+end;
+
+function TclassHorarios.Excluir: boolean;
+begin
+
+end;
+
+function TclassHorarios.Inserir: boolean;
+begin
+
+end;
+
+procedure TclassHorarios.SetANO(const Value: integer);
+begin
+  FANO := Value;
+end;
+
+procedure TclassHorarios.SetCOLABORADORES_COL_CODIGO(const Value: integer);
+begin
+  FCOLABORADORES_COL_CODIGO := Value;
+end;
+
+procedure TclassHorarios.SetHOR_CODIGO(const Value: integer);
+begin
+  FHOR_CODIGO := Value;
+end;
+
+procedure TclassHorarios.SetMATERIAS_MAT_CODIGO(const Value: integer);
+begin
+  FMATERIAS_MAT_CODIGO := Value;
+end;
+
+procedure TclassHorarios.SetTURMAS_TUR_CODIGO(const Value: integer);
+begin
+  FTURMAS_TUR_CODIGO := Value;
+end;
+
+end.
