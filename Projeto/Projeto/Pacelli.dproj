@@ -179,7 +179,9 @@
             <Form>frmMateriasConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="classMateriasPorSerie.pas"/>
+        <DCCReference Include="classResultadoFinal.pas"/>
+        <DCCReference Include="classNotas.pas"/>
+        <DCCReference Include="classHorarios.pas"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

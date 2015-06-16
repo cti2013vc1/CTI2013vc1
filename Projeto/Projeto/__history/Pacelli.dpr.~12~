@@ -35,9 +35,7 @@ uses
   classFuncoes in 'classFuncoes.pas',
   untMateriasCadastro in 'untMateriasCadastro.pas' {frmMateriasCadastro},
   untMateriasConsulta in 'untMateriasConsulta.pas' {frmMateriasConsulta},
-  classResultadoFinal in 'classResultadoFinal.pas',
-  classNotas in 'classNotas.pas',
-  classHorarios in 'classHorarios.pas';
+  classMateriasPorSerie in 'classMateriasPorSerie.pas';
 
 {$R *.res}
 
