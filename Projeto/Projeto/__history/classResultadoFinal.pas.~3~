@@ -195,10 +195,10 @@ fdquery.SQL.Add(':ANO, ');//**
 fdquery.SQL.Add(':ALUNOS_ALU_CODIGO, ');//**
 fdquery.SQL.Add(':TURMAS_TUR_CODIGO, ');//**
 fdquery.SQL.Add(':MATERIAS_MAT_CODIGO, ');//**
-fdquery.SQL.Add(':RES_FALTA, ');//**
-fdquery.SQL.Add(':RES_AULAS_DADAS, ');//**
-fdquery.SQL.Add(':RES_CC, ');//**
-fdquery.SQL.Add(':RES_CA, ');//**
+fdquery.SQL.Add(':RES_FALTA ');//**
+fdquery.SQL.Add(':RES_AULAS_DADAS ');//**
+fdquery.SQL.Add(':RES_CC ');//**
+fdquery.SQL.Add(':RES_CA ');//**
 fdquery.SQL.Add(':RES_OBS ');//**
 fdquery.SQL.Add(') ');
 //atribuir os valores para os parametros da SQL
