@@ -3,7 +3,7 @@ unit classTurmas;
 interface
 
 uses
-  FireDAC.Comp.Client, FireDAC.DApt;
+  FireDAC.Comp.Client, FireDAC.DApt, Dialogs;
 
 type
   TclassTurmas = class
@@ -107,9 +107,10 @@ con.sql.Add(         'SELECT                '+
                      'PERIODOS_LETIVOS.PEL_CODIGO,       '+
                      'TURNOS.TUR_CODIGO       '+
                      'FROM TURMAS          '+
-                     'LEFT OUTER JOIN SERIES ON ( SERIES.SERIES_SER_CODIGO = TURMAS.SERIES_SER_CODIGO ) '+
-                     'LEFT OUTER JOIN PERIODOS ON ( PERIODOS_LETIVOS.PERIODOS_LETIVOS_PEL_CODIGO = TURMAS.PERIODOS_LETIVOS_PEL_CODIGO ) '+
-                     'LEFT OUTER JOIN TURNOS ON ( TURNOS.TURNOS_TUR_CODIGO = TURMAS.TURNOS_TUR_CODIGO ) ');
+                     'LEFT OUTER JOIN SERIES ON ( SERIES.SER_CODIGO = TURMAS.SERIES_SER_CODIGO ) '+
+                     'LEFT OUTER JOIN periodos_letivos ON ( PERIODOS_LETIVOS.PEL_CODIGO = TURMAS.PERIODOS_LETIVOS_PEL_CODIGO ) '+
+                     'LEFT OUTER JOIN TURNOS ON ( TURNOS.TUR_CODIGO = TURMAS.TURNOS_TUR_CODIGO ) ');
+
 con.Open();
 result := con;
 end;

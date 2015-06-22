@@ -8,6 +8,7 @@ object DMConexao: TDMConexao
       'User_Name=root'
       'Database=pacelli_tarde'
       'DriverID=MySQL')
+    Connected = True
     LoginPrompt = False
     Left = 40
     Top = 32

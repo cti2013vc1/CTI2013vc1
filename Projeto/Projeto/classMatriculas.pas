@@ -3,7 +3,7 @@ unit classMatriculas;
 interface
 
 uses
-  FireDAC.Comp.Client, FireDAC.DApt;
+  FireDAC.Comp.Client, FireDAC.DApt, Dialogs;
 
 type
   TclassMatriculas = class
@@ -63,6 +63,7 @@ fdquery.ParamByName('ALUNOS_ALU_CODIGO').Value := ALUNOS_ALU_CODIGO;
 fdquery.ParamByName('TURMAS_TUR_CODIGO').Value := TURMAS_TUR_CODIGO;
 fdquery.ParamByName('MATERIAS_MAT_CODIGO').Value := MATERIAS_MAT_CODIGO;
 fdquery.ParamByName('MAT_DATA').Value := MAT_DATA;
+
 //executa no banco de dados
 fdquery.ExecSQL;
 //verifica se realmente fez a alteração no banco
@@ -101,13 +102,17 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                 '+
                      'MATRICULAS.ANO,   '+
                      'ALUNOS.ALU_CODIGO,     '+
+                     'ALUNOS.ALU_NOME,'     +
+                     'TURMAS.TUR_CODIGO,      '+
                      'TURMAS.TUR_CODIGO,      '+
                      'MATERIAS.MAT_CODIGO,    '+
+                     'MATERIAS.MAT_NOME,    '+
                      'MATRICULAS.MAT_DATA    '+
-                     'FROM MATERIAS          '+
-                     'LEFT OUTER JOIN ALUNOS ON ( ALUNOS.ALUNOS_ALU_CODIGO = MATRICULAS.ALUNOS_ALU_CODIGO ) '+
-                     'LEFT OUTER JOIN TURMAS ON ( TURMAS.TURMAS_TUR_CODIGO = MATRICULAS.TURMAS_TUR_CODIGO ) '+
-                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MATERIAS_MAT_CODIGO = MATRICULAS.MATERIAS_MAT_CODIGO ) ');
+                     'FROM MATRICULAS          '+
+                     'LEFT OUTER JOIN ALUNOS ON ( ALUNOS.ALU_CODIGO = MATRICULAS.ALUNOS_ALU_CODIGO ) '+
+                     'LEFT OUTER JOIN TURMAS ON ( TURMAS.TUR_CODIGO = MATRICULAS.TURMAS_TUR_CODIGO ) '+
+                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = MATRICULAS.MATERIAS_MAT_CODIGO ) ');
+
 con.Open();
 result := con;
 

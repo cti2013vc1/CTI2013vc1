@@ -9,8 +9,6 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
   inherited Panel2: TPanel
     Width = 428
     Height = 398
-    ExplicitLeft = -8
-    ExplicitTop = 129
     ExplicitWidth = 428
     ExplicitHeight = 398
     inherited btnSalvar: TSpeedButton
@@ -137,7 +135,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
   end
   inherited Panel1: TPanel
     Width = 428
-    ExplicitWidth = 376
+    ExplicitWidth = 428
     inherited Label1: TLabel
       Width = 227
       Caption = 'Cadastro de alunos'

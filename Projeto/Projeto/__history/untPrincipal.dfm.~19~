@@ -2,8 +2,8 @@ object frmPrincipal: TfrmPrincipal
   Left = 0
   Top = 0
   Caption = 'Menu'
-  ClientHeight = 201
-  ClientWidth = 447
+  ClientHeight = 263
+  ClientWidth = 459
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -12,6 +12,7 @@ object frmPrincipal: TfrmPrincipal
   Font.Style = []
   Menu = MainMenu1
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object MainMenu1: TMainMenu
@@ -25,9 +26,11 @@ object frmPrincipal: TfrmPrincipal
       end
       object urnos1: TMenuItem
         Caption = 'Turnos'
+        OnClick = urnos1Click
       end
       object reas1: TMenuItem
         Caption = #193'reas'
+        OnClick = reas1Click
       end
       object Cadastrodesries1: TMenuItem
         Caption = 'S'#233'ries'
@@ -47,6 +50,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Matrias1: TMenuItem
         Caption = 'Mat'#233'rias'
+        OnClick = Matrias1Click
       end
       object Matrculas1: TMenuItem
         Caption = 'Matr'#237'culas'

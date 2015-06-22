@@ -54,6 +54,7 @@ object frmPrincipal: TfrmPrincipal
       end
       object Matrculas1: TMenuItem
         Caption = 'Matr'#237'culas'
+        OnClick = Matrculas1Click
       end
       object urmas1: TMenuItem
         Caption = 'Turmas'
