@@ -1,0 +1,44 @@
+unit untHorariosCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Data.DB,
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Vcl.DBCtrls;
+
+type
+  TfrmHorariosCadastro = class(Tfrm_modelo_cadastro)
+    HOR_CODIGO: TLabeledEdit;
+    DBL_colaboradores: TDBLookupComboBox;
+    DBL_turmas: TDBLookupComboBox;
+    DBL_materias: TDBLookupComboBox;
+    lbledt_ano: TLabeledEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    procedure btnSalvarClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmHorariosCadastro: TfrmHorariosCadastro;
+
+implementation
+
+{$R *.dfm}
+
+uses classHorarios;
+
+procedure TfrmHorariosCadastro.btnSalvarClick(Sender: TObject);
+var
+  hor : TClassHorarios;
+begin
+  inherited;
+
+end;
+
+end.

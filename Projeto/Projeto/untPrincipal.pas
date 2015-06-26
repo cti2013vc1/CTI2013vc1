@@ -32,6 +32,7 @@ type
     procedure urnos1Click(Sender: TObject);
     procedure Matrias1Click(Sender: TObject);
     procedure Matrculas1Click(Sender: TObject);
+    procedure urmas1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -48,7 +49,8 @@ implementation
 uses untPeriodosLetivosConsulta, untSeriesCadastro, untSeriesConsulta,
   untColaboradoresConsulta, untConceitosConsulta, untAlunosCadastro,
   untAreasConsulta, untTurnosConsulta, untAlunosConsulta, untMaterias,
-  untMateriasConsulta, untMateriasCadastro, untMatriculasConsulta;
+  untMateriasConsulta, untMateriasCadastro, untMatriculasConsulta,
+  untTurmasConsulta;
 
 
 
@@ -90,6 +92,11 @@ end;
 procedure TfrmPrincipal.reas1Click(Sender: TObject);
 begin
 frmAreasConsulta.Show;
+end;
+
+procedure TfrmPrincipal.urmas1Click(Sender: TObject);
+begin
+frmTurmasConsulta.Show;
 end;
 
 procedure TfrmPrincipal.urnos1Click(Sender: TObject);

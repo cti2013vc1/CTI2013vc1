@@ -39,7 +39,10 @@ uses
   classNotas in 'classNotas.pas',
   classHorarios in 'classHorarios.pas',
   untMatriculasCadastro in 'untMatriculasCadastro.pas' {frmMatriculasCadastro},
-  untMatriculasConsulta in 'untMatriculasConsulta.pas' {frmMatriculasConsulta};
+  untMatriculasConsulta in 'untMatriculasConsulta.pas' {frmMatriculasConsulta},
+  untTurmasCadastro in 'untTurmasCadastro.pas' {frmTurmasCadastro},
+  untTurmasConsulta in 'untTurmasConsulta.pas' {frmTurmasConsulta},
+  untHorariosCadastro in 'untHorariosCadastro.pas' {frmHorariosCadastro};
 
 {$R *.res}
 
@@ -69,5 +72,8 @@ begin
   Application.CreateForm(TfrmMateriasConsulta, frmMateriasConsulta);
   Application.CreateForm(TfrmMatriculasCadastro, frmMatriculasCadastro);
   Application.CreateForm(TfrmMatriculasConsulta, frmMatriculasConsulta);
+  Application.CreateForm(TfrmTurmasCadastro, frmTurmasCadastro);
+  Application.CreateForm(TfrmTurmasConsulta, frmTurmasConsulta);
+  Application.CreateForm(TfrmHorariosCadastro, frmHorariosCadastro);
   Application.Run;
 end.

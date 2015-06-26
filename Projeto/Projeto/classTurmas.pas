@@ -102,10 +102,12 @@ con := TFDQuery.Create(nil);
 con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'TURMAS.TUR_CODIGO,   '+
-                     'TURMAS.TUR_NOME,      '+
                      'SERIES.SER_CODIGO,       '+
+                     'SERIES.SER_NOME,       '+
                      'PERIODOS_LETIVOS.PEL_CODIGO,       '+
-                     'TURNOS.TUR_CODIGO       '+
+                     'PERIODOS_LETIVOS.PEL_NOME,       '+
+                     'TURNOS.TUR_CODIGO,       '+
+                     'TURMAS.TUR_NOME      '+
                      'FROM TURMAS          '+
                      'LEFT OUTER JOIN SERIES ON ( SERIES.SER_CODIGO = TURMAS.SERIES_SER_CODIGO ) '+
                      'LEFT OUTER JOIN periodos_letivos ON ( PERIODOS_LETIVOS.PEL_CODIGO = TURMAS.PERIODOS_LETIVOS_PEL_CODIGO ) '+

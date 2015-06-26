@@ -1,0 +1,25 @@
+unit untHorariosCadastro;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Data.DB,
+  Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  Tfrm_modelo_cadastro1 = class(Tfrm_modelo_cadastro)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_modelo_cadastro1: Tfrm_modelo_cadastro1;
+
+implementation
+
+{$R *.dfm}
+
+end.

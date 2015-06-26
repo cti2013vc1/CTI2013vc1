@@ -3,7 +3,6 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
   ClientHeight = 505
   ClientWidth = 467
   OnShow = FormShow
-  ExplicitTop = -83
   ExplicitWidth = 483
   ExplicitHeight = 544
   PixelsPerInch = 96
@@ -11,8 +10,6 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
   inherited Panel2: TPanel
     Width = 467
     Height = 440
-    ExplicitLeft = 8
-    ExplicitTop = 64
     ExplicitWidth = 467
     ExplicitHeight = 440
     inherited btnSalvar: TSpeedButton
@@ -154,16 +151,18 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     object MK_Data: TMaskEdit
       Left = 32
       Top = 232
-      Width = 121
+      Width = 120
       Height = 26
+      EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
+      MaxLength = 10
       ParentFont = False
       TabOrder = 4
-      Text = ''
+      Text = '  /  /    '
     end
     object DTP_data: TDateTimePicker
       Left = 151
