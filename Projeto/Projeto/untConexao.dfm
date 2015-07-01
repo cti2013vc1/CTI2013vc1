@@ -4,11 +4,11 @@ object DMConexao: TDMConexao
   Width = 534
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Server=localhost'
-      'User_Name=root'
+      'Server=paginas.setrem.com.br'
+      'User_Name=ctitarde'
       'Database=pacelli_tarde'
+      'Password=Ctivesp15'
       'DriverID=MySQL')
-    Connected = True
     LoginPrompt = False
     Left = 40
     Top = 32

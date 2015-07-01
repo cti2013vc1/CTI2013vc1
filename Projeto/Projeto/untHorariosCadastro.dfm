@@ -1,5 +1,8 @@
 inherited frmHorariosCadastro: TfrmHorariosCadastro
   Caption = 'Cadastro de horarios'
+  OnShow = FormShow
+  ExplicitWidth = 478
+  ExplicitHeight = 520
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -52,7 +55,7 @@ inherited frmHorariosCadastro: TfrmHorariosCadastro
     object lbledt_hor_codigo: TLabeledEdit
       Left = 32
       Top = 40
-      Width = 121
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -74,47 +77,56 @@ inherited frmHorariosCadastro: TfrmHorariosCadastro
     object DBL_colaboradores: TDBLookupComboBox
       Left = 32
       Top = 96
-      Width = 217
+      Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
+      KeyField = 'COL_CODIGO'
+      ListField = 'COL_NOME'
+      ListSource = ds_colaboradores
       ParentFont = False
       TabOrder = 1
     end
     object DBL_turmas: TDBLookupComboBox
       Left = 32
       Top = 152
-      Width = 217
+      Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
+      KeyField = 'TUR_CODIGO'
+      ListField = 'TUR_NOME'
+      ListSource = ds_turmas
       ParentFont = False
       TabOrder = 2
     end
     object DBL_materias: TDBLookupComboBox
       Left = 32
       Top = 208
-      Width = 217
+      Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
+      KeyField = 'MAT_CODIGO'
+      ListField = 'MAT_NOME'
+      ListSource = ds_materias
       ParentFont = False
       TabOrder = 3
     end
     object lbledt_ano: TLabeledEdit
       Left = 32
       Top = 272
-      Width = 121
-      Height = 26
+      Width = 100
+      Height = 24
       EditLabel.Width = 28
       EditLabel.Height = 18
       EditLabel.Caption = 'Ano'
@@ -139,5 +151,21 @@ inherited frmHorariosCadastro: TfrmHorariosCadastro
       Caption = 'Cadastro de hor'#225'rios'
       ExplicitWidth = 247
     end
+  end
+  inherited dsdados: TDataSource
+    Left = 360
+    Top = 345
+  end
+  object ds_colaboradores: TDataSource
+    Left = 368
+    Top = 145
+  end
+  object ds_turmas: TDataSource
+    Left = 360
+    Top = 209
+  end
+  object ds_materias: TDataSource
+    Left = 360
+    Top = 273
   end
 end

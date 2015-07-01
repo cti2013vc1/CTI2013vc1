@@ -62,7 +62,7 @@ begin
    matriculas.ALUNOS_ALU_CODIGO := StrToInt(DBL_alu_codigo.KeyValue);
    matriculas.TURMAS_TUR_CODIGO := StrToInt(DBL_turmas_codigo.KeyValue);
    matriculas.MATERIAS_MAT_CODIGO := StrToInt(DBL_mat_codigo.KeyValue);
-   matriculas.MAT_DATA := DTP_data.Date;
+   matriculas.MAT_DATA := StrToDate(MK_Data.Text);
    matriculas.ANO := StrToInt(lbledt_ano.Text);
 
 
@@ -120,6 +120,10 @@ begin
 
   materias := TClassMaterias.Create;
   dsmaterias.DataSet := materias.ConsultarMaterias();
+
+
+
+
 
 end;
 

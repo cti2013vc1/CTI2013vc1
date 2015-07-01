@@ -1,5 +1,0 @@
-inherited frmMatriculasConsulta: TfrmMatriculasConsulta
-  Caption = 'Consulta de matr'#237'culas'
-  PixelsPerInch = 96
-  TextHeight = 13
-end

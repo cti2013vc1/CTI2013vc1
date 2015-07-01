@@ -1,95 +1,91 @@
-inherited frm_modelo_cadastro1: Tfrm_modelo_cadastro1
-  Caption = 'Cadastro de materias por s'#233'rie'
-  ClientHeight = 333
-  ClientWidth = 380
-  ExplicitWidth = 396
-  ExplicitHeight = 372
+inherited frmMateriasPorSerieCadastro: TfrmMateriasPorSerieCadastro
+  Caption = 'Cadastro de mat'#233'rias por s'#233'rie'
+  ClientHeight = 384
+  ClientWidth = 504
+  ExplicitWidth = 520
+  ExplicitHeight = 423
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    Width = 380
-    Height = 268
-    ExplicitTop = 64
-    ExplicitWidth = 380
-    ExplicitHeight = 268
+    Width = 504
+    Height = 319
+    ExplicitWidth = 504
+    ExplicitHeight = 319
     inherited btnSalvar: TSpeedButton
-      Left = 48
-      Top = 194
-      OnClick = btnSalvarClick
+      Left = 81
+      Top = 245
+      ExplicitLeft = 81
+      ExplicitTop = 245
     end
     inherited btnCancelar: TSpeedButton
-      Left = 186
-      Top = 194
+      Left = 268
+      Top = 245
+      ExplicitLeft = 268
+      ExplicitTop = 245
     end
     object Label2: TLabel
-      Left = 32
-      Top = 37
-      Width = 121
+      Left = 40
+      Top = 40
+      Width = 53
       Height = 18
-      Caption = 'Nome da mat'#233'ria'
-      Color = clBlack
+      Caption = 'Mat'#233'ria'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
-      ParentColor = False
       ParentFont = False
     end
     object Label3: TLabel
-      Left = 32
-      Top = 101
-      Width = 103
+      Left = 40
+      Top = 115
+      Width = 38
       Height = 18
-      Caption = 'Nome da s'#233'rie'
-      Color = clBlack
+      Caption = 'S'#233'rie'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
-      ParentColor = False
       ParentFont = False
     end
-    object DB_materias_mat_codigo: TDBLookupComboBox
-      Left = 32
-      Top = 56
-      Width = 217
-      Height = 26
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -16
-      Font.Name = 'Arial'
-      Font.Style = []
-      KeyField = 'MATERIAS_MAT_CODIGO'
-      ListField = 'MATERIAS_MAT_NOME'
-      ListSource = dsdados
-      ParentFont = False
+    object DBL_materias: TDBLookupComboBox
+      Left = 40
+      Top = 61
+      Width = 420
+      Height = 21
+      KeyField = 'MAT_CODIGO'
+      ListField = 'MAT_NOME'
+      ListSource = dsmateria
       TabOrder = 0
     end
-    object DB_series_ser_codigo: TDBLookupComboBox
-      Left = 32
-      Top = 120
-      Width = 217
-      Height = 26
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clBlack
-      Font.Height = -16
-      Font.Name = 'Arial'
-      Font.Style = []
-      KeyField = 'SERIES_SER_CODIGO'
-      ListField = 'SERIES_SER_NOME'
-      ListSource = dsdados
-      ParentFont = False
+    object DBL_serie: TDBLookupComboBox
+      Left = 40
+      Top = 135
+      Width = 420
+      Height = 21
       TabOrder = 1
     end
   end
   inherited Panel1: TPanel
-    Width = 380
+    Width = 504
+    ExplicitWidth = 504
     inherited Label1: TLabel
       Width = 364
       Caption = 'Cadastro de mat'#233'rias por s'#233'rie'
       ExplicitWidth = 364
     end
+  end
+  inherited dsdados: TDataSource
+    Left = 440
+    Top = 321
+  end
+  object dsmateria: TDataSource
+    Left = 456
+    Top = 153
+  end
+  object dsserie: TDataSource
+    Left = 456
+    Top = 241
   end
 end

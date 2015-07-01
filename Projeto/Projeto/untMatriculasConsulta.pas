@@ -36,11 +36,15 @@ begin
   inherited;
   matriculas:= TClassMatriculas.Create();
   matriculas.ANO := dsdados.DataSet.FieldByName ('ANO').Value;
+  matriculas.ALUNOS_ALU_CODIGO := dsdados.DataSet.FieldByName('ALU_CODIGO').Value;
+  matriculas.TURMAS_TUR_CODIGO := dsdados.DataSet.FieldByName('TUR_CODIGO').Value;
+  matriculas.MATERIAS_MAT_CODIGO := dsdados.DataSet.FieldByName('MAT_CODIGO').Value;
   matriculas.Carregar;
-  frmMatriculasCadastro.DBL_alu_codigo.KeyValue := matriculas.ALUNOS_ALU_CODIGO.ToString;
-  frmMatriculasCadastro.DBL_turmas_codigo.KeyValue := matriculas.TURMAS_TUR_CODIGO.ToString;
-  frmMatriculasCadastro.DBL_mat_codigo.KeyValue := matriculas.MATERIAS_MAT_CODIGO.ToString;
+  frmMatriculasCadastro.DBL_alu_codigo.KeyValue := matriculas.ALUNOS_ALU_CODIGO;
+  frmMatriculasCadastro.DBL_turmas_codigo.KeyValue := matriculas.TURMAS_TUR_CODIGO;
+  frmMatriculasCadastro.DBL_mat_codigo.KeyValue := matriculas.MATERIAS_MAT_CODIGO;
   frmMatriculasCadastro.MK_Data.Text := DateToStr(matriculas.MAT_DATA);
+  frmMatriculasCadastro.lbledt_ano.Text := IntToStr(matriculas.ANO);
   frmMatriculasCadastro.Show;
   //criar a variavel status dentro do public do
    frmMatriculasCadastro.status := 'E';
@@ -53,6 +57,10 @@ begin
   inherited;
   matriculas:= TclassMatriculas.Create;
   matriculas.ANO :=  dsdados.DataSet.FieldByName('ANO').Value;
+  matriculas.ALUNOS_ALU_CODIGO :=  dsdados.DataSet.FieldByName('ALU_CODIGO').Value;
+  matriculas.TURMAS_TUR_CODIGO :=  dsdados.DataSet.FieldByName('TUR_CODIGO').Value;
+  matriculas.MATERIAS_MAT_CODIGO :=  dsdados.DataSet.FieldByName('MAT_CODIGO').Value;
+
 
 if matriculas.Excluir then
 begin

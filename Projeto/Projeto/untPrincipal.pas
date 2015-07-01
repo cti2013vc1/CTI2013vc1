@@ -4,14 +4,14 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus;
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.Menus, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls;
 
 type
   TfrmPrincipal = class(TForm)
-    MainMenu1: TMainMenu;
+    Menu: TMainMenu;
     Cadastrodeperodosletivos1: TMenuItem;
     Cadastrodesries1: TMenuItem;
-    menu1: TMenuItem;
     Colaboradores1: TMenuItem;
     Conceitos1: TMenuItem;
     Alunos1: TMenuItem;
@@ -19,10 +19,10 @@ type
     Matrculas1: TMenuItem;
     urmas1: TMenuItem;
     Horrios1: TMenuItem;
-    Notas1: TMenuItem;
-    Resultadofinal1: TMenuItem;
     reas1: TMenuItem;
     urnos1: TMenuItem;
+    Panel1: TPanel;
+    Image1: TImage;
     procedure Cadastrodeperodosletivos1Click(Sender: TObject);
     procedure Cadastrodesries1Click(Sender: TObject);
     procedure Colaboradores1Click(Sender: TObject);
@@ -33,6 +33,7 @@ type
     procedure Matrias1Click(Sender: TObject);
     procedure Matrculas1Click(Sender: TObject);
     procedure urmas1Click(Sender: TObject);
+    procedure Horrios1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -50,7 +51,7 @@ uses untPeriodosLetivosConsulta, untSeriesCadastro, untSeriesConsulta,
   untColaboradoresConsulta, untConceitosConsulta, untAlunosCadastro,
   untAreasConsulta, untTurnosConsulta, untAlunosConsulta, untMaterias,
   untMateriasConsulta, untMateriasCadastro, untMatriculasConsulta,
-  untTurmasConsulta;
+  untTurmasConsulta, untHorariosConsulta;
 
 
 
@@ -77,6 +78,11 @@ end;
 procedure TfrmPrincipal.Conceitos1Click(Sender: TObject);
 begin
 frmConceitosConsulta.Show;
+end;
+
+procedure TfrmPrincipal.Horrios1Click(Sender: TObject);
+begin
+frmHorariosConsulta.Show;
 end;
 
 procedure TfrmPrincipal.Matrculas1Click(Sender: TObject);

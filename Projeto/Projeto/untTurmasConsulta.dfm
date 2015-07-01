@@ -1,8 +1,11 @@
 inherited frmTurmasConsulta: TfrmTurmasConsulta
   Caption = 'Consulta de turmas'
+  Font.Name = 'Arial'
   OnShow = FormShow
+  ExplicitWidth = 693
+  ExplicitHeight = 498
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 14
   inherited Panel2: TPanel
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
@@ -14,38 +17,65 @@ inherited frmTurmasConsulta: TfrmTurmasConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
+      Font.Height = -15
+      Font.Name = 'Arial'
       Columns = <
         item
           Expanded = False
           FieldName = 'TUR_CODIGO'
-          Title.Caption = 'C'#243'digo da turma'
-          Width = 106
+          Title.Caption = 'C'#243'digo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 74
           Visible = True
         end
         item
           Expanded = False
-          FieldName = 'SER_CODIGO'
+          FieldName = 'SER_NOME'
           Title.Caption = 'S'#233'rie'
-          Width = 65
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 105
           Visible = True
         end
         item
           Expanded = False
-          FieldName = 'PEL_CODIGO'
+          FieldName = 'PEL_NOME'
           Title.Caption = 'Per'#237'odos letivos'
-          Width = 104
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 114
           Visible = True
         end
         item
           Expanded = False
-          FieldName = 'TUR_CODIGO'
+          FieldName = 'TURNO_NOME'
           Title.Caption = 'Turno'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
           Visible = True
         end
         item
           Expanded = False
           FieldName = 'TUR_NOME'
           Title.Caption = 'Nome da turma'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
           Width = 103
           Visible = True
         end>

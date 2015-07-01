@@ -1,10 +1,11 @@
 inherited frmAreasConsulta: TfrmAreasConsulta
   Caption = 'Consulta de '#225'reas'
+  Font.Name = 'Arial'
   OnShow = FormShow
   ExplicitWidth = 693
   ExplicitHeight = 498
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 14
   inherited Panel2: TPanel
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
@@ -16,6 +17,8 @@ inherited frmAreasConsulta: TfrmAreasConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
+      Font.Height = -15
+      Font.Name = 'Arial'
       Columns = <
         item
           Expanded = False
@@ -26,6 +29,12 @@ inherited frmAreasConsulta: TfrmAreasConsulta
           Font.Name = 'Arial'
           Font.Style = []
           Title.Caption = 'C'#243'digo'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 91
           Visible = True
         end
         item
@@ -37,6 +46,12 @@ inherited frmAreasConsulta: TfrmAreasConsulta
           Font.Name = 'Arial'
           Font.Style = []
           Title.Caption = 'Nome'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 146
           Visible = True
         end>
     end

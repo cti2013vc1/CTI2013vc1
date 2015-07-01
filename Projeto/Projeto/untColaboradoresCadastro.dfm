@@ -1,26 +1,25 @@
 inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
   Caption = 'Cadastro de colaboradores'
   ClientHeight = 505
-  ClientWidth = 431
-  ExplicitTop = -85
-  ExplicitWidth = 447
+  ClientWidth = 445
+  ExplicitWidth = 461
   ExplicitHeight = 544
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    Width = 431
+    Width = 445
     Height = 440
     ExplicitWidth = 431
     ExplicitHeight = 440
     inherited btnSalvar: TSpeedButton
-      Left = 62
+      Left = 66
       Top = 366
       OnClick = btnSalvarClick
       ExplicitLeft = 62
       ExplicitTop = 366
     end
     inherited btnCancelar: TSpeedButton
-      Left = 220
+      Left = 229
       Top = 366
       OnClick = btnCancelarClick
       ExplicitLeft = 220
@@ -42,7 +41,7 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
     object lbledt_col_codigo: TLabeledEdit
       Left = 32
       Top = 48
-      Width = 121
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -64,7 +63,7 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
     object lbledt_col_nome: TLabeledEdit
       Left = 32
       Top = 112
-      Width = 121
+      Width = 350
       Height = 26
       EditLabel.Width = 42
       EditLabel.Height = 18
@@ -86,7 +85,7 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
     object lbledt_col_senha: TLabeledEdit
       Left = 32
       Top = 178
-      Width = 209
+      Width = 200
       Height = 26
       EditLabel.Width = 45
       EditLabel.Height = 18
@@ -109,7 +108,7 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
     object lbledt_col_usuario: TLabeledEdit
       Left = 32
       Top = 310
-      Width = 121
+      Width = 350
       Height = 26
       EditLabel.Width = 54
       EditLabel.Height = 18
@@ -158,7 +157,7 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
     end
   end
   inherited Panel1: TPanel
-    Width = 431
+    Width = 445
     ExplicitWidth = 431
     inherited Label1: TLabel
       Width = 317

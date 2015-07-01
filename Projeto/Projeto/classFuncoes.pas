@@ -2,7 +2,7 @@ unit classFuncoes;
 
 interface
 uses
-  VCl.Forms, Vcl.ExtCtrls, Vcl.StdCtrls;
+  VCl.Forms, Vcl.ExtCtrls, Vcl.StdCtrls, DBCtrls, ComCtrls, SysUtils;
 
   procedure LimparCampos(Form : TForm);
 
@@ -30,7 +30,18 @@ var
 
         (Form.Components[i] as TRadioButton).Checked := False;
 
-      end;
+      end else if Form.Components[i] is TDBLookupComboBox then
+        begin
+         //   (Form.Components[i] as TDBLookupComboBox).DataSource.DataSet.Close;
+         //   (Form.Components[i] as TDBLookupComboBox).DataSource.DataSet.Open;
+        end else if (Form.Components[i] is TDateTimePicker) then
+        begin
+
+           (Form.Components[i] as TDateTimePicker).Date := Now();
+
+        end;
+
+
 
     end;
 

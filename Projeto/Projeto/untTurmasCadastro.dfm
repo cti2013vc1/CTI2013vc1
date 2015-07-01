@@ -6,7 +6,6 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    ExplicitTop = 64
     inherited btnSalvar: TSpeedButton
       OnClick = btnSalvarClick
     end
@@ -54,8 +53,8 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object lbledt_tur_codigo: TLabeledEdit
       Left = 32
-      Top = 40
-      Width = 121
+      Top = 41
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -77,31 +76,31 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     object DBL_ser_codigo: TDBLookupComboBox
       Left = 32
       Top = 96
-      Width = 145
+      Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
-      KeyField = 'SERIES_SER_CODIGO'
-      ListField = 'SERIES_SER_NOME'
-      ListSource = dsdados
+      KeyField = 'SER_CODIGO'
+      ListField = 'SER_NOME'
+      ListSource = ds_serie
       ParentFont = False
       TabOrder = 1
     end
     object DBL_periodos_letivos_codigo: TDBLookupComboBox
       Left = 32
       Top = 152
-      Width = 145
+      Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
-      KeyField = 'PERIODOS_LETIVOS_PEL_CODIGO'
-      ListField = 'PERIODOS_LETIVOS_PEL_NOME'
+      KeyField = 'PEL_CODIGO'
+      ListField = 'PEL_NOME'
       ListSource = dsperiodoletivo
       ParentFont = False
       TabOrder = 2
@@ -109,15 +108,15 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     object DBL_tur_codigo: TDBLookupComboBox
       Left = 32
       Top = 208
-      Width = 145
+      Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
       Font.Height = -16
       Font.Name = 'Arial'
       Font.Style = []
-      KeyField = 'TURNOS_TUR_CODIGO'
-      ListField = 'TURNOS_TUR_NOME'
+      KeyField = 'TUR_CODIGO'
+      ListField = 'TUR_NOME'
       ListSource = dsturnos
       ParentFont = False
       TabOrder = 3
@@ -125,7 +124,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     object lbledt_tur_nome: TLabeledEdit
       Left = 32
       Top = 272
-      Width = 273
+      Width = 300
       Height = 26
       EditLabel.Width = 107
       EditLabel.Height = 18
@@ -153,7 +152,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
   end
   inherited dsdados: TDataSource
-    Top = 137
+    Top = 81
   end
   object dsperiodoletivo: TDataSource
     Left = 376
@@ -162,5 +161,9 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
   object dsturnos: TDataSource
     Left = 384
     Top = 297
+  end
+  object ds_serie: TDataSource
+    Left = 376
+    Top = 153
   end
 end

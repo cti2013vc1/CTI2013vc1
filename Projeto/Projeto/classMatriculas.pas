@@ -3,7 +3,7 @@ unit classMatriculas;
 interface
 
 uses
-  FireDAC.Comp.Client, FireDAC.DApt, Dialogs;
+  FireDAC.Comp.Client, FireDAC.DApt, Dialogs, System.SysUtils;
 
 type
   TclassMatriculas = class
@@ -62,7 +62,7 @@ fdquery.ParamByName('ANO').Value := ANO;
 fdquery.ParamByName('ALUNOS_ALU_CODIGO').Value := ALUNOS_ALU_CODIGO;
 fdquery.ParamByName('TURMAS_TUR_CODIGO').Value := TURMAS_TUR_CODIGO;
 fdquery.ParamByName('MATERIAS_MAT_CODIGO').Value := MATERIAS_MAT_CODIGO;
-fdquery.ParamByName('MAT_DATA').Value := MAT_DATA;
+fdquery.ParamByName('MAT_DATA').Value := FormatDateTime('yyyy-MM-dd',FMAT_DATA);
 
 //executa no banco de dados
 fdquery.ExecSQL;
@@ -104,7 +104,7 @@ con.sql.Add(         'SELECT                 '+
                      'ALUNOS.ALU_CODIGO,     '+
                      'ALUNOS.ALU_NOME,'     +
                      'TURMAS.TUR_CODIGO,      '+
-                     'TURMAS.TUR_CODIGO,      '+
+                     'TURMAS.TUR_NOME,      '+
                      'MATERIAS.MAT_CODIGO,    '+
                      'MATERIAS.MAT_NOME,    '+
                      'MATRICULAS.MAT_DATA    '+
@@ -126,7 +126,7 @@ fdquery := TFDQuery.Create(nil);
 fdquery.Connection := DMConexao.FDConnection1;
 fdquery.SQL.Add('DELETE ');
 fdquery.SQL.Add('FROM ');
-fdquery.SQL.Add('MATERIAS ');
+fdquery.SQL.Add('MATRICULAS ');
 fdquery.SQL.Add('WHERE');
 fdquery.SQL.Add('ANO = :ANO AND ');
 fdquery.SQL.Add('ALUNOS_ALU_CODIGO = :ALUNOS_ALU_CODIGO AND ');
@@ -173,7 +173,7 @@ fdquery.ParamByName('ANO').Value := FANO;
 fdquery.ParamByName('ALUNOS_ALU_CODIGO').Value := FALUNOS_ALU_CODIGO;
 fdquery.ParamByName('TURMAS_TUR_CODIGO').Value := FTURMAS_TUR_CODIGO;
 fdquery.ParamByName('MATERIAS_MAT_CODIGO').Value := FMATERIAS_MAT_CODIGO;
-fdquery.ParamByName('MAT_DATA').Value := FMAT_DATA;
+fdquery.ParamByName('MAT_DATA').Value := FormatDateTime('yyyy-MM-dd',FMAT_DATA);
 
 fdquery.ExecSQL();
 if fdquery.RowsAffected > 0 then

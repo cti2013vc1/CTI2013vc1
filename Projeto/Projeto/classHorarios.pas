@@ -30,7 +30,7 @@ type
        //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarAlunos(): TFDQuery;
+ function ConsultarHorarios(): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -93,7 +93,7 @@ FANO := fdquery.FieldByName('ANO').Value;
 
 end;
 
-function TclassHorarios.ConsultarAlunos: TFDQuery;
+function TclassHorarios.ConsultarHorarios: TFDQuery;
 var
 con : TFDQuery;
 begin

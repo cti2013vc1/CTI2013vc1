@@ -1,8 +1,0 @@
-inherited frmSeriesConsulta: TfrmSeriesConsulta
-  Caption = 'Consulta de s'#233'ries'
-  PixelsPerInch = 96
-  TextHeight = 13
-  inherited Panel1: TPanel
-    Caption = 'Consulta de s'#233'ries'
-  end
-end

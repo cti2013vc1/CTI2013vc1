@@ -9,20 +9,28 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
   inherited Panel2: TPanel
     Width = 371
     Height = 272
+    ExplicitLeft = -8
+    ExplicitTop = 64
+    ExplicitWidth = 371
+    ExplicitHeight = 272
     inherited btnSalvar: TSpeedButton
       Left = 45
       Top = 198
       OnClick = btnSalvarClick
+      ExplicitLeft = 45
+      ExplicitTop = 198
     end
     inherited btnCancelar: TSpeedButton
       Left = 180
       Top = 198
       OnClick = btnCancelarClick
+      ExplicitLeft = 180
+      ExplicitTop = 198
     end
     object lbledt_tur_codigo: TLabeledEdit
       Left = 32
       Top = 48
-      Width = 113
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -46,7 +54,7 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
     object lbledt_tur_nome: TLabeledEdit
       Left = 32
       Top = 122
-      Width = 193
+      Width = 250
       Height = 26
       EditLabel.Width = 102
       EditLabel.Height = 18
@@ -70,6 +78,7 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
   end
   inherited Panel1: TPanel
     Width = 371
+    ExplicitWidth = 371
     inherited Label1: TLabel
       Width = 233
       Caption = 'Cadastro de Turnos'

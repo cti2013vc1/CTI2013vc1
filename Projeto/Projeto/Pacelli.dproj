@@ -202,6 +202,14 @@
             <Form>frmHorariosCadastro</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="untHorariosConsulta.pas">
+            <Form>frmHorariosConsulta</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untMateriasPorSerieCadastro.pas">
+            <Form>frmMateriasPorSerieCadastro</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

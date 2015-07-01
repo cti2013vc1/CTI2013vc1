@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
-  Vcl.ExtCtrls, Vcl.Imaging.pngimage, Vcl.Buttons;
+  Vcl.ExtCtrls, Vcl.Imaging.pngimage, Vcl.Buttons, Data.DB;
 
 type
   TfrmSeriesCadastro = class(Tfrm_modelo_cadastro)

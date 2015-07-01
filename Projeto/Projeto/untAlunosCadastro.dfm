@@ -43,7 +43,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
     object lbledt_alu_codigo: TLabeledEdit
       Left = 32
       Top = 48
-      Width = 49
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -65,7 +65,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
     object lbledt_alu_nome: TLabeledEdit
       Left = 32
       Top = 112
-      Width = 201
+      Width = 350
       Height = 26
       EditLabel.Width = 42
       EditLabel.Height = 18
@@ -87,7 +87,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
     object lbledt_alu_inep: TLabeledEdit
       Left = 32
       Top = 240
-      Width = 129
+      Width = 150
       Height = 26
       EditLabel.Width = 29
       EditLabel.Height = 18
@@ -109,7 +109,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
     object MK_DataNascimento: TMaskEdit
       Left = 30
       Top = 181
-      Width = 131
+      Width = 150
       Height = 26
       EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
@@ -123,7 +123,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
       Text = '  /  /    '
     end
     object dtpDtaNascimento: TDateTimePicker
-      Left = 159
+      Left = 179
       Top = 181
       Width = 14
       Height = 26

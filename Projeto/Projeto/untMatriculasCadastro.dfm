@@ -41,7 +41,7 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object Label3: TLabel
       Left = 33
-      Top = 85
+      Top = 84
       Width = 107
       Height = 18
       Caption = 'Nome da turma'
@@ -54,7 +54,7 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object Label4: TLabel
       Left = 32
-      Top = 152
+      Top = 148
       Width = 121
       Height = 18
       Caption = 'Nome da mat'#233'ria'
@@ -67,7 +67,7 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object Label5: TLabel
       Left = 33
-      Top = 213
+      Top = 210
       Width = 122
       Height = 18
       Caption = 'Data da matr'#237'cula'
@@ -80,8 +80,8 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object lbledt_ano: TLabeledEdit
       Left = 32
-      Top = 298
-      Width = 121
+      Top = 291
+      Width = 100
       Height = 26
       EditLabel.Width = 28
       EditLabel.Height = 18
@@ -102,8 +102,8 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object DBL_alu_codigo: TDBLookupComboBox
       Left = 32
-      Top = 48
-      Width = 335
+      Top = 42
+      Width = 350
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -119,7 +119,7 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     object DBL_turmas_codigo: TDBLookupComboBox
       Left = 32
       Top = 101
-      Width = 249
+      Width = 350
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -134,8 +134,8 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object DBL_mat_codigo: TDBLookupComboBox
       Left = 33
-      Top = 168
-      Width = 249
+      Top = 165
+      Width = 350
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -150,8 +150,8 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
     end
     object MK_Data: TMaskEdit
       Left = 32
-      Top = 232
-      Width = 120
+      Top = 229
+      Width = 100
       Height = 26
       EditMask = '!99/99/0000;1;_'
       Font.Charset = DEFAULT_CHARSET
@@ -165,8 +165,8 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
       Text = '  /  /    '
     end
     object DTP_data: TDateTimePicker
-      Left = 151
-      Top = 232
+      Left = 131
+      Top = 229
       Width = 18
       Height = 26
       Date = 42172.680768518520000000

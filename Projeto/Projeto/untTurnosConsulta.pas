@@ -33,9 +33,6 @@ var
    tur: TClassTurnos;
 begin
   inherited;
-
-
-
   tur:= TClassTurnos.Create();
   LimparCampos(frmTurnosCadastro);
   tur.TUR_CODIGO := dsdados.DataSet.FieldByName ('TUR_CODIGO').Value;
@@ -46,7 +43,6 @@ begin
   frmTurnosCadastro.Show;
   //criar a variavel status dentro do public do
    frmTurnosCadastro.status := 'E';
-
 end;
 
 procedure TfrmTurnosConsulta.btnExcluirClick(Sender: TObject);

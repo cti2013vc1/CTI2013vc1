@@ -107,6 +107,7 @@ con.sql.Add(         'SELECT                '+
                      'PERIODOS_LETIVOS.PEL_CODIGO,       '+
                      'PERIODOS_LETIVOS.PEL_NOME,       '+
                      'TURNOS.TUR_CODIGO,       '+
+                     'TURNOS.TUR_NOME AS TURNO_NOME,       '+
                      'TURMAS.TUR_NOME      '+
                      'FROM TURMAS          '+
                      'LEFT OUTER JOIN SERIES ON ( SERIES.SER_CODIGO = TURMAS.SERIES_SER_CODIGO ) '+

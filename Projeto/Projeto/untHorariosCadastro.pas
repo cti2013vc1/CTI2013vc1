@@ -17,8 +17,12 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    ds_colaboradores: TDataSource;
+    ds_turmas: TDataSource;
+    ds_materias: TDataSource;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -33,7 +37,8 @@ implementation
 
 {$R *.dfm}
 
-uses classHorarios;
+uses classHorarios, untHorariosConsulta, classColaboradores, classMaterias,
+  classTurmas;
 
 procedure TfrmHorariosCadastro.btnCancelarClick(Sender: TObject);
 begin
@@ -55,7 +60,7 @@ begin
    hor.COLABORADORES_COL_CODIGO := StrToInt(DBL_colaboradores.KeyValue);
    hor.TURMAS_TUR_CODIGO := StrToInt(DBL_turmas.KeyValue);
    hor.MATERIAS_MAT_CODIGO := StrToInt(DBL_materias.KeyValue);
-   hor.ANO := lbledt_ano.Text;
+   hor.ANO := StrToInt(lbledt_ano.Text);
 
 
     if hor.Inserir() then
@@ -75,9 +80,7 @@ begin
    hor.COLABORADORES_COL_CODIGO := StrToInt(DBL_colaboradores.KeyValue);
    hor.TURMAS_TUR_CODIGO := StrToInt(DBL_turmas.KeyValue);
    hor.MATERIAS_MAT_CODIGO := StrToInt(DBL_materias.KeyValue);
-   hor.ANO := lbledt_ano.Text;
-
-
+   hor.ANO := StrToInt(lbledt_ano.Text);
 
   if hor.Alterar() then
   begin
@@ -87,6 +90,24 @@ begin
     //fecha o formulario
     Close;
   end;
+end;
+end;
+procedure TfrmHorariosCadastro.FormShow(Sender: TObject);
+var
+  colaboradores : TClassColaboradores;
+  turmas : TClassTurmas;
+  materias : TClassMaterias;
+begin
+  inherited;
+  colaboradores := TClassColaboradores.Create;
+  ds_colaboradores.DataSet := colaboradores.ConsultarColaboradores();
+
+  turmas := TClassTurmas.Create;
+  ds_turmas.DataSet := turmas.ConsultarTurmas();
+
+  materias := TClassMaterias.Create;
+  ds_materias.DataSet := materias.ConsultarMaterias();
+
 end;
 
 end.

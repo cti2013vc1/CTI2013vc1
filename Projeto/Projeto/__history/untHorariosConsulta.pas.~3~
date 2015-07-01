@@ -1,0 +1,36 @@
+unit untHorariosConsulta;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloConsulta, Data.DB, Vcl.Grids,
+  Vcl.DBGrids, Vcl.Buttons, Vcl.StdCtrls, Vcl.Imaging.pngimage, Vcl.ExtCtrls;
+
+type
+  TfrmHorariosConsulta = class(Tfrm_modelo_consulta)
+    procedure btnInserirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmHorariosConsulta: TfrmHorariosConsulta;
+
+implementation
+
+{$R *.dfm}
+
+uses classFuncoes, untHorariosCadastro;
+
+procedure TfrmHorariosConsulta.btnInserirClick(Sender: TObject);
+begin
+  inherited;
+  LimparCampos(frmHorariosCadastro);
+  frmHorariosCadastro.Show;
+  frmHorariosCadastro.status := 'I';
+end;
+
+end.

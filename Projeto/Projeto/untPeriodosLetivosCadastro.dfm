@@ -1,5 +1,7 @@
 inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
   Caption = 'Cadastro de Per'#237'odos Letivos'
+  ExplicitWidth = 478
+  ExplicitHeight = 520
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
@@ -53,7 +55,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
     object lbledt_codigo: TLabeledEdit
       Left = 32
       Top = 56
-      Width = 113
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -75,7 +77,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
     object lbledt_nome: TLabeledEdit
       Left = 32
       Top = 128
-      Width = 204
+      Width = 300
       Height = 26
       EditLabel.Width = 55
       EditLabel.Height = 18
@@ -97,7 +99,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
     object lbledt_qtdenotas: TLabeledEdit
       Left = 32
       Top = 198
-      Width = 49
+      Width = 50
       Height = 26
       EditLabel.Width = 168
       EditLabel.Height = 18

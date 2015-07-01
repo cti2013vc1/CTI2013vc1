@@ -10,8 +10,6 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
   inherited Panel2: TPanel
     Width = 368
     Height = 329
-    ExplicitLeft = -8
-    ExplicitTop = 64
     ExplicitWidth = 368
     ExplicitHeight = 329
     inherited btnSalvar: TSpeedButton
@@ -30,7 +28,7 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
     end
     object Label2: TLabel
       Left = 32
-      Top = 176
+      Top = 168
       Width = 34
       Height = 18
       Caption = #193'rea'
@@ -44,7 +42,7 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
     object lbledt_mat_codigo: TLabeledEdit
       Left = 32
       Top = 48
-      Width = 193
+      Width = 80
       Height = 26
       EditLabel.Width = 52
       EditLabel.Height = 18
@@ -68,8 +66,8 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
     end
     object DBL_materias: TDBLookupComboBox
       Left = 32
-      Top = 192
-      Width = 193
+      Top = 186
+      Width = 250
       Height = 26
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clBlack
@@ -84,8 +82,8 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
     end
     object lbledt_mat_nome: TLabeledEdit
       Left = 32
-      Top = 128
-      Width = 193
+      Top = 120
+      Width = 250
       Height = 26
       EditLabel.Width = 121
       EditLabel.Height = 18
@@ -118,7 +116,7 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
     end
   end
   inherited dsdados: TDataSource
-    Left = 256
-    Top = 249
+    Left = 312
+    Top = 257
   end
 end
