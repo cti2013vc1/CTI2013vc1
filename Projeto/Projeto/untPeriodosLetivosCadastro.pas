@@ -17,6 +17,7 @@ type
     Label4: TLabel;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -85,6 +86,12 @@ begin
 
 
 end;
+end;
+
+procedure TfrmPeriodosLetivosCadastro.FormShow(Sender: TObject);
+begin
+  inherited;
+  lbledt_codigo.SetFocus;
 end;
 
 end.

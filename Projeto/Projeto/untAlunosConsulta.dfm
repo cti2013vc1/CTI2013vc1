@@ -1,12 +1,24 @@
 inherited frmAlunosConsulta: TfrmAlunosConsulta
   Caption = 'Consulta de alunos'
+  ClientWidth = 765
   Font.Name = 'Arial'
   OnShow = FormShow
-  ExplicitWidth = 693
+  ExplicitLeft = -8
+  ExplicitWidth = 781
   ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 14
+  inherited Panel1: TPanel
+    Width = 765
+    inherited Image2: TImage
+      Left = 619
+    end
+    inherited Edit1: TEdit
+      Width = 488
+    end
+  end
   inherited Panel2: TPanel
+    Width = 765
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -17,6 +29,7 @@ inherited frmAlunosConsulta: TfrmAlunosConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
+      Width = 569
       Font.Height = -15
       Font.Name = 'Arial'
       Columns = <
@@ -29,7 +42,7 @@ inherited frmAlunosConsulta: TfrmAlunosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 56
+          Width = 66
           Visible = True
         end
         item
@@ -65,7 +78,7 @@ inherited frmAlunosConsulta: TfrmAlunosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 72
+          Width = 102
           Visible = True
         end>
     end

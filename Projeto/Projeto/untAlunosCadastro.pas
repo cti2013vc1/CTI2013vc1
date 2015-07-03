@@ -18,6 +18,7 @@ type
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure dtpDtaNascimentoChange(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -52,8 +53,8 @@ begin
    //Alimentar os atributos da classe
    alunos.ALU_CODIGO := StrToInt(lbledt_alu_codigo.Text);
    alunos.ALU_NOME := lbledt_alu_nome.Text;
-   alunos.ALU_DATANASCIMENTO := dtpDtaNascimento.Date;
-   alunos.ALU_INEP := lbledt_alu_nome.Text;
+   alunos.ALU_DATANASCIMENTO := StrToDate (MK_DataNascimento.Text);
+   alunos.ALU_INEP := lbledt_alu_inep.Text;
 
     if alunos.Inserir() then
     begin
@@ -70,8 +71,8 @@ begin
   //alimentar os atributos da classe
   alunos.ALU_CODIGO := StrToInt(lbledt_alu_codigo.Text);
   alunos.ALU_NOME := lbledt_alu_nome.Text;
-  alunos.ALU_DATANASCIMENTO := StrToDateTime (MK_DataNascimento.Text);
-  alunos.ALU_INEP := lbledt_alu_nome.Text;
+  alunos.ALU_DATANASCIMENTO := dtpDtaNascimento.Date;
+  alunos.ALU_INEP := lbledt_alu_inep.Text;
 
 
   if alunos.Alterar() then
@@ -90,6 +91,12 @@ procedure TfrmAlunosCadastro.dtpDtaNascimentoChange(Sender: TObject);
 begin
   inherited;
 MK_DataNascimento.Text := FormatDateTime('dd/MM/yyyy',dtpDtaNascimento.Date);
+end;
+
+procedure TfrmAlunosCadastro.FormShow(Sender: TObject);
+begin
+  inherited;
+  lbledt_alu_codigo.SetFocus;
 end;
 
 end.

@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, unt_modeloCadastro, Vcl.StdCtrls,
-  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons;
+  Vcl.Imaging.pngimage, Vcl.ExtCtrls, Vcl.Buttons, Data.DB;
 
 type
   TfrmAreasCadastro = class(Tfrm_modelo_cadastro)
@@ -15,6 +15,7 @@ type
     Label3: TLabel;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,4 +79,10 @@ begin
 
 end;
 end;
+procedure TfrmAreasCadastro.FormShow(Sender: TObject);
+begin
+  inherited;
+  lbledt_arc_codigo.SetFocus;
+end;
+
 end.

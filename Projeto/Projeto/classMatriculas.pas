@@ -111,7 +111,7 @@ con.sql.Add(         'SELECT                 '+
                      'FROM MATRICULAS          '+
                      'LEFT OUTER JOIN ALUNOS ON ( ALUNOS.ALU_CODIGO = MATRICULAS.ALUNOS_ALU_CODIGO ) '+
                      'LEFT OUTER JOIN TURMAS ON ( TURMAS.TUR_CODIGO = MATRICULAS.TURMAS_TUR_CODIGO ) '+
-                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = MATRICULAS.MATERIAS_MAT_CODIGO ) ');
+                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = MATRICULAS.MATERIAS_MAT_CODIGO ) Order By  MATRICULAS.ANO Desc');
 
 con.Open();
 result := con;

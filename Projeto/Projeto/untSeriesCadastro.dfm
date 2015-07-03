@@ -2,6 +2,7 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
   Caption = 'Cadastro de s'#233'ries'
   ClientHeight = 337
   ClientWidth = 383
+  OnShow = FormShow
   ExplicitWidth = 399
   ExplicitHeight = 376
   PixelsPerInch = 96

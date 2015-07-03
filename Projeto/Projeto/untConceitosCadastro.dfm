@@ -2,6 +2,7 @@ inherited frmConceitosCadastro: TfrmConceitosCadastro
   Caption = 'Cadastro de conceitos'
   ClientHeight = 416
   ClientWidth = 389
+  OnShow = FormShow
   ExplicitWidth = 405
   ExplicitHeight = 455
   PixelsPerInch = 96
@@ -9,18 +10,21 @@ inherited frmConceitosCadastro: TfrmConceitosCadastro
   inherited Panel2: TPanel
     Width = 389
     Height = 351
-    ExplicitTop = 64
     ExplicitWidth = 389
     ExplicitHeight = 351
     inherited btnSalvar: TSpeedButton
       Left = 50
       Top = 277
       OnClick = btnSalvarClick
+      ExplicitLeft = 50
+      ExplicitTop = 277
     end
     inherited btnCancelar: TSpeedButton
       Left = 192
       Top = 277
       OnClick = btnCancelarClick
+      ExplicitLeft = 192
+      ExplicitTop = 277
     end
     object Label2: TLabel
       Left = 32
@@ -126,6 +130,7 @@ inherited frmConceitosCadastro: TfrmConceitosCadastro
   end
   inherited Panel1: TPanel
     Width = 389
+    ExplicitWidth = 389
     inherited Label1: TLabel
       Width = 264
       Caption = 'Cadastro de Conceitos'

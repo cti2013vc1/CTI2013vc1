@@ -1,12 +1,27 @@
 inherited frmMateriasConsulta: TfrmMateriasConsulta
   Caption = 'Consulta de Mat'#233'rias'
+  ClientWidth = 690
   Font.Name = 'Arial'
   OnShow = FormShow
-  ExplicitWidth = 693
+  ExplicitWidth = 706
   ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 14
+  inherited Panel1: TPanel
+    Width = 690
+    ExplicitWidth = 690
+    inherited Image2: TImage
+      Left = 544
+      ExplicitLeft = 544
+    end
+    inherited Edit1: TEdit
+      Width = 413
+      ExplicitWidth = 413
+    end
+  end
   inherited Panel2: TPanel
+    Width = 690
+    ExplicitWidth = 690
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -17,6 +32,7 @@ inherited frmMateriasConsulta: TfrmMateriasConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
+      Width = 494
       Font.Height = -15
       Font.Name = 'Arial'
       Columns = <
@@ -41,19 +57,19 @@ inherited frmMateriasConsulta: TfrmMateriasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 154
+          Width = 185
           Visible = True
         end
         item
           Expanded = False
-          FieldName = 'AREAS_ARC_CODIGO'
+          FieldName = 'ARC_NOME'
           Title.Caption = #193'rea'
           Title.Font.Charset = DEFAULT_CHARSET
           Title.Font.Color = clWindowText
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 150
+          Width = 172
           Visible = True
         end>
     end

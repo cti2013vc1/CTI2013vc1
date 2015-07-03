@@ -197,7 +197,7 @@ con.sql.Add(         'SELECT                 '+
                      'NOTAS.NOT_PPDAC,    '+
                      'NOTAS.NOT_CA,    '+
                      'NOTAS.NOT_PPDAA    '+
-                     'FROM MATERIAS          '+
+                     'FROM NOTAS          '+
                      'LEFT OUTER JOIN ALUNOS ON ( ALUNOS.ALUNOS_ALU_CODIGO = NOTAS.ALUNOS_ALU_CODIGO ) '+
                      'LEFT OUTER JOIN TURMAS ON ( TURMAS.TURMAS_TUR_CODIGO = NOTAS.TURMAS_TUR_CODIGO ) '+
                      'LEFT OUTER JOIN COLABORADORES ON ( COLABORADORES.COLABORADORES_COL_CODIGO = NOTAS.COLABORADORES_COL_CODIGO ) '+

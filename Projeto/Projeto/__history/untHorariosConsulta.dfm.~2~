@@ -1,5 +1,0 @@
-inherited frmHorariosConsulta: TfrmHorariosConsulta
-  Caption = 'Consulta de hor'#225'rios'
-  PixelsPerInch = 96
-  TextHeight = 13
-end

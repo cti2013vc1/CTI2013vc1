@@ -91,7 +91,7 @@ con.sql.Add(         'SELECT                '+
                      'PERIODOS_LETIVOS.PEL_CODIGO,   '+
                      'PERIODOS_LETIVOS.PEL_NOME,     '+
                      'PERIODOS_LETIVOS.QTDE_NOTAS    '+
-                     'FROM PERIODOS_LETIVOS          ');
+                     'FROM PERIODOS_LETIVOS    Order By PERIODOS_LETIVOS.PEL_CODIGO      ');
 
 con.Open();
 result := con;

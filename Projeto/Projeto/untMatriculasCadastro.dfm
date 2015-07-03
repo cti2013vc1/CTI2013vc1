@@ -165,7 +165,7 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
       Text = '  /  /    '
     end
     object DTP_data: TDateTimePicker
-      Left = 131
+      Left = 130
       Top = 229
       Width = 18
       Height = 26

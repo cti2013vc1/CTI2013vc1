@@ -84,7 +84,7 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT               '+
                      'TURNOS.TUR_CODIGO,   '+
                      'TURNOS.TUR_NOME      '+
-                     'FROM TURNOS          ');
+                     'FROM TURNOS    Order By TURNOS.TUR_CODIGO       ');
 
 con.Open();
 result := con;

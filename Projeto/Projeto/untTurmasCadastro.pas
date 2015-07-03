@@ -110,6 +110,8 @@ begin
 
   turnos := TclassTurnos.Create;
   dsturnos.DataSet := turnos.ConsultarTurnos();
+
+  lbledt_tur_codigo.SetFocus;
 end;
 
 end.

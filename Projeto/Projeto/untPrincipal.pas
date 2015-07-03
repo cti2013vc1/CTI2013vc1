@@ -21,8 +21,9 @@ type
     Horrios1: TMenuItem;
     reas1: TMenuItem;
     urnos1: TMenuItem;
-    Panel1: TPanel;
     Image1: TImage;
+    Image2: TImage;
+    Panel1: TPanel;
     procedure Cadastrodeperodosletivos1Click(Sender: TObject);
     procedure Cadastrodesries1Click(Sender: TObject);
     procedure Colaboradores1Click(Sender: TObject);
@@ -34,6 +35,7 @@ type
     procedure Matrculas1Click(Sender: TObject);
     procedure urmas1Click(Sender: TObject);
     procedure Horrios1Click(Sender: TObject);
+    //procedure FormResize(Sender: TObject);
   private
     { Private declarations }
   public
@@ -79,6 +81,19 @@ procedure TfrmPrincipal.Conceitos1Click(Sender: TObject);
 begin
 frmConceitosConsulta.Show;
 end;
+
+//procedure TfrmPrincipal.FormResize(Sender: TObject);
+//var
+ // multi: double;
+//begin
+//  if( Height > 500) then
+//    multi := 0.5
+//  else
+//    multi := 0.25  ;
+//  Image1.Height := round( Height * multi );
+//  Image1.Top := Height - Image1.Height ;
+//  Image1.AutoSize := true;
+//end;
 
 procedure TfrmPrincipal.Horrios1Click(Sender: TObject);
 begin

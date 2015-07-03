@@ -2,6 +2,7 @@ inherited frmAreasCadastro: TfrmAreasCadastro
   Caption = 'Cadastro de '#225'reas'
   ClientHeight = 361
   ClientWidth = 347
+  OnShow = FormShow
   ExplicitWidth = 363
   ExplicitHeight = 400
   PixelsPerInch = 96
@@ -9,19 +10,21 @@ inherited frmAreasCadastro: TfrmAreasCadastro
   inherited Panel2: TPanel
     Width = 347
     Height = 296
-    ExplicitLeft = 120
-    ExplicitTop = 71
-    ExplicitWidth = 368
-    ExplicitHeight = 318
+    ExplicitWidth = 347
+    ExplicitHeight = 296
     inherited btnSalvar: TSpeedButton
       Left = 39
       Top = 222
       OnClick = btnSalvarClick
+      ExplicitLeft = 39
+      ExplicitTop = 222
     end
     inherited btnCancelar: TSpeedButton
       Left = 164
       Top = 222
       OnClick = btnCancelarClick
+      ExplicitLeft = 164
+      ExplicitTop = 222
     end
     object Label2: TLabel
       Left = 32
@@ -96,6 +99,7 @@ inherited frmAreasCadastro: TfrmAreasCadastro
   end
   inherited Panel1: TPanel
     Width = 347
+    ExplicitWidth = 347
     inherited Label1: TLabel
       Width = 214
       Caption = 'Cadastro de '#225'reas'

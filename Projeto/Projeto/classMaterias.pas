@@ -85,9 +85,10 @@ con.sql.Add(         'SELECT                 '+
                      'AREAS.ARC_CODIGO,       '+
                      'AREAS.ARC_NOME           '+
                      'FROM MATERIAS          '+
-                     'LEFT OUTER JOIN AREAS ON ( AREAS.ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO ) ');
+                     'LEFT OUTER JOIN AREAS ON ( AREAS.ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO ) Order By MATERIAS.MAT_CODIGO');
 con.Open();
 result := con;
+
 end;
 
 function TclassMaterias.Excluir: boolean;

@@ -1,27 +1,31 @@
 inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
   Caption = 'Consulta de colaboradores'
-  ClientWidth = 771
+  ClientHeight = 475
+  ClientWidth = 1140
+  Position = poDesktopCenter
+  WindowState = wsMaximized
   OnShow = FormShow
-  ExplicitTop = 0
-  ExplicitWidth = 787
-  ExplicitHeight = 498
+  ExplicitWidth = 1156
+  ExplicitHeight = 514
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 771
-    ExplicitWidth = 804
+    Width = 1140
+    ExplicitWidth = 1140
     inherited Image2: TImage
-      Left = 625
+      Left = 994
       ExplicitLeft = 658
     end
     inherited Edit1: TEdit
-      Width = 494
-      ExplicitWidth = 527
+      Width = 863
+      ExplicitWidth = 863
     end
   end
   inherited Panel2: TPanel
-    Width = 771
-    ExplicitWidth = 804
+    Width = 1140
+    Height = 386
+    ExplicitWidth = 1140
+    ExplicitHeight = 386
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -32,7 +36,8 @@ inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
-      Width = 575
+      Width = 944
+      Height = 313
       Font.Height = -15
       Font.Name = 'Arial'
       Columns = <
@@ -79,7 +84,7 @@ inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 121
+          Width = 107
           Visible = True
         end
         item
@@ -91,7 +96,7 @@ inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 436
+          Width = 447
           Visible = True
         end>
     end

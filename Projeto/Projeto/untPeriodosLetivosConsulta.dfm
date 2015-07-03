@@ -1,29 +1,29 @@
 inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
   Caption = 'Consulta de Per'#237'odos Letivos'
   ClientHeight = 437
-  ClientWidth = 679
+  ClientWidth = 697
   OnShow = FormShow
-  ExplicitTop = 7
-  ExplicitWidth = 695
+  ExplicitWidth = 713
   ExplicitHeight = 476
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
-    Width = 679
-    ExplicitWidth = 843
+    Width = 697
+    ExplicitWidth = 679
     inherited Image2: TImage
-      Left = 533
+      Left = 551
       ExplicitLeft = 697
     end
     inherited Edit1: TEdit
-      Width = 402
-      ExplicitWidth = 566
+      Width = 420
+      ExplicitWidth = 402
     end
   end
   inherited Panel2: TPanel
-    Width = 679
+    Width = 697
     Height = 348
-    ExplicitWidth = 843
+    ExplicitWidth = 679
+    ExplicitHeight = 348
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -34,7 +34,7 @@ inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
-      Width = 497
+      Width = 515
       Height = 275
       Font.Height = -15
       Font.Name = 'Arial'
@@ -60,7 +60,7 @@ inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 232
+          Width = 263
           Visible = True
         end
         item

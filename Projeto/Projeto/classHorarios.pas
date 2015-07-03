@@ -54,7 +54,7 @@ fdquery.SQL.Add('SET ');
 fdquery.SQL.Add('ANO = :ANO ');  //CAMPO DE ALTERAÇÃO
 //APOS O ULTIMO CAMPO NÃO VAI VIRGULA
 fdquery.SQL.Add('WHERE ');
-fdquery.SQL.Add('HOR_CODIGO = :HOR_CODIGO ');
+fdquery.SQL.Add('HOR_CODIGO = :HOR_CODIGO and ');
 fdquery.SQL.Add('COLABORADORES_COL_CODIGO = :COLABORADORES_COL_CODIGO AND ');
 fdquery.SQL.Add('TURMAS_TUR_CODIGO = :TURMAS_TUR_CODIGO AND ');
 fdquery.SQL.Add('MATERIAS_MAT_CODIGO = :MATERIAS_MAT_CODIGO ');
@@ -102,13 +102,16 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                 '+
                      'HORARIOS.HOR_CODIGO,        '+
                      'COLABORADORES.COL_CODIGO,     '+
+                     'COLABORADORES.COL_NOME,     '+
                      'TURMAS.TUR_CODIGO,      '+
+                     'TURMAS.TUR_NOME,      '+
                      'MATERIAS.MAT_CODIGO,    '+
+                     'MATERIAS.MAT_NOME,    '+
                      'HORARIOS.ANO    '+
-                     'FROM MATERIAS          '+
-                     'LEFT OUTER JOIN COLABORADORES ON ( COLABORADORES.COLABORADORES_COL_CODIGO = HORARIOS.COLABORADORES_COL_CODIGO ) '+
-                     'LEFT OUTER JOIN TURMAS ON ( TURMAS.TURMAS_TUR_CODIGO = HORARIOS.TURMAS_TUR_CODIGO ) '+
-                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MATERIAS_MAT_CODIGO = HORARIOS.MATERIAS_MAT_CODIGO ) ');
+                     'FROM HORARIOS          '+
+                     'LEFT OUTER JOIN COLABORADORES ON ( COLABORADORES.COL_CODIGO = HORARIOS.COLABORADORES_COL_CODIGO ) '+
+                     'LEFT OUTER JOIN TURMAS ON ( TURMAS.TUR_CODIGO = HORARIOS.TURMAS_TUR_CODIGO ) '+
+                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = HORARIOS.MATERIAS_MAT_CODIGO ) Order By HORARIOS.HOR_CODIGO');
 con.Open();
 result := con;
 

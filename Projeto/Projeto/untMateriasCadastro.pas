@@ -74,7 +74,7 @@ begin
   begin
     ShowMessage('Registro alterado com sucesso!');
     //atualiza o grid
-    frmAlunosConsulta.FormShow(nil);
+    frmMateriasConsulta.FormShow(nil);
     //fecha o formulario
     Close;
   end;
@@ -90,6 +90,8 @@ begin
   inherited;
   areas := TclassAreas.Create;
   dsdados.DataSet := areas.ConsultarAreas;
+
+  lbledt_mat_codigo.SetFocus;
 end;
 
 end.

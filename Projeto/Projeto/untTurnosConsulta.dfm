@@ -1,12 +1,23 @@
 inherited frmTurnosConsulta: TfrmTurnosConsulta
   Caption = 'Consulta de turnos'
+  ClientWidth = 657
   Font.Name = 'Arial'
   OnShow = FormShow
-  ExplicitWidth = 693
+  ExplicitWidth = 673
   ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 14
+  inherited Panel1: TPanel
+    Width = 657
+    inherited Image2: TImage
+      Left = 511
+    end
+    inherited Edit1: TEdit
+      Width = 380
+    end
+  end
   inherited Panel2: TPanel
+    Width = 657
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -17,6 +28,7 @@ inherited frmTurnosConsulta: TfrmTurnosConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
+      Width = 461
       Font.Height = -15
       Font.Name = 'Arial'
       Columns = <
@@ -34,6 +46,7 @@ inherited frmTurnosConsulta: TfrmTurnosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
+          Width = 100
           Visible = True
         end
         item
@@ -50,7 +63,7 @@ inherited frmTurnosConsulta: TfrmTurnosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 158
+          Width = 326
           Visible = True
         end>
     end

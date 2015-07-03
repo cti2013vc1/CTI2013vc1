@@ -121,6 +121,9 @@ begin
   materias := TClassMaterias.Create;
   dsmaterias.DataSet := materias.ConsultarMaterias();
 
+  MK_Data.Text := FormatDateTime('dd/MM/yyyy', Now);
+
+  DBL_alu_codigo.SetFocus;
 
 
 

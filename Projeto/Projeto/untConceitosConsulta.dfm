@@ -1,11 +1,22 @@
 inherited frmConceitosConsulta: TfrmConceitosConsulta
   Caption = 'Consulta de conceitos'
+  ClientWidth = 699
   OnShow = FormShow
-  ExplicitWidth = 693
+  ExplicitWidth = 715
   ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 13
+  inherited Panel1: TPanel
+    Width = 699
+    inherited Image2: TImage
+      Left = 553
+    end
+    inherited Edit1: TEdit
+      Width = 422
+    end
+  end
   inherited Panel2: TPanel
+    Width = 699
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -16,6 +27,7 @@ inherited frmConceitosConsulta: TfrmConceitosConsulta
       OnClick = btnInserirClick
     end
     inherited DBGrid1: TDBGrid
+      Width = 503
       Font.Height = -15
       Font.Name = 'Arial'
       Columns = <
@@ -28,7 +40,7 @@ inherited frmConceitosConsulta: TfrmConceitosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 84
+          Width = 114
           Visible = True
         end
         item
@@ -40,7 +52,7 @@ inherited frmConceitosConsulta: TfrmConceitosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 85
+          Width = 258
           Visible = True
         end
         item
@@ -52,7 +64,7 @@ inherited frmConceitosConsulta: TfrmConceitosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 83
+          Width = 96
           Visible = True
         end>
     end

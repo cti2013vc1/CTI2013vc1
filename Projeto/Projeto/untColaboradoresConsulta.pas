@@ -45,7 +45,7 @@ begin
    end
    else if col.COL_NIVEL_ACESSO = 'D' then
    begin
-   frmColaboradoresCadastro.RBDiretoria.Checked := True;
+   frmColaboradoresCadastro.RBProfessor.Checked := True;
    end;
   frmColaboradoresCadastro.lbledt_col_usuario.Text := col.COL_USUARIO;
 

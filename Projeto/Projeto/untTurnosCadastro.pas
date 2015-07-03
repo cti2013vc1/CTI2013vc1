@@ -13,6 +13,7 @@ type
     lbledt_tur_nome: TLabeledEdit;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -76,6 +77,12 @@ begin
 
 
 end;
+end;
+
+procedure TfrmTurnosCadastro.FormShow(Sender: TObject);
+begin
+  inherited;
+  lbledt_tur_codigo.SetFocus;
 end;
 
 end.

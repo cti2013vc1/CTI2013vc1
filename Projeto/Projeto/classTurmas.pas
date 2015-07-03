@@ -112,7 +112,7 @@ con.sql.Add(         'SELECT                '+
                      'FROM TURMAS          '+
                      'LEFT OUTER JOIN SERIES ON ( SERIES.SER_CODIGO = TURMAS.SERIES_SER_CODIGO ) '+
                      'LEFT OUTER JOIN periodos_letivos ON ( PERIODOS_LETIVOS.PEL_CODIGO = TURMAS.PERIODOS_LETIVOS_PEL_CODIGO ) '+
-                     'LEFT OUTER JOIN TURNOS ON ( TURNOS.TUR_CODIGO = TURMAS.TURNOS_TUR_CODIGO ) ');
+                     'LEFT OUTER JOIN TURNOS ON ( TURNOS.TUR_CODIGO = TURMAS.TURNOS_TUR_CODIGO ) Order By TURMAS.TUR_CODIGO ');
 
 con.Open();
 result := con;

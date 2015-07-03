@@ -2,7 +2,7 @@ unit classAlunos;
 
 interface
 uses
-  FireDAC.Comp.Client, FireDAC.DApt;
+  FireDAC.Comp.Client, FireDAC.DApt, System.SysUtils;
 
 type
   TclassAlunos = class
@@ -57,7 +57,7 @@ fdquery.SQL.Add('ALU_CODIGO = :ALU_CODIGO ');
 
 fdquery.ParamByName('ALU_CODIGO').Value := ALU_CODIGO;
 fdquery.ParamByName('ALU_NOME').Value := ALU_NOME;
-fdquery.ParamByName('ALU_DATANASCIMENTO').Value := ALU_DATANASCIMENTO;
+fdquery.ParamByName('ALU_DATANASCIMENTO').Value := FormatDateTime('yyyy-MM-dd',ALU_DATANASCIMENTO);
 fdquery.ParamByName('ALU_INEP').Value := ALU_INEP;
 //executa no banco de dados
 fdquery.ExecSQL;
@@ -96,7 +96,7 @@ con.sql.Add(         'SELECT                '+
                      'ALUNOS.ALU_NOME,     '+
                      'ALUNOS.ALU_DATANASCIMENTO,     '+
                      'ALUNOS.ALU_INEP     '+
-                     'FROM ALUNOS          ');
+                     'FROM ALUNOS    Order By ALUNOS.ALU_CODIGO');
 
 con.Open();
 result := con;
@@ -148,7 +148,7 @@ fdquery.SQL.Add(') ');
 //atribuir os valores para os parametros da SQL
 fdquery.ParamByName('ALU_CODIGO').Value := FALU_CODIGO;
 fdquery.ParamByName('ALU_NOME').Value := FALU_NOME;
-fdquery.ParamByName('ALU_DATANASCIMENTO').Value := FALU_DATANASCIMENTO;
+fdquery.ParamByName('ALU_DATANASCIMENTO').Value := FormatDateTime('yyyy-MM-dd',FALU_DATANASCIMENTO);
 fdquery.ParamByName('ALU_INEP').Value := FALU_INEP;
 
 fdquery.ExecSQL();
@@ -172,7 +172,7 @@ end;
 
 procedure TclassAlunos.SetALU_INEP(const Value: string);
 begin
-
+  FALU_INEP := value;
 end;
 
 procedure TclassAlunos.SetALU_NOME(const Value: string);

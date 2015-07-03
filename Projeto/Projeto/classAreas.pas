@@ -84,7 +84,7 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'AREAS.ARC_CODIGO,   '+
                      'AREAS.ARC_NOME     '+
-                     'FROM AREAS          ');
+                     'FROM AREAS         Order By AREAS.ARC_CODIGO ');
 
 con.Open();
 result := con;

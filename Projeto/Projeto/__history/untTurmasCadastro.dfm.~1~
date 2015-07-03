@@ -1,5 +1,0 @@
-inherited frm_modelo_cadastro1: Tfrm_modelo_cadastro1
-  Caption = 'frm_modelo_cadastro1'
-  PixelsPerInch = 96
-  TextHeight = 13
-end

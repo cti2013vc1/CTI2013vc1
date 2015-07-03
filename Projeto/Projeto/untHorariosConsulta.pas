@@ -35,12 +35,15 @@ begin
   inherited;
   hor:= TClassHorarios.Create();
   hor.HOR_CODIGO := dsdados.DataSet.FieldByName ('HOR_CODIGO').Value;
+  hor.COLABORADORES_COL_CODIGO := dsdados.DataSet.FieldByName('COL_CODIGO').Value;
+  hor.TURMAS_TUR_CODIGO := dsdados.DataSet.FieldByName('TUR_CODIGO').Value;
+  hor.MATERIAS_MAT_CODIGO := dsdados.DataSet.FieldByName('MAT_CODIGO').Value;
   hor.Carregar;
   frmHorariosCadastro.lbledt_hor_codigo.Text := hor.HOR_CODIGO.ToString;
-  frmHorariosCadastro.DBL_colaboradores.KeyValue := hor.COLABORADORES_COL_CODIGO.ToString;
-  frmHorariosCadastro.DBL_turmas.KeyValue := hor.TURMAS_TUR_CODIGO.ToString;
-  frmHorariosCadastro.DBL_materias.KeyValue := hor.MATERIAS_MAT_CODIGO.ToString;
-  frmHorariosCadastro.lbledt_ano.Text := hor.ANO.ToString;
+  frmHorariosCadastro.DBL_colaboradores.KeyValue := hor.COLABORADORES_COL_CODIGO;
+  frmHorariosCadastro.DBL_turmas.KeyValue := hor.TURMAS_TUR_CODIGO;
+  frmHorariosCadastro.DBL_materias.KeyValue := hor.MATERIAS_MAT_CODIGO;
+  frmHorariosCadastro.lbledt_ano.Text := IntToStr(hor.ANO);
   frmHorariosCadastro.Show;
   //criar a variavel status dentro do public do
    frmHorariosCadastro.status := 'E';

@@ -82,7 +82,7 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'SERIES.SER_CODIGO,   '+
                      'SERIES.SER_NOME      '+
-                     'FROM SERIES          ');
+                     'FROM SERIES      Order By SERIES.SER_CODIGO    ');
 con.Open();
 result := con;
 

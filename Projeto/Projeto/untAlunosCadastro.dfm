@@ -2,6 +2,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
   Caption = 'Cadastro de alunos'
   ClientHeight = 463
   ClientWidth = 428
+  OnShow = FormShow
   ExplicitWidth = 444
   ExplicitHeight = 502
   PixelsPerInch = 96
@@ -123,7 +124,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
       Text = '  /  /    '
     end
     object dtpDtaNascimento: TDateTimePicker
-      Left = 179
+      Left = 178
       Top = 181
       Width = 14
       Height = 26

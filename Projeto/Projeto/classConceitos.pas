@@ -90,7 +90,7 @@ con.sql.Add(         'SELECT                '+
                      'CONCEITOS.CON_CODIGO,   '+
                      'CONCEITOS.CON_NOME,     '+
                      'CONCEITOS.CON_LETRA    '+
-                     'FROM CONCEITOS          ');
+                     'FROM CONCEITOS    Order By CONCEITOS.CON_CODIGO      ');
 
 con.Open();
 result := con;

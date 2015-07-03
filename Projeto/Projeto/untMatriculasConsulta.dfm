@@ -1,26 +1,27 @@
 inherited frmMatriculasConsulta: TfrmMatriculasConsulta
   Caption = 'Consulta de matr'#237'culas'
-  ClientWidth = 1024
+  ClientWidth = 1036
   Font.Name = 'Arial'
   OnShow = FormShow
-  ExplicitWidth = 1040
+  ExplicitLeft = -262
+  ExplicitWidth = 1052
   ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 14
   inherited Panel1: TPanel
-    Width = 1024
+    Width = 1036
     ExplicitWidth = 1024
     inherited Image2: TImage
-      Left = 878
+      Left = 890
       ExplicitLeft = 878
     end
     inherited Edit1: TEdit
-      Width = 747
+      Width = 759
       ExplicitWidth = 747
     end
   end
   inherited Panel2: TPanel
-    Width = 1024
+    Width = 1036
     ExplicitWidth = 1024
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
@@ -33,7 +34,9 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
     end
     inherited DBGrid1: TDBGrid
       Left = 164
-      Width = 828
+      Width = 840
+      Font.Height = -15
+      Font.Name = 'Arial'
       Columns = <
         item
           Expanded = False
@@ -44,7 +47,7 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 131
+          Width = 300
           Visible = True
         end
         item
@@ -56,7 +59,7 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 141
+          Width = 140
           Visible = True
         end
         item
@@ -68,7 +71,7 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 158
+          Width = 201
           Visible = True
         end
         item

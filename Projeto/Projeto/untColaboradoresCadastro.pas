@@ -14,10 +14,11 @@ type
     lbledt_col_senha: TLabeledEdit;
     lbledt_col_usuario: TLabeledEdit;
     RBSecretaria: TRadioButton;
-    RBDiretoria: TRadioButton;
+    RBProfessor: TRadioButton;
     Label2: TLabel;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -57,9 +58,9 @@ begin
    begin
    col.COL_NIVEL_ACESSO := 'S';
    end
-   else if RBDiretoria.Checked then
+   else if RBProfessor.Checked then
    begin
-     col.COL_NIVEL_ACESSO := 'D';
+     col.COL_NIVEL_ACESSO := 'P';
    end;
    col.COL_USUARIO := lbledt_col_usuario.Text;
 
@@ -83,7 +84,7 @@ begin
    begin
    col.COL_NIVEL_ACESSO := 'S';
    end
-   else if RBDiretoria.Checked then
+   else if RBProfessor.Checked then
    begin
      col.COL_NIVEL_ACESSO := 'D';
    end;
@@ -103,5 +104,11 @@ begin
 end;
 end;
 
+
+procedure TfrmColaboradoresCadastro.FormShow(Sender: TObject);
+begin
+  inherited;
+  lbledt_col_codigo.SetFocus;
+end;
 
 end.

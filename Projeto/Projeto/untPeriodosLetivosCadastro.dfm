@@ -1,5 +1,6 @@
 inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
   Caption = 'Cadastro de Per'#237'odos Letivos'
+  OnShow = FormShow
   ExplicitWidth = 478
   ExplicitHeight = 520
   PixelsPerInch = 96
@@ -43,7 +44,7 @@ inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
       Width = 343
       Height = 13
       Caption = 
-        'Ex.: Bimestre: 4 per'#237'odos; Trimestre: 3 per'#237'odos; Semestre: 6 pe' +
+        'Ex.: Bimestre: 4 per'#237'odos; Trimestre: 3 per'#237'odos; Semestre: 2 pe' +
         'r'#237'odos;'
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clGray

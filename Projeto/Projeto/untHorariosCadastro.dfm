@@ -6,7 +6,6 @@ inherited frmHorariosCadastro: TfrmHorariosCadastro
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    ExplicitTop = 64
     inherited btnSalvar: TSpeedButton
       OnClick = btnSalvarClick
     end
@@ -126,7 +125,7 @@ inherited frmHorariosCadastro: TfrmHorariosCadastro
       Left = 32
       Top = 272
       Width = 100
-      Height = 24
+      Height = 26
       EditLabel.Width = 28
       EditLabel.Height = 18
       EditLabel.Caption = 'Ano'

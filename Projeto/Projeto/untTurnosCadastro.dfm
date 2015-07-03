@@ -2,6 +2,7 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
   Caption = 'Cadastro de Turnos'
   ClientHeight = 337
   ClientWidth = 371
+  OnShow = FormShow
   ExplicitWidth = 387
   ExplicitHeight = 376
   PixelsPerInch = 96
@@ -9,8 +10,6 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
   inherited Panel2: TPanel
     Width = 371
     Height = 272
-    ExplicitLeft = -8
-    ExplicitTop = 64
     ExplicitWidth = 371
     ExplicitHeight = 272
     inherited btnSalvar: TSpeedButton

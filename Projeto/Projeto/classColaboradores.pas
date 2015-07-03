@@ -106,7 +106,7 @@ con.sql.Add(         'SELECT                '+
                      'COLABORADORES.COL_SENHA,    '+
                      'COLABORADORES.COL_NIVEL_ACESSO, '+
                      'COLABORADORES.COL_USUARIO              '+
-                     'FROM COLABORADORES          ');
+                     'FROM COLABORADORES       Order By COLABORADORES.COL_CODIGO   ');
 
 con.Open();
 result := con;

@@ -108,6 +108,8 @@ begin
   materias := TClassMaterias.Create;
   ds_materias.DataSet := materias.ConsultarMaterias();
 
+  lbledt_hor_codigo.SetFocus;
+
 end;
 
 end.

@@ -14,7 +14,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object Label2: TLabel
       Left = 32
-      Top = 77
+      Top = 137
       Width = 38
       Height = 18
       Caption = 'S'#233'rie'
@@ -27,7 +27,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object Label3: TLabel
       Left = 32
-      Top = 133
+      Top = 193
       Width = 95
       Height = 18
       Caption = 'Per'#237'odo letivo'
@@ -40,7 +40,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object Label4: TLabel
       Left = 32
-      Top = 189
+      Top = 249
       Width = 38
       Height = 18
       Caption = 'Turno'
@@ -75,7 +75,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object DBL_ser_codigo: TDBLookupComboBox
       Left = 32
-      Top = 96
+      Top = 156
       Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
@@ -91,7 +91,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object DBL_periodos_letivos_codigo: TDBLookupComboBox
       Left = 32
-      Top = 152
+      Top = 212
       Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
@@ -107,7 +107,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object DBL_tur_codigo: TDBLookupComboBox
       Left = 32
-      Top = 208
+      Top = 266
       Width = 300
       Height = 26
       Font.Charset = DEFAULT_CHARSET
@@ -123,7 +123,7 @@ inherited frmTurmasCadastro: TfrmTurmasCadastro
     end
     object lbledt_tur_nome: TLabeledEdit
       Left = 32
-      Top = 272
+      Top = 101
       Width = 300
       Height = 26
       EditLabel.Width = 107
