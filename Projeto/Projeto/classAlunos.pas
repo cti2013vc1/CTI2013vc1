@@ -96,7 +96,7 @@ con.sql.Add(         'SELECT                '+
                      'ALUNOS.ALU_NOME,     '+
                      'ALUNOS.ALU_DATANASCIMENTO,     '+
                      'ALUNOS.ALU_INEP     '+
-                     'FROM ALUNOS    Order By ALUNOS.ALU_CODIGO');
+                     'FROM ALUNOS    Order By ALUNOS.ALU_NOME');
 
 con.Open();
 result := con;
