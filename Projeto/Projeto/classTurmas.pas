@@ -30,7 +30,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarTurmas(): TFDQuery;
+ function ConsultarTurmas(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -94,7 +94,7 @@ FTURNOS_TUR_CODIGO := fdquery.FieldByName('TURNOS_TUR_CODIGO').Value;
 
 end;
 
-function TclassTurmas.ConsultarTurmas: TFDQuery;
+function TclassTurmas.ConsultarTurmas(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -112,8 +112,10 @@ con.sql.Add(         'SELECT                '+
                      'FROM TURMAS          '+
                      'LEFT OUTER JOIN SERIES ON ( SERIES.SER_CODIGO = TURMAS.SERIES_SER_CODIGO ) '+
                      'LEFT OUTER JOIN periodos_letivos ON ( PERIODOS_LETIVOS.PEL_CODIGO = TURMAS.PERIODOS_LETIVOS_PEL_CODIGO ) '+
-                     'LEFT OUTER JOIN TURNOS ON ( TURNOS.TUR_CODIGO = TURMAS.TURNOS_TUR_CODIGO ) Order By TURMAS.TUR_CODIGO ');
-
+                     'LEFT OUTER JOIN TURNOS ON ( TURNOS.TUR_CODIGO = TURMAS.TURNOS_TUR_CODIGO )  ');
+if condicao <> '' then
+con.SQL.Add('WHERE '+condicao);
+con.SQL.Add(' Order By TURMAS.TUR_CODIGO');
 con.Open();
 result := con;
 end;

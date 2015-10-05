@@ -13,6 +13,7 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,6 +68,25 @@ begin
   frmSeriesCadastro.Show;
   frmSeriesCadastro.status := 'I';
 end;
+
+procedure TfrmSeriesConsulta.edtConsultaChange(Sender: TObject);
+var
+series : TclassSeries;
+cond : string;
+begin
+series := TclassSeries.Create;
+  inherited;
+  cond := 'SER_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'SER_NOME LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := series.ConsultarSeries(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := alseries.ConsultarSeries
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
+end;
+
 
 procedure TfrmSeriesConsulta.FormShow(Sender: TObject);
 var

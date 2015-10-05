@@ -9,20 +9,21 @@ inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 697
-    ExplicitWidth = 679
+    ExplicitWidth = 697
     inherited Image2: TImage
       Left = 551
       ExplicitLeft = 697
     end
-    inherited Edit1: TEdit
+    inherited edtConsulta: TEdit
       Width = 420
-      ExplicitWidth = 402
+      OnChange = edtConsultaChange
+      ExplicitWidth = 420
     end
   end
   inherited Panel2: TPanel
     Width = 697
     Height = 348
-    ExplicitWidth = 679
+    ExplicitWidth = 697
     ExplicitHeight = 348
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
@@ -76,5 +77,9 @@ inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
           Visible = True
         end>
     end
+  end
+  inherited dsdados: TDataSource
+    Left = 496
+    Top = 40
   end
 end

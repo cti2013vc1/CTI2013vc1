@@ -23,7 +23,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarConceitos(): TFDQuery;
+ function ConsultarConceitos(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -80,7 +80,7 @@ FCON_LETRA := fdquery.FieldByName('CON_LETRA').Value;
 
 end;
 
-function TclassConceitos.ConsultarConceitos: TFDQuery;
+function TclassConceitos.ConsultarConceitos(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -90,8 +90,10 @@ con.sql.Add(         'SELECT                '+
                      'CONCEITOS.CON_CODIGO,   '+
                      'CONCEITOS.CON_NOME,     '+
                      'CONCEITOS.CON_LETRA    '+
-                     'FROM CONCEITOS    Order By CONCEITOS.CON_CODIGO      ');
-
+                     'FROM CONCEITOS          ');
+if condicao <> '' then
+con.SQL.Add(' WHERE '+condicao);
+con.SQL.Add('Order By CONCEITOS.CON_CODIGO');
 con.Open();
 result := con;
 

@@ -13,6 +13,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -69,6 +70,23 @@ begin
   frmTurnosCadastro.status := 'I';
 end;
 
+procedure TfrmTurnosConsulta.edtConsultaChange(Sender: TObject);
+var
+turnos : TclassTurnos;
+cond : string;
+begin
+turnos := TclassTurnos.Create;
+  inherited;
+  cond := 'TUR_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'TUR_NOME LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := turnos.ConsultarTurnos(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := turnos.ConsultarTurnos
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
+end;
 procedure TfrmTurnosConsulta.FormShow(Sender: TObject);
 var
 tur : TclassTurnos;

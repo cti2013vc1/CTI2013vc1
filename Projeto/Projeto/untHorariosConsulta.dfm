@@ -2,26 +2,24 @@ inherited frmHorariosConsulta: TfrmHorariosConsulta
   Caption = 'Consulta de hor'#225'rios'
   ClientWidth = 936
   OnShow = FormShow
-  ExplicitLeft = -165
   ExplicitWidth = 952
-  ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
     Width = 936
-    ExplicitWidth = 803
+    ExplicitWidth = 936
     inherited Image2: TImage
       Left = 790
       ExplicitLeft = 657
     end
-    inherited Edit1: TEdit
+    inherited edtConsulta: TEdit
       Width = 659
-      ExplicitWidth = 526
+      ExplicitWidth = 659
     end
   end
   inherited Panel2: TPanel
     Width = 936
-    ExplicitWidth = 803
+    ExplicitWidth = 936
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end

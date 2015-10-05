@@ -4,11 +4,12 @@ object DMConexao: TDMConexao
   Width = 534
   object FDConnection1: TFDConnection
     Params.Strings = (
-      'Server=paginas.setrem.com.br'
-      'User_Name=ctitarde'
+      'Server=phpmyadmin.paginas.setrem.com.br'
       'Database=pacelli_tarde'
+      'User_Name=ctitarde'
       'Password=Ctivesp15'
       'DriverID=MySQL')
+    Connected = True
     LoginPrompt = False
     Left = 40
     Top = 32

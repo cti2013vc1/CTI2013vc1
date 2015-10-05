@@ -19,6 +19,7 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure dtpDtaNascimentoChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -92,6 +93,22 @@ begin
   inherited;
 MK_DataNascimento.Text := FormatDateTime('dd/MM/yyyy',dtpDtaNascimento.Date);
 end;
+
+procedure TfrmAlunosCadastro.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+if (key = 13) and (lbledt_alu_inep.Text <> '') then //Simula o TAB como ENTER
+begin
+ btnSalvar.Click;
+ end else
+if key = 13 then
+Self.Perform(WM_NEXTDLGCTL,0,0);
+
+if (key = 27) then
+  btnCancelar.Click;
+end;
+
 
 procedure TfrmAlunosCadastro.FormShow(Sender: TObject);
 begin

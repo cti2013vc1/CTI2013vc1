@@ -20,7 +20,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarSeries(): TFDQuery;
+ function ConsultarSeries(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -73,7 +73,7 @@ FSER_NOME := fdquery.FieldByName('SER_NOME').Value;
 
 end;
 
-function TclassSeries.ConsultarSeries: TFDQuery;
+function TclassSeries.ConsultarSeries(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -82,7 +82,10 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'SERIES.SER_CODIGO,   '+
                      'SERIES.SER_NOME      '+
-                     'FROM SERIES      Order By SERIES.SER_CODIGO    ');
+                     'FROM SERIES          ');
+if condicao <> '' then
+con.SQL.Add('WHERE '+condicao);
+con.SQL.Add(' Order By SERIES.SER_CODIGO');
 con.Open();
 result := con;
 

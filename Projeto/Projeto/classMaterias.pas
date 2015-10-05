@@ -21,7 +21,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarMaterias(): TFDQuery;
+ function ConsultarMaterias(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -73,7 +73,7 @@ FMAT_NOME := fdquery.FieldByName('MAT_NOME').Value;
 FAREAS_ARC_CODIGO := fdquery.FieldByName('AREAS_ARC_CODIGO').Value;
 end;
 
-function TclassMaterias.ConsultarMaterias: TFDQuery;
+function TclassMaterias.ConsultarMaterias(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -85,7 +85,10 @@ con.sql.Add(         'SELECT                 '+
                      'AREAS.ARC_CODIGO,       '+
                      'AREAS.ARC_NOME           '+
                      'FROM MATERIAS          '+
-                     'LEFT OUTER JOIN AREAS ON ( AREAS.ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO ) Order By MATERIAS.MAT_CODIGO');
+                     'LEFT OUTER JOIN AREAS ON ( AREAS.ARC_CODIGO = MATERIAS.AREAS_ARC_CODIGO )');
+if condicao <> '' then
+con.SQL.Add('WHERE '+condicao);
+con.SQL.Add('Order By MATERIAS.MAT_CODIGO');
 con.Open();
 result := con;
 

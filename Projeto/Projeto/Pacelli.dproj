@@ -206,8 +206,16 @@
             <Form>frmHorariosConsulta</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="untMateriasPorSerieCadastro.pas">
-            <Form>frmMateriasPorSerieCadastro</Form>
+        <DCCReference Include="untLogin.pas">
+            <Form>frmLogin</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untRelNotas.pas">
+            <Form>frmRelNotas</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="untGraficos.pas">
+            <Form>frmGraficos</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
@@ -242,6 +250,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>False</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

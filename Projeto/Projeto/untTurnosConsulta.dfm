@@ -9,15 +9,26 @@ inherited frmTurnosConsulta: TfrmTurnosConsulta
   TextHeight = 14
   inherited Panel1: TPanel
     Width = 657
+    ExplicitWidth = 657
     inherited Image2: TImage
       Left = 511
+      ExplicitLeft = 511
     end
-    inherited Edit1: TEdit
+    inherited lblTitulo: TLabel
+      Width = 25
+      Height = 14
+      ExplicitWidth = 25
+      ExplicitHeight = 14
+    end
+    inherited edtConsulta: TEdit
       Width = 380
+      OnChange = edtConsultaChange
+      ExplicitWidth = 380
     end
   end
   inherited Panel2: TPanel
     Width = 657
+    ExplicitWidth = 657
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end

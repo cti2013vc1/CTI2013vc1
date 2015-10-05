@@ -24,7 +24,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarPeriodoLetivo(): TFDQuery;
+ function ConsultarPeriodoLetivo(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -81,7 +81,7 @@ FQTDE_NOTAS := fdquery.FieldByName('QTDE_NOTAS').Value;
 
 end;
 
-function TclassPeriodoLetivo.ConsultarPeriodoLetivo: TFDQuery;
+function TclassPeriodoLetivo.ConsultarPeriodoLetivo(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -91,8 +91,10 @@ con.sql.Add(         'SELECT                '+
                      'PERIODOS_LETIVOS.PEL_CODIGO,   '+
                      'PERIODOS_LETIVOS.PEL_NOME,     '+
                      'PERIODOS_LETIVOS.QTDE_NOTAS    '+
-                     'FROM PERIODOS_LETIVOS    Order By PERIODOS_LETIVOS.PEL_CODIGO      ');
-
+                     'FROM PERIODOS_LETIVOS          ');
+if condicao <> '' then
+con.SQL.Add('WHERE '+condicao);
+con.SQL.Add(' Order By PERIODOS_LETIVOS.PEL_CODIGO');
 con.Open();
 result := con;
 

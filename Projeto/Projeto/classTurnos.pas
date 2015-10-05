@@ -23,7 +23,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarTurnos(): TFDQuery;
+ function ConsultarTurnos(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -75,7 +75,7 @@ fdquery.Open();
 FTUR_NOME := fdquery.FieldByName('TUR_NOME').Value;
 end;
 
-function TclassTurnos.ConsultarTurnos: TFDQuery;
+function TclassTurnos.ConsultarTurnos(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -85,7 +85,8 @@ con.sql.Add(         'SELECT               '+
                      'TURNOS.TUR_CODIGO,   '+
                      'TURNOS.TUR_NOME      '+
                      'FROM TURNOS    Order By TURNOS.TUR_CODIGO       ');
-
+if condicao <> '' then
+con.SQL.Add('WHERE '+condicao);
 con.Open();
 result := con;
 end;

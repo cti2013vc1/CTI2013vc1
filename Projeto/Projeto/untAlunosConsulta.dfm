@@ -3,22 +3,32 @@ inherited frmAlunosConsulta: TfrmAlunosConsulta
   ClientWidth = 765
   Font.Name = 'Arial'
   OnShow = FormShow
-  ExplicitLeft = -8
   ExplicitWidth = 781
   ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 14
   inherited Panel1: TPanel
     Width = 765
+    ExplicitWidth = 765
     inherited Image2: TImage
       Left = 619
+      ExplicitLeft = 619
     end
-    inherited Edit1: TEdit
+    inherited lblTitulo: TLabel
+      Width = 25
+      Height = 14
+      ExplicitWidth = 25
+      ExplicitHeight = 14
+    end
+    inherited edtConsulta: TEdit
       Width = 488
+      OnChange = edtConsultaChange
+      ExplicitWidth = 488
     end
   end
   inherited Panel2: TPanel
     Width = 765
+    ExplicitWidth = 765
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end

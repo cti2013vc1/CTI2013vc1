@@ -11,6 +11,8 @@ type
   TfrmSeriesCadastro = class(Tfrm_modelo_cadastro)
     lbledt_ser_codigo: TLabeledEdit;
     lbledt_ser_nome: TLabeledEdit;
+    SpeedButton1: TSpeedButton;
+    Panel3: TPanel;
     procedure btnSalvarClick(Sender: TObject);
     procedure btnCancelarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);

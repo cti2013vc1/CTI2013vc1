@@ -2,7 +2,7 @@ unit classColaboradores;
 
 interface
 uses
-  FireDAC.Comp.Client, FireDAC.DApt;
+  FireDAC.Comp.Client, FireDAC.DApt, idHashMessageDigest;
 
 type
   TclassColaboradores = class
@@ -25,24 +25,24 @@ type
     property COL_NIVEL_ACESSO : string read FCOL_NIVEL_ACESSO write SetCOL_NIVEL_ACESSO;
     property COL_USUARIO : string read FCOL_USUARIO write SetCOL_USUARIO;
 
-
-
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarColaboradores(): TFDQuery;
+ function ConsultarColaboradores(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
  function Excluir() : boolean;
+ function ValidarLogin(login, senha : string): boolean;    //Ctrl + Shift + C
+ function ConverteMD5(texto : string) : string; //Ctrl + Shift + C
 
 
      end;
 implementation
 
-uses untConexao;
-
 { TclassColaboradores }
+
+uses untConexao;
 
 
 function TclassColaboradores.Alterar: boolean;
@@ -94,7 +94,7 @@ FCOL_USUARIO := fdquery.FieldByName('COL_USUARIO').Value;
 
 end;
 
-function TclassColaboradores.ConsultarColaboradores: TFDQuery;
+function TclassColaboradores.ConsultarColaboradores(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -106,11 +106,22 @@ con.sql.Add(         'SELECT                '+
                      'COLABORADORES.COL_SENHA,    '+
                      'COLABORADORES.COL_NIVEL_ACESSO, '+
                      'COLABORADORES.COL_USUARIO              '+
-                     'FROM COLABORADORES       Order By COLABORADORES.COL_CODIGO   ');
-
+                     'FROM COLABORADORES          ');
+if condicao <> '' then
+con.SQL.Add(' WHERE '+condicao);
+con.SQL.Add('Order By COLABORADORES.COL_CODIGO');
 con.Open();
 result := con;
 
+end;
+
+function TclassColaboradores.ConverteMD5(texto: string): string;
+var
+  md5 : TIdHashMessageDigest5;
+begin
+  md5 := TIdHashMessageDigest5.Create;
+
+  Result := md5.HashStringAsHex(texto);
 end;
 
 function TclassColaboradores.Excluir: boolean;
@@ -196,6 +207,26 @@ end;
 procedure TclassColaboradores.SetCOL_USUARIO(const Value: string);
 begin
   FCOL_USUARIO := Value;
+end;
+
+function TclassColaboradores.ValidarLogin(login, senha: string): boolean;
+var
+  fdquery : TFDquery;
+begin
+  fdquery:= TFDQuery.Create(nil);
+  fdquery.Connection := DMConexao.FDConnection1;
+  fdquery.SQL.Add('SELECT * FROM COLABORADORES ');
+  fdquery.SQL.Add('WHERE COL_USUARIO = :COL_USUARIO AND COL_SENHA = :COL_SENHA ');
+
+  //parâmetro indicado em cima na variável ValidarLogin
+  fdquery.ParamByName('COL_USUARIO').Value := login;
+  fdquery.ParamByName('COL_SENHA').Value := ConverteMD5(senha);
+  fdquery.Open();
+  if (fdquery.RecordCount > 0) then
+  result := true
+  else
+  result := false;
+
 end;
 
 end.

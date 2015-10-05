@@ -14,6 +14,8 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
+
   private
     { Private declarations }
   public
@@ -65,6 +67,27 @@ begin
   LimparCampos(frmPeriodosLetivosCadastro);
   frmPeriodosLetivosCadastro.Show;
   frmPeriodosLetivosCadastro.status := 'I';
+end;
+
+
+
+procedure TfrmPeriodosLetivosConsulta.edtConsultaChange(Sender: TObject);
+var
+periodos : TclassPeriodoLetivo;
+cond : string;
+begin
+periodos := TclassPeriodoLetivo.Create;
+  inherited;
+  cond := 'PEL_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'PEL_NOME LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'QTDE_NOTAS LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := periodos.ConsultarPeriodoLetivo(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := cidades.ConsultarCidades
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
 end;
 
 procedure TfrmPeriodosLetivosConsulta.FormShow(Sender: TObject);

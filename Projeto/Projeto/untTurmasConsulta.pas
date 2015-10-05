@@ -13,6 +13,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,6 +68,26 @@ begin
   LimparCampos(frmTurmasCadastro);
   frmTurmasCadastro.Show;
   frmTurmasCadastro.status := 'I';
+end;
+
+procedure TfrmTurmasConsulta.edtConsultaChange(Sender: TObject);
+var
+turmas : TClassTurmas;
+cond : string;
+begin
+turmas := TClassTurmas.Create;
+  inherited;
+  cond := 'TUR_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := 'SER_NOME LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := 'PEL_NOME LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'TUR_NOME LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := turmas.ConsultarTurmas(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := turmas.ConsultarTurmas
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
 end;
 
 procedure TfrmTurmasConsulta.FormShow(Sender: TObject);

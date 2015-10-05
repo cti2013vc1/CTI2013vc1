@@ -10,15 +10,18 @@ inherited frmSeriesConsulta: TfrmSeriesConsulta
   inherited Panel1: TPanel
     Width = 702
     Caption = 'Consulta de s'#233'ries'
+    ExplicitWidth = 702
     inherited Image2: TImage
       Left = 556
+      ExplicitLeft = 556
     end
-    inherited Edit1: TEdit
-      Width = 425
+    inherited edtConsulta: TEdit
+      OnChange = edtConsultaChange
     end
   end
   inherited Panel2: TPanel
     Width = 702
+    ExplicitWidth = 702
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end

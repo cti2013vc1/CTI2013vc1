@@ -1,30 +1,69 @@
 inherited frmSeriesCadastro: TfrmSeriesCadastro
   Caption = 'Cadastro de s'#233'ries'
-  ClientHeight = 337
-  ClientWidth = 383
+  ClientHeight = 446
+  ClientWidth = 766
   OnShow = FormShow
-  ExplicitWidth = 399
-  ExplicitHeight = 376
+  ExplicitWidth = 782
+  ExplicitHeight = 485
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel2: TPanel
-    Width = 383
-    Height = 272
-    ExplicitWidth = 383
-    ExplicitHeight = 272
+    Width = 766
+    Height = 381
+    ExplicitTop = 64
+    ExplicitWidth = 766
+    ExplicitHeight = 305
     inherited btnSalvar: TSpeedButton
-      Left = 42
-      Top = 190
+      Left = 612
+      Top = 299
       OnClick = btnSalvarClick
-      ExplicitLeft = 65
-      ExplicitTop = 352
+      ExplicitLeft = 612
+      ExplicitTop = 223
     end
     inherited btnCancelar: TSpeedButton
-      Left = 181
-      Top = 190
+      Left = 426
+      Top = 299
       OnClick = btnCancelarClick
       ExplicitLeft = 239
       ExplicitTop = 352
+    end
+    object SpeedButton1: TSpeedButton
+      Left = 129
+      Top = 299
+      Width = 113
+      Height = 46
+      Anchors = [akBottom]
+      Caption = 'Salvar'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = 25
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      Glyph.Data = {
+        76020000424D7602000000000000760000002800000020000000200000000100
+        04000000000000020000C40E0000C40E00001000000000000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00FFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF70007FF
+        FFFFFFFFFF800000FFFFFFFF700007F8000FFFFFFF800000FFFFFFFF000007F8
+        000FFFFFFF800000FFFFFFFF000007F8000FFFFFFF800000FFFFFFFF000007F8
+        000FFFFFFF800000FFFFFFFF000007F8000FFFFFFF800000FFFFFFFF000007F8
+        000FFFFFFF800000FFFFFFFF000007F8000FFFFFFF800000FFFFFFFF000007FF
+        FFFFFFFFFF700000FFFFFFFF000000000000000000000000FFFFFFFF00000000
+        0000000000000000FFFFFFFF000000000000000000000000FFFFFFFF00078888
+        8888888888887000FFFFFFFF000FFFFFFFFFFFFFFFFFF000FFFFFFFF000FFFFF
+        FFFFFFFFFFFFF000FFFFFFFF000FFFFFFFFFFFFFFFFFF000FFFFFFFF000FFFFF
+        FFFFFFFFFFFFF000FFFFFFFF000FFFFFFFFFFFFFFFFFF000FFFFFFFF000FFFFF
+        FFFFFFFFFFFFF000FFFFFFFF000FFFFFFFFFFFFFFFFFF000FFFFFFFF000FFFFF
+        FFFFFFFFFFFFF000FFFFFFFF000FFFFFFFFFFFFFFFFFF7F0FFFFFFFF000FFFFF
+        FFFFFFFFFFFFF000FFFFFFFF000FFFFFFFFFFFFFFFFFF000FFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
+        FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF}
+      ParentFont = False
+      OnClick = btnSalvarClick
+      ExplicitLeft = 57
+      ExplicitTop = 275
     end
     object lbledt_ser_codigo: TLabeledEdit
       Left = 32
@@ -70,10 +109,17 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
       ParentFont = False
       TabOrder = 1
     end
+    object Panel3: TPanel
+      Left = 370
+      Top = 6
+      Width = 383
+      Height = 275
+      TabOrder = 2
+    end
   end
   inherited Panel1: TPanel
-    Width = 383
-    ExplicitWidth = 383
+    Width = 766
+    ExplicitWidth = 766
     inherited Image1: TImage
       Left = 41
       Top = 3
@@ -87,7 +133,7 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
     end
   end
   inherited dsdados: TDataSource
-    Left = 344
-    Top = 281
+    Left = 712
+    Top = 17
   end
 end

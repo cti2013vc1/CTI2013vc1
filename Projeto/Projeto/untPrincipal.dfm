@@ -10,10 +10,12 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  KeyPreview = True
   Menu = Menu
   OldCreateOrder = False
   Position = poDesktopCenter
   WindowState = wsMaximized
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
@@ -23,10 +25,6 @@ object frmPrincipal: TfrmPrincipal
     Height = 459
     Align = alClient
     TabOrder = 0
-    ExplicitLeft = 472
-    ExplicitTop = 216
-    ExplicitWidth = 209
-    ExplicitHeight = 65
     DesignSize = (
       937
       459)
@@ -2106,6 +2104,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 24
     object Alunos1: TMenuItem
       Caption = 'Alunos'
+      ShortCut = 16449
       OnClick = Alunos1Click
     end
     object Cadastrodeperodosletivos1: TMenuItem
@@ -2118,6 +2117,7 @@ object frmPrincipal: TfrmPrincipal
     end
     object Cadastrodesries1: TMenuItem
       Caption = 'S'#233'ries'
+      ShortCut = 16467
       OnClick = Cadastrodesries1Click
     end
     object Conceitos1: TMenuItem
@@ -2130,23 +2130,41 @@ object frmPrincipal: TfrmPrincipal
     end
     object Colaboradores1: TMenuItem
       Caption = 'Colaboradores'
+      ShortCut = 16451
       OnClick = Colaboradores1Click
     end
     object urmas1: TMenuItem
       Caption = 'Turmas'
+      ShortCut = 16468
       OnClick = urmas1Click
     end
     object Matrias1: TMenuItem
       Caption = 'Mat'#233'rias'
+      ShortCut = 16462
       OnClick = Matrias1Click
     end
     object Matrculas1: TMenuItem
       Caption = 'Matr'#237'culas'
+      ShortCut = 16461
       OnClick = Matrculas1Click
     end
     object Horrios1: TMenuItem
       Caption = 'Hor'#225'rios'
+      ShortCut = 16456
       OnClick = Horrios1Click
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Relat'#243'rios'
+      object NotasTrimestrais1: TMenuItem
+        Caption = 'Notas Trimestrais'
+        OnClick = NotasTrimestrais1Click
+      end
+    end
+    object Grficos1: TMenuItem
+      Caption = 'Gr'#225'ficos'
+      object Escolhergrfico1: TMenuItem
+        Caption = 'Escolher gr'#225'fico'
+      end
     end
   end
 end

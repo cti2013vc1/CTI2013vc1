@@ -1,5 +1,0 @@
-inherited frmAlunosConsulta: TfrmAlunosConsulta
-  Caption = 'Consulta de alunos'
-  PixelsPerInch = 96
-  TextHeight = 13
-end

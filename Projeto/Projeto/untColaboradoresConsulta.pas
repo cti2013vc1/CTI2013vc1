@@ -13,6 +13,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -75,6 +76,27 @@ begin
   LimparCampos(frmColaboradoresCadastro);
   frmColaboradoresCadastro.Show;
   frmColaboradoresCadastro.status := 'I';
+end;
+
+procedure TfrmColaboradoresConsulta.edtConsultaChange(Sender: TObject);
+var
+colaboradores : TclassColaboradores;
+cond : string;
+begin
+colaboradores := TclassColaboradores.Create;
+  inherited;
+  cond := 'COL_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'COL_NOME LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'COL_SENHA LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'COL_NIVEL_ACESSO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'COL_USUARIO LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := colaboradores.ConsultarColaboradores(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := colaboradores.ConsultarColaboradores
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
 end;
 
 procedure TfrmColaboradoresConsulta.FormShow(Sender: TObject);

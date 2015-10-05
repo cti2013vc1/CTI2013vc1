@@ -14,8 +14,17 @@ inherited frmMateriasConsulta: TfrmMateriasConsulta
       Left = 544
       ExplicitLeft = 544
     end
-    inherited Edit1: TEdit
+    inherited lblTitulo: TLabel
+      Width = 25
+      Height = 14
+      ExplicitWidth = 25
+      ExplicitHeight = 14
+    end
+    inherited edtConsulta: TEdit
+      Top = 41
       Width = 413
+      OnChange = edtConsultaChange
+      ExplicitTop = 41
       ExplicitWidth = 413
     end
   end

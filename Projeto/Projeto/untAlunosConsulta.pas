@@ -13,6 +13,7 @@ type
     procedure btnInserirClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -67,6 +68,26 @@ begin
   LimparCampos(frmAlunosCadastro);
   frmAlunosCadastro.Show;
   frmAlunosCadastro.status := 'I';
+end;
+
+procedure TfrmAlunosConsulta.edtConsultaChange(Sender: TObject);
+var
+alunos : TclassAlunos;
+cond : string;
+begin
+alunos := TclassAlunos.Create;
+  inherited;
+  cond := 'ALU_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'ALU_NOME LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'ALU_DATANASCIMENTO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'ALU_INEP LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := alunos.ConsultarAlunos(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := alunos.ConsultarAlunos
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
 end;
 
 procedure TfrmAlunosConsulta.FormShow(Sender: TObject);

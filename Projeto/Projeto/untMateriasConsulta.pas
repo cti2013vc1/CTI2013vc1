@@ -13,6 +13,7 @@ type
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure edtConsultaChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -66,6 +67,25 @@ begin
   LimparCampos(frmMateriasCadastro);
   frmMateriasCadastro.Show;
   frmMateriasCadastro.status := 'I';
+end;
+
+procedure TfrmMateriasConsulta.edtConsultaChange(Sender: TObject);
+var
+materias : TclassMaterias;
+cond : string;
+begin
+materias := TclassMaterias.Create;
+  inherited;
+  cond := 'MAT_CODIGO LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'ARC_NOME LIKE ''%'+edtConsulta.Text+'%'' OR ';
+  cond := cond+ 'MAT_NOME LIKE ''%'+edtConsulta.Text+'%'' ';
+
+    //QUANDO CONSULTADO POR TODOS OS CAMPOS DO SELECT
+  dsdados.DataSet := materias.ConsultarMaterias(cond);
+
+    //QUANDO CONSULTADO POR COLUNA
+  {dsdados.DataSet := materias.ConsultarMaterias
+    (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
 end;
 
 procedure TfrmMateriasConsulta.FormShow(Sender: TObject);

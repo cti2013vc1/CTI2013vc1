@@ -20,7 +20,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
   //escrever a uses acima do type
- function ConsultarAreas(): TFDQuery;
+ function ConsultarAreas(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -75,7 +75,7 @@ FARC_NOME := fdquery.FieldByName('ARC_NOME').Value;
 
 end;
 
-function TclassAreas.ConsultarAreas: TFDQuery;
+function TclassAreas.ConsultarAreas(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -84,8 +84,10 @@ con.Connection := dmConexao.FDConnection1;
 con.sql.Add(         'SELECT                '+
                      'AREAS.ARC_CODIGO,   '+
                      'AREAS.ARC_NOME     '+
-                     'FROM AREAS         Order By AREAS.ARC_CODIGO ');
-
+                     'FROM AREAS          ');
+if condicao <> '' then
+con.SQL.Add(' WHERE '+condicao);
+con.SQL.Add(' Order By AREAS.ARC_CODIGO');
 con.Open();
 result := con;
 

@@ -28,7 +28,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarMatriculas(): TFDQuery;
+ function ConsultarMatriculas(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -93,7 +93,7 @@ FMAT_DATA := fdquery.FieldByName('MAT_DATA').Value;
 
 end;
 
-function TclassMatriculas.ConsultarMatriculas: TFDQuery;
+function TclassMatriculas.ConsultarMatriculas(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -111,8 +111,10 @@ con.sql.Add(         'SELECT                 '+
                      'FROM MATRICULAS          '+
                      'LEFT OUTER JOIN ALUNOS ON ( ALUNOS.ALU_CODIGO = MATRICULAS.ALUNOS_ALU_CODIGO ) '+
                      'LEFT OUTER JOIN TURMAS ON ( TURMAS.TUR_CODIGO = MATRICULAS.TURMAS_TUR_CODIGO ) '+
-                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = MATRICULAS.MATERIAS_MAT_CODIGO ) Order By  ALUNOS.ALU_NOME ');
-
+                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = MATRICULAS.MATERIAS_MAT_CODIGO )');
+if condicao <> '' then
+con.SQL.Add(' WHERE '+condicao);
+con.SQL.Add('Order By  ALUNOS.ALU_NOME');
 con.Open();
 result := con;
 

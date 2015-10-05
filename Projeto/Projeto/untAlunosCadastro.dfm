@@ -2,6 +2,8 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
   Caption = 'Cadastro de alunos'
   ClientHeight = 463
   ClientWidth = 428
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 444
   ExplicitHeight = 502
@@ -105,7 +107,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
       Font.Name = 'Arial'
       Font.Style = []
       ParentFont = False
-      TabOrder = 2
+      TabOrder = 3
     end
     object MK_DataNascimento: TMaskEdit
       Left = 30
@@ -120,7 +122,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
       Font.Style = []
       MaxLength = 10
       ParentFont = False
-      TabOrder = 3
+      TabOrder = 4
       Text = '  /  /    '
     end
     object dtpDtaNascimento: TDateTimePicker
@@ -130,7 +132,7 @@ inherited frmAlunosCadastro: TfrmAlunosCadastro
       Height = 26
       Date = 42167.616706678240000000
       Time = 42167.616706678240000000
-      TabOrder = 4
+      TabOrder = 2
       OnChange = dtpDtaNascimentoChange
     end
   end

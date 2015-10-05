@@ -26,7 +26,7 @@ type
  //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarAlunos(): TFDQuery;
+ function ConsultarAlunos(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -85,7 +85,7 @@ FALU_INEP := fdquery.FieldByName('ALU_INEP').Value;
 
 end;
 
-function TclassAlunos.ConsultarAlunos: TFDQuery;
+function TclassAlunos.ConsultarAlunos(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -96,8 +96,10 @@ con.sql.Add(         'SELECT                '+
                      'ALUNOS.ALU_NOME,     '+
                      'ALUNOS.ALU_DATANASCIMENTO,     '+
                      'ALUNOS.ALU_INEP     '+
-                     'FROM ALUNOS    Order By ALUNOS.ALU_NOME');
-
+                     'FROM ALUNOS    ');
+if condicao <> '' then
+con.SQL.Add(' WHERE '+condicao);
+con.SQL.Add(' Order By ALUNOS.ALU_NOME');
 con.Open();
 result := con;
 

@@ -16,8 +16,9 @@ inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
       Left = 994
       ExplicitLeft = 658
     end
-    inherited Edit1: TEdit
+    inherited edtConsulta: TEdit
       Width = 863
+      OnChange = edtConsultaChange
       ExplicitWidth = 863
     end
   end

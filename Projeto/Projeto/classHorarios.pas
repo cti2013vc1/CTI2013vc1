@@ -30,7 +30,7 @@ type
        //Depois de colocar todos os campos clicke Ctrl + Shift + C
 
     //escrever a uses acima do type
- function ConsultarHorarios(): TFDQuery;
+ function ConsultarHorarios(condicao : string = ''): TFDQuery;
  function Inserir(): boolean;
  procedure Carregar();
  function Alterar() : boolean;
@@ -93,7 +93,7 @@ FANO := fdquery.FieldByName('ANO').Value;
 
 end;
 
-function TclassHorarios.ConsultarHorarios: TFDQuery;
+function TclassHorarios.ConsultarHorarios(condicao : string = ''): TFDQuery;
 var
 con : TFDQuery;
 begin
@@ -111,7 +111,10 @@ con.sql.Add(         'SELECT                 '+
                      'FROM HORARIOS          '+
                      'LEFT OUTER JOIN COLABORADORES ON ( COLABORADORES.COL_CODIGO = HORARIOS.COLABORADORES_COL_CODIGO ) '+
                      'LEFT OUTER JOIN TURMAS ON ( TURMAS.TUR_CODIGO = HORARIOS.TURMAS_TUR_CODIGO ) '+
-                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = HORARIOS.MATERIAS_MAT_CODIGO ) Order By HORARIOS.HOR_CODIGO');
+                     'LEFT OUTER JOIN MATERIAS ON ( MATERIAS.MAT_CODIGO = HORARIOS.MATERIAS_MAT_CODIGO ) ');
+if condicao <> '' then
+con.SQL.Add('WHERE '+condicao);
+con.SQL.Add('Order By HORARIOS.HOR_CODIGO');
 con.Open();
 result := con;
 

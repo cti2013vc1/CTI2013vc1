@@ -72,6 +72,7 @@ type
  procedure Carregar();
  function Alterar() : boolean;
  function Excluir() : boolean;
+ function RelatoriosNotas():TFDQuery;
   end;
 
 
@@ -314,6 +315,49 @@ if fdquery.RowsAffected > 0 then
   result := true
 else
   result := false;
+
+end;
+
+function TclassNotas.RelatoriosNotas: TFDQuery;
+var
+con : TFDQuery;
+begin
+con := TFDQuery.Create(nil);
+con.Connection := dmConexao.FDConnection1;
+con.SQL.Add('SELECT alunos.ALU_NOME, ');
+con.SQL.Add('notas.NOT_AULAS_DADAS, notas.NOT_FALTAS, ');
+con.SQL.Add('NOTA1.CON_NOME AS  NOT_NOTA1, ');
+con.SQL.Add('NOTA2.CON_NOME AS  NOT_NOTA2, ');
+con.SQL.Add('NOTA3.CON_NOME AS  NOT_NOTA3, ');
+con.SQL.Add('NOTA4.CON_NOME AS  NOT_NOTA4, ');
+con.SQL.Add('NOTA5.CON_NOME AS  NOT_NOTA5, ');
+con.SQL.Add('NOTA6.CON_NOME AS  NOT_NOTA6, ');
+con.SQL.Add('NOTACC.CON_NOME AS  NOT_CC, ');
+con.SQL.Add('NOTAPPDAC.CON_NOME AS  NOT_PPDAC, ');
+con.SQL.Add('NOTACA.CON_NOME AS  NOT_CA, ');
+con.SQL.Add('NOTAPPDAA.CON_NOME AS  NOT_PPDAA ');
+con.SQL.Add('FROM MATRICULAS ');
+con.SQL.Add('INNER JOIN alunos ON alunos.ALU_CODIGO = matriculas.ALUNOS_ALU_CODIGO ');
+con.SQL.Add('LEFT OUTER JOIN notas ON ');
+con.SQL.Add('notas.ANO = matriculas.ANO and notas.ALUNOS_ALU_CODIGO = matriculas.ALUNOS_ALU_CODIGO ');
+con.SQL.Add('and notas.TURMAS_TUR_CODIGO = matriculas.TURMAS_TUR_CODIGO and notas.MATERIAS_MAT_CODIGO = matriculas.MATERIAS_MAT_CODIGO ');
+con.SQL.Add('and notas.PERIODO = 1 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTA1 ON NOTA1.CON_CODIGO = notas.NOT_NOTA1 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTA2 ON NOTA2.CON_CODIGO = notas.NOT_NOTA2 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTA3 ON NOTA3.CON_CODIGO = notas.NOT_NOTA3 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTA4 ON NOTA4.CON_CODIGO = notas.NOT_NOTA4 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTA5 ON NOTA5.CON_CODIGO = notas.NOT_NOTA5 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTA6 ON NOTA6.CON_CODIGO = notas.NOT_NOTA6 ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTACC ON NOTACC.CON_CODIGO = notas.NOT_CC ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTAPPDAC ON NOTAPPDAC.CON_CODIGO = notas.NOT_PPDAC ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTACA ON NOTACA.CON_CODIGO = notas.NOT_CA ');
+con.SQL.Add('LEFT OUTER JOIN conceitos NOTAPPDAA ON NOTAPPDAA.CON_CODIGO = notas.NOT_PPDAA ');
+con.SQL.Add('WHERE matriculas.ANO = 2014 AND matriculas.TURMAS_TUR_CODIGO = 1 AND matriculas.MATERIAS_MAT_CODIGO = 1 ');
+con.SQL.Add('ORDER BY alunos.ALU_NOME ');
+con.SQL.Add('');
+
+con.Open();
+Result := con;
 
 end;
 

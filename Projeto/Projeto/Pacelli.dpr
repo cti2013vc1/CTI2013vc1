@@ -44,7 +44,9 @@ uses
   untTurmasConsulta in 'untTurmasConsulta.pas' {frmTurmasConsulta},
   untHorariosCadastro in 'untHorariosCadastro.pas' {frmHorariosCadastro},
   untHorariosConsulta in 'untHorariosConsulta.pas' {frmHorariosConsulta},
-  untMateriasPorSerieCadastro in 'untMateriasPorSerieCadastro.pas' {frmMateriasPorSerieCadastro};
+  untLogin in 'untLogin.pas' {frmLogin},
+  untRelNotas in 'untRelNotas.pas' {frmRelNotas},
+  untGraficos in 'untGraficos.pas' {frmGraficos};
 
 {$R *.res}
 
@@ -78,6 +80,8 @@ begin
   Application.CreateForm(TfrmTurmasConsulta, frmTurmasConsulta);
   Application.CreateForm(TfrmHorariosCadastro, frmHorariosCadastro);
   Application.CreateForm(TfrmHorariosConsulta, frmHorariosConsulta);
-  Application.CreateForm(TfrmMateriasPorSerieCadastro, frmMateriasPorSerieCadastro);
+  Application.CreateForm(TfrmLogin, frmLogin);
+  Application.CreateForm(TfrmRelNotas, frmRelNotas);
+  Application.CreateForm(TfrmGraficos, frmGraficos);
   Application.Run;
 end.

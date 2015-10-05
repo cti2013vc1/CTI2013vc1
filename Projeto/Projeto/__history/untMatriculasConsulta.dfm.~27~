@@ -1,0 +1,218 @@
+inherited frmMatriculasConsulta: TfrmMatriculasConsulta
+  Caption = 'Consulta de matr'#237'culas'
+  ClientWidth = 1036
+  Font.Name = 'Arial'
+  OnShow = FormShow
+  ExplicitLeft = -265
+  ExplicitWidth = 1052
+  ExplicitHeight = 498
+  PixelsPerInch = 96
+  TextHeight = 14
+  inherited Panel1: TPanel
+    Width = 1036
+    Height = 129
+    ExplicitLeft = 8
+    ExplicitTop = -6
+    ExplicitWidth = 1036
+    ExplicitHeight = 129
+    inherited Image1: TImage
+      Top = 24
+      ExplicitTop = 24
+    end
+    inherited Image2: TImage
+      Left = 890
+      ExplicitLeft = 878
+    end
+    inherited lblTitulo: TLabel
+      Top = 12
+      Width = 25
+      Height = 14
+      ExplicitTop = 12
+      ExplicitWidth = 25
+      ExplicitHeight = 14
+    end
+    object btnConsultar: TSpeedButton [3]
+      Left = 792
+      Top = 65
+      Width = 76
+      Height = 43
+      Caption = 'Consultar'
+      OnClick = btnConsultarClick
+    end
+    inherited edtConsulta: TEdit
+      Top = 32
+      Width = 759
+      OnChange = edtConsultaChange
+      ExplicitTop = 32
+      ExplicitWidth = 759
+    end
+    object cbkPorAluno: TCheckBox
+      Left = 57
+      Top = 65
+      Width = 97
+      Height = 17
+      Caption = 'Por Aluno:'
+      TabOrder = 1
+    end
+    object edtPorAluno: TEdit
+      Left = 57
+      Top = 88
+      Width = 121
+      Height = 22
+      TabOrder = 2
+      TextHint = 'Digite o nome do Aluno'
+    end
+    object mkData: TMaskEdit
+      Left = 513
+      Top = 88
+      Width = 121
+      Height = 22
+      TabOrder = 3
+      Text = ''
+      TextHint = 'Digite a Data'
+    end
+  end
+  inherited Panel2: TPanel
+    Top = 129
+    Width = 1036
+    Height = 330
+    ExplicitWidth = 1036
+    inherited btnExcluir: TSpeedButton
+      OnClick = btnExcluirClick
+    end
+    inherited btnEditar: TSpeedButton
+      OnClick = btnEditarClick
+    end
+    inherited btnInserir: TSpeedButton
+      OnClick = btnInserirClick
+    end
+    inherited DBGrid1: TDBGrid
+      Left = 164
+      Width = 840
+      Height = 257
+      Font.Height = -15
+      Font.Name = 'Arial'
+      Columns = <
+        item
+          Expanded = False
+          FieldName = 'ALU_NOME'
+          Title.Caption = 'Nome do aluno'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 300
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'TUR_NOME'
+          Title.Caption = 'Nome da turma'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 140
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MAT_NOME'
+          Title.Caption = 'Nome da mat'#233'ria'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 201
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'MAT_DATA'
+          Title.Caption = 'Data'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 87
+          Visible = True
+        end
+        item
+          Expanded = False
+          FieldName = 'ANO'
+          Title.Caption = 'Ano'
+          Title.Font.Charset = DEFAULT_CHARSET
+          Title.Font.Color = clWindowText
+          Title.Font.Height = -15
+          Title.Font.Name = 'Arial'
+          Title.Font.Style = []
+          Width = 75
+          Visible = True
+        end>
+    end
+  end
+  object edtPorTurma: TEdit [2]
+    Left = 209
+    Top = 88
+    Width = 121
+    Height = 22
+    TabOrder = 2
+    TextHint = 'Digite o nome da Turma'
+  end
+  object cbkPorTuma: TCheckBox [3]
+    Left = 209
+    Top = 65
+    Width = 97
+    Height = 17
+    Caption = 'Por Turma:'
+    TabOrder = 3
+  end
+  object edtPorMateria: TEdit [4]
+    Left = 361
+    Top = 88
+    Width = 128
+    Height = 22
+    TabOrder = 4
+    TextHint = 'Digite o nome da Mat'#233'ria'
+  end
+  object cbkPorMateria: TCheckBox [5]
+    Left = 361
+    Top = 65
+    Width = 97
+    Height = 17
+    Caption = 'Por Mat'#233'ria:'
+    TabOrder = 5
+  end
+  object cbkPorData: TCheckBox [6]
+    Left = 513
+    Top = 65
+    Width = 97
+    Height = 17
+    Caption = 'Por Data:'
+    TabOrder = 6
+  end
+  object edtPorAno: TEdit [7]
+    Left = 657
+    Top = 88
+    Width = 121
+    Height = 22
+    TabOrder = 7
+    TextHint = 'Digite o Ano'
+  end
+  object cbkPorAno: TCheckBox [8]
+    Left = 657
+    Top = 65
+    Width = 97
+    Height = 17
+    Caption = 'Por Ano:'
+    TabOrder = 8
+  end
+  inherited dsdados: TDataSource
+    Left = 552
+    Top = 0
+  end
+end

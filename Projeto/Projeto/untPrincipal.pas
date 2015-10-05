@@ -24,6 +24,10 @@ type
     Image1: TImage;
     Image2: TImage;
     Panel1: TPanel;
+    Relatrios1: TMenuItem;
+    NotasTrimestrais1: TMenuItem;
+    Grficos1: TMenuItem;
+    Escolhergrfico1: TMenuItem;
     procedure Cadastrodeperodosletivos1Click(Sender: TObject);
     procedure Cadastrodesries1Click(Sender: TObject);
     procedure Colaboradores1Click(Sender: TObject);
@@ -35,11 +39,15 @@ type
     procedure Matrculas1Click(Sender: TObject);
     procedure urmas1Click(Sender: TObject);
     procedure Horrios1Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure NotasTrimestrais1Click(Sender: TObject);
     //procedure FormResize(Sender: TObject);
   private
     { Private declarations }
   public
     { Public declarations }
+    logado : Boolean;
+    finalizar_sistema : Boolean;
   end;
 
 var
@@ -51,9 +59,10 @@ implementation
 
 uses untPeriodosLetivosConsulta, untSeriesCadastro, untSeriesConsulta,
   untColaboradoresConsulta, untConceitosConsulta, untAlunosCadastro,
-  untAreasConsulta, untTurnosConsulta, untAlunosConsulta, untMaterias,
+  untTurnosConsulta, untAlunosConsulta, untMaterias,
   untMateriasConsulta, untMateriasCadastro, untMatriculasConsulta,
-  untTurmasConsulta, untHorariosConsulta;
+  untTurmasConsulta, untHorariosConsulta, untLogin, untAreasConsulta,
+  untRelNotas;
 
 
 
@@ -82,18 +91,20 @@ begin
 frmConceitosConsulta.Show;
 end;
 
-//procedure TfrmPrincipal.FormResize(Sender: TObject);
-//var
- // multi: double;
-//begin
-//  if( Height > 500) then
-//    multi := 0.5
-//  else
-//    multi := 0.25  ;
-//  Image1.Height := round( Height * multi );
-//  Image1.Top := Height - Image1.Height ;
-//  Image1.AutoSize := true;
-//end;
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  //Aqui ele diz que quando o usuário clicar em fechar o sistema, o formulário de login abre até que a senha esteja verdadeira
+{while logado = false do
+  begin
+  if finalizar_sistema = true then
+  begin
+    Application.Terminate;
+    Break;
+  end;
+    frmLogin.ShowModal;
+  end;  }
+end;
+
 
 procedure TfrmPrincipal.Horrios1Click(Sender: TObject);
 begin
@@ -108,6 +119,11 @@ end;
 procedure TfrmPrincipal.Matrias1Click(Sender: TObject);
 begin
 frmMateriasConsulta.Show;
+end;
+
+procedure TfrmPrincipal.NotasTrimestrais1Click(Sender: TObject);
+begin
+frmRelNotas.Show;
 end;
 
 procedure TfrmPrincipal.reas1Click(Sender: TObject);
