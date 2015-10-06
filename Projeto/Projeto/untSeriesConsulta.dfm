@@ -2,11 +2,13 @@ inherited frmSeriesConsulta: TfrmSeriesConsulta
   Caption = 'Consulta de s'#233'ries'
   ClientWidth = 702
   Font.Name = 'Tekton Pro'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 718
   ExplicitHeight = 498
   PixelsPerInch = 96
-  TextHeight = 13
+  TextHeight = 14
   inherited Panel1: TPanel
     Width = 702
     Caption = 'Consulta de s'#233'ries'
@@ -14,6 +16,12 @@ inherited frmSeriesConsulta: TfrmSeriesConsulta
     inherited Image2: TImage
       Left = 556
       ExplicitLeft = 556
+    end
+    inherited lblTitulo: TLabel
+      Width = 25
+      Height = 14
+      ExplicitWidth = 25
+      ExplicitHeight = 14
     end
     inherited edtConsulta: TEdit
       OnChange = edtConsultaChange
@@ -42,7 +50,6 @@ inherited frmSeriesConsulta: TfrmSeriesConsulta
           Expanded = False
           FieldName = 'SER_CODIGO'
           Title.Caption = 'C'#243'digo'
-          Width = 74
           Visible = True
         end
         item

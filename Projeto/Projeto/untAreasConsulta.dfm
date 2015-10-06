@@ -2,8 +2,11 @@ inherited frmAreasConsulta: TfrmAreasConsulta
   Caption = 'Consulta de '#225'reas'
   ClientWidth = 673
   Font.Name = 'Arial'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 689
+  ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 14
   inherited Panel1: TPanel
@@ -56,7 +59,6 @@ inherited frmAreasConsulta: TfrmAreasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 96
           Visible = True
         end
         item

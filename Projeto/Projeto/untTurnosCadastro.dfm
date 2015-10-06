@@ -2,6 +2,8 @@ inherited frmTurnosCadastro: TfrmTurnosCadastro
   Caption = 'Cadastro de Turnos'
   ClientHeight = 337
   ClientWidth = 371
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 387
   ExplicitHeight = 376

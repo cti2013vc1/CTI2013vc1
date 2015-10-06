@@ -14,6 +14,7 @@ type
     procedure btnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edtConsultaChange(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -86,6 +87,23 @@ areas := TclassAreas.Create;
     //QUANDO CONSULTADO POR COLUNA
   {dsdados.DataSet := areas.ConsultarAreas
     (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
+end;
+
+procedure TfrmAreasConsulta.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+//Ctrl + I
+if (Shift = [ssCtrl]) and (Key = 49) then
+btnInserir.Click;
+//Ctrl + E = Editar
+if (Shift = [ssCtrl]) and (Key = 45) then
+btnEditar.Click;
+// Delete = Deletar
+if (key = 46) then
+btnExcluir.Click;
+if (key = 27) then
+  Close;
 end;
 
 procedure TfrmAreasConsulta.FormShow(Sender: TObject);

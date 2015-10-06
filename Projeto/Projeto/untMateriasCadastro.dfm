@@ -2,6 +2,8 @@ inherited frmMateriasCadastro: TfrmMateriasCadastro
   Caption = 'Cadastro de mat'#233'rias'
   ClientHeight = 394
   ClientWidth = 368
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 384
   ExplicitHeight = 433

@@ -2,6 +2,8 @@ inherited frmColaboradoresCadastro: TfrmColaboradoresCadastro
   Caption = 'Cadastro de colaboradores'
   ClientHeight = 505
   ClientWidth = 445
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 461
   ExplicitHeight = 544

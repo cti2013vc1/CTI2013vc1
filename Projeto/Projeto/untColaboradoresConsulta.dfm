@@ -2,8 +2,10 @@ inherited frmColaboradoresConsulta: TfrmColaboradoresConsulta
   Caption = 'Consulta de colaboradores'
   ClientHeight = 475
   ClientWidth = 1140
+  KeyPreview = True
   Position = poDesktopCenter
   WindowState = wsMaximized
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 1156
   ExplicitHeight = 514

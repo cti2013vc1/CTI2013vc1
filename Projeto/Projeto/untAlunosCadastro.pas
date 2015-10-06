@@ -98,13 +98,13 @@ procedure TfrmAlunosCadastro.FormKeyDown(Sender: TObject; var Key: Word;
   Shift: TShiftState);
 begin
   inherited;
-if (key = 13) and (lbledt_alu_inep.Text <> '') then //Simula o TAB como ENTER
-begin
- btnSalvar.Click;
- end else
-if key = 13 then
-Self.Perform(WM_NEXTDLGCTL,0,0);
-
+//Enter = Simula o tab
+if (key = 13) then
+  self.Perform(WM_NEXTDLGCTL,0,0);
+//Ctrl + S = Salvar
+if (key = 73) then
+  btnSalvar.Click;
+//Esc = Sair
 if (key = 27) then
   btnCancelar.Click;
 end;

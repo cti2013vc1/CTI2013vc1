@@ -2,6 +2,8 @@ inherited frmAreasCadastro: TfrmAreasCadastro
   Caption = 'Cadastro de '#225'reas'
   ClientHeight = 361
   ClientWidth = 347
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 363
   ExplicitHeight = 400

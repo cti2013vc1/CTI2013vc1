@@ -2,6 +2,8 @@ inherited frmMateriasConsulta: TfrmMateriasConsulta
   Caption = 'Consulta de Mat'#233'rias'
   ClientWidth = 690
   Font.Name = 'Arial'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 706
   ExplicitHeight = 498
@@ -54,7 +56,6 @@ inherited frmMateriasConsulta: TfrmMateriasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 102
           Visible = True
         end
         item

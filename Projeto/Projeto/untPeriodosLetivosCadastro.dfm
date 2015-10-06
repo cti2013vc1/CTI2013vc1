@@ -1,5 +1,7 @@
 inherited frmPeriodosLetivosCadastro: TfrmPeriodosLetivosCadastro
   Caption = 'Cadastro de Per'#237'odos Letivos'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 478
   ExplicitHeight = 520

@@ -17,6 +17,7 @@ type
     procedure btnCancelarClick(Sender: TObject);
     procedure btnSalvarClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -81,6 +82,21 @@ begin
   end;
 end;
 
+end;
+
+procedure TfrmConceitosCadastro.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+//Enter = Simula o tab
+if (key = 13) then
+  self.Perform(WM_NEXTDLGCTL,0,0);
+//Ctrl + S = Salvar
+if (key = 73) then
+  btnSalvar.Click;
+//Esc = Sair
+if (key = 27) then
+  btnCancelar.Click;
 end;
 
 procedure TfrmConceitosCadastro.FormShow(Sender: TObject);

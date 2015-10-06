@@ -2,6 +2,8 @@ inherited frmConceitosCadastro: TfrmConceitosCadastro
   Caption = 'Cadastro de conceitos'
   ClientHeight = 416
   ClientWidth = 389
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 405
   ExplicitHeight = 455

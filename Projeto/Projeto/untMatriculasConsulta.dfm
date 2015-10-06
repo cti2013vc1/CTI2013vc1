@@ -2,8 +2,9 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
   Caption = 'Consulta de matr'#237'culas'
   ClientWidth = 1037
   Font.Name = 'Arial'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
-  ExplicitLeft = -266
   ExplicitWidth = 1053
   ExplicitHeight = 498
   PixelsPerInch = 96
@@ -101,7 +102,9 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
     Top = 145
     Width = 1037
     Height = 314
-    ExplicitWidth = 1036
+    ExplicitTop = 145
+    ExplicitWidth = 1037
+    ExplicitHeight = 314
     inherited btnExcluir: TSpeedButton
       OnClick = btnExcluirClick
     end
@@ -127,7 +130,6 @@ inherited frmMatriculasConsulta: TfrmMatriculasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 300
           Visible = True
         end
         item

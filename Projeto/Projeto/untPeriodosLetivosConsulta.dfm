@@ -2,6 +2,8 @@ inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
   Caption = 'Consulta de Per'#237'odos Letivos'
   ClientHeight = 437
   ClientWidth = 697
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 713
   ExplicitHeight = 476
@@ -49,7 +51,6 @@ inherited frmPeriodosLetivosConsulta: TfrmPeriodosLetivosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 75
           Visible = True
         end
         item

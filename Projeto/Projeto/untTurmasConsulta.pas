@@ -14,6 +14,7 @@ type
     procedure btnExcluirClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure edtConsultaChange(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -88,6 +89,23 @@ turmas := TClassTurmas.Create;
     //QUANDO CONSULTADO POR COLUNA
   {dsdados.DataSet := turmas.ConsultarTurmas
     (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
+end;
+
+procedure TfrmTurmasConsulta.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+//Ctrl + I
+if (Shift = [ssCtrl]) and (Key = 49) then
+btnInserir.Click;
+//Ctrl + E = Editar
+if (Shift = [ssCtrl]) and (Key = 45) then
+btnEditar.Click;
+// Delete = Deletar
+if (key = 46) then
+btnExcluir.Click;
+if (key = 27) then
+  Close;
 end;
 
 procedure TfrmTurmasConsulta.FormShow(Sender: TObject);

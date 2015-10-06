@@ -1,6 +1,8 @@
 inherited frmConceitosConsulta: TfrmConceitosConsulta
   Caption = 'Consulta de conceitos'
   ClientWidth = 699
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 715
   ExplicitHeight = 498
@@ -45,7 +47,6 @@ inherited frmConceitosConsulta: TfrmConceitosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 114
           Visible = True
         end
         item

@@ -1,8 +1,11 @@
 inherited frmHorariosConsulta: TfrmHorariosConsulta
   Caption = 'Consulta de hor'#225'rios'
   ClientWidth = 936
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 952
+  ExplicitHeight = 498
   PixelsPerInch = 96
   TextHeight = 13
   inherited Panel1: TPanel
@@ -43,7 +46,6 @@ inherited frmHorariosConsulta: TfrmHorariosConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 100
           Visible = True
         end
         item

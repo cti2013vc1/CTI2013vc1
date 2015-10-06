@@ -2,6 +2,8 @@ inherited frmTurmasConsulta: TfrmTurmasConsulta
   Caption = 'Consulta de turmas'
   ClientWidth = 923
   Font.Name = 'Arial'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 939
   ExplicitHeight = 498
@@ -52,7 +54,6 @@ inherited frmTurmasConsulta: TfrmTurmasConsulta
           Title.Font.Height = -15
           Title.Font.Name = 'Arial'
           Title.Font.Style = []
-          Width = 74
           Visible = True
         end
         item

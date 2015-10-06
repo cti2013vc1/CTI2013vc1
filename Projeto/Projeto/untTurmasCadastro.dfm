@@ -1,5 +1,7 @@
 inherited frmTurmasCadastro: TfrmTurmasCadastro
   Caption = 'Cadastro de turmas'
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 478
   ExplicitHeight = 520

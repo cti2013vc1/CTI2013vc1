@@ -30,6 +30,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure edtConsultaChange(Sender: TObject);
     procedure btnConsultarClick(Sender: TObject);
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
   private
     { Private declarations }
   public
@@ -137,6 +138,23 @@ matriculas := TclassMatriculas.Create;
     //QUANDO CONSULTADO POR COLUNA
   {dsdados.DataSet := matriculas.ConsultarMatriculas
     (lblTitulo.Caption +' LIKE ''%'+edt_consulta.Text+'%''');  }
+end;
+
+procedure TfrmMatriculasConsulta.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  inherited;
+//Ctrl + I
+if (Shift = [ssCtrl]) and (Key = 49) then
+btnInserir.Click;
+//Ctrl + E = Editar
+if (Shift = [ssCtrl]) and (Key = 45) then
+btnEditar.Click;
+// Delete = Deletar
+if (key = 46) then
+btnExcluir.Click;
+if (key = 27) then
+  Close;
 end;
 
 procedure TfrmMatriculasConsulta.FormShow(Sender: TObject);

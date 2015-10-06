@@ -2,6 +2,8 @@ inherited frmMatriculasCadastro: TfrmMatriculasCadastro
   Caption = 'Cadastro de matr'#237'culas'
   ClientHeight = 505
   ClientWidth = 467
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 483
   ExplicitHeight = 544

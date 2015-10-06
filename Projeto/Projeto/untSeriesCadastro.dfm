@@ -2,6 +2,8 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
   Caption = 'Cadastro de s'#233'ries'
   ClientHeight = 446
   ClientWidth = 766
+  KeyPreview = True
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   ExplicitWidth = 782
   ExplicitHeight = 485
@@ -10,9 +12,8 @@ inherited frmSeriesCadastro: TfrmSeriesCadastro
   inherited Panel2: TPanel
     Width = 766
     Height = 381
-    ExplicitTop = 64
     ExplicitWidth = 766
-    ExplicitHeight = 305
+    ExplicitHeight = 381
     inherited btnSalvar: TSpeedButton
       Left = 612
       Top = 299
