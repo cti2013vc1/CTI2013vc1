@@ -5,8 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
-  Vcl.ExtCtrls, VclTee.TeeGDIPlus, VCLTee.TeEngine, VCLTee.Series,
-  VCLTee.TeeProcs, VCLTee.Chart, VCLTee.DBChart;
+  Vcl.ExtCtrls;
 
 type
   TfrmGraficos = class(TForm)
@@ -25,8 +24,6 @@ type
     RadioButton8: TRadioButton;
     RadioButton9: TRadioButton;
     Button1: TButton;
-    DBChart1: TDBChart;
-    Series1: TBarSeries;
   private
     { Private declarations }
   public

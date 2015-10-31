@@ -20,6 +20,7 @@ object frmGraficos: TfrmGraficos
     Height = 65
     Align = alTop
     TabOrder = 0
+    ExplicitWidth = 462
     object Image1: TImage
       Left = 32
       Top = 2
@@ -209,23 +210,6 @@ object frmGraficos: TfrmGraficos
       Height = 25
       Caption = 'Gerar'
       TabOrder = 9
-    end
-  end
-  object DBChart1: TDBChart
-    Left = 184
-    Top = 64
-    Width = 572
-    Height = 297
-    Title.Text.Strings = (
-      'TDBChart')
-    TabOrder = 2
-    DefaultCanvas = 'TGDIPlusCanvas'
-    ColorPaletteIndex = 13
-    object Series1: TBarSeries
-      XValues.Name = 'X'
-      XValues.Order = loAscending
-      YValues.Name = 'Bar'
-      YValues.Order = loNone
     end
   end
 end
